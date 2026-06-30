@@ -1,0 +1,188 @@
+title = "Módulo 15 - Testing de Capa de Datos"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación limita el contexto a solo repositorios JPA?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@DataJpaTest" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@SpringBootTest" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@JpaTest" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@RepositoryTest" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué base de datos usa @DataJpaTest por defecto?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "H2 en memoria" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "PostgreSQL" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "MySQL" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La configurada en producción" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué librería permite usar contenedores Docker en tests de integración?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "TestContainers" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Docker Compose" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "AssertJ" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Mockito" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación carga datos SQL antes de un test?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Sql" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Data" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Before" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@DatabaseSetup" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Cómo se configura TestContainers con PostgreSQL en un test?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Testcontainers y @Container" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@DockerPostgres" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@PostgresContainer" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@TestDatabase" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación desactiva la sustitución automática de la base de datos por H2?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@AutoConfigureTestDatabase(replace = NONE)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@DataJpaTest" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@TestDatabase" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@DisableH2" }
+
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué método de AssertJ se usa para verificar que un Optional tiene un valor?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["isPresent", "isNotEmpty"]
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué ventaja tienen TestContainers sobre H2?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Prueban contra la misma base de datos que producción" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Son más rápidos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No requieren Docker" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Son más fáciles de configurar" }
+
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 60000
+title = "Ordena los pasos de un test con TestContainers"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+answers = ["Iniciar contenedor PostgreSQL", "Configurar contexto Spring", "Ejecutar operación JPA", "Verificar resultado con AssertJ", "Detener contenedor"]
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación permite ordenar la ejecución de los métodos de test?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@TestMethodOrder" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Order" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Sequence" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@TestMethodOrdering" }
+

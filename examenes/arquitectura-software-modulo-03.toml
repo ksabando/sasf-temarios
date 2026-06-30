@@ -1,0 +1,187 @@
+title = "Módulo 03 - Domain-Driven Design (DDD)"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es el principio fundamental de Domain-Driven Design?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El dominio es el corazón del software, el modelo debe reflejar el negocio" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usar microservicios para todo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La base de datos debe diseñarse primero" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Todos los objetos deben ser entidades" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es un Bounded Context en DDD?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Un límite explícito donde un modelo de dominio específico es válido" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un límite de memoria para evitar memory leaks" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una restricción de base de datos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un tipo de aggregate" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre Entity y Value Object?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Las entidades tienen identidad, los VOs se definen por sus atributos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Las entidades son inmutables, los VOs son mutables" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No hay diferencia, son lo mismo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Los VOs tienen ID, las entidades no" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es el Aggregate Root en DDD?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El punto de entrada único a un aggregate, la única entidad referenciable desde fuera" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La base de datos principal del sistema" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El servicio más importante del dominio" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La clase base de todas las entidades" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Para qué sirve un Repository en DDD?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Para abstraer la persistencia de aggregates como una colección" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Para almacenar eventos del dominio" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Para implementar la lógica de negocio" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Para conectar el frontend con el backend" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué tipo de subdominio representa un diferenciador competitivo?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Core Domain" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Generic Subdomain" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Supporting Subdomain" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Bounded Subdomain" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles son relaciones válidas entre Bounded Contexts en DDD? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Anticorruption Layer (ACL)" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Shared Kernel" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Dependency Injection" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Load Balancer" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué característica NO corresponde a un Value Object? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Tiene identidad única" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Es mutable" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Se compara por atributos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es inmutable" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo se llama el lenguaje común entre expertos de negocio y desarrolladores en DDD?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "Ubiquitous Language" }
+[[slides.TypeAnswer.answers]]
+content = { Text = "Lenguaje Ubicuo" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los tipos de subdominio por importancia estratégica (de mayor a menor):"
+points_awarded = 1000
+axis_labels = { from = "Mayor importancia", to = "Menor importancia" }
+[[slides.Order.answers]]
+content = { Text = "Core Domain" }
+[[slides.Order.answers]]
+content = { Text = "Supporting Subdomain" }
+[[slides.Order.answers]]
+content = { Text = "Generic Subdomain" }

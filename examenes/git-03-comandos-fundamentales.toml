@@ -1,0 +1,135 @@
+title = "M03 - Comandos Fundamentales"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando crea un nuevo repositorio Git?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git init" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git start" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git new" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git create" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando descarga un repositorio remoto y todo su historial?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git clone" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git fetch" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git pull" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git download" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+points_awarded = 1000
+title = "¿Cuáles de las siguientes opciones puede usar el flag -m con git commit?"
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Proporcionar el mensaje del commit en línea" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Modificar el autor del commit" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Agregar archivos automáticamente" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Evitar abrir el editor de texto" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué flag de git commit agrega todos los archivos modificados al commit automáticamente?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "-a" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--all" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "-m" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--amend" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando muestra el estado del repositorio?"
+case_sensitive = false
+answers = ["git status"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando muestra las diferencias sin staged entre el working directory y el staging?"
+case_sensitive = false
+answers = ["git diff"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando mueve o renombra un archivo en Git?"
+case_sensitive = false
+answers = ["git mv"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "Ordena los comandos para hacer un commit desde archivos nuevos (de primero a último)"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["git init", "git add .", "git commit -m mensaje"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "Ordena los comandos para clonar y explorar un repositorio remoto"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["git clone url", "cd repositorio", "git status", "git log"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "Ordena los efectos del flag --amend al ejecutar git commit"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["Modifica el commit más reciente", "Permite cambiar el mensaje", "Incluye archivos olvidados en staging", "Reemplaza el commit anterior"]

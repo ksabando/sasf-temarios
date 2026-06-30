@@ -1,0 +1,555 @@
+title = "Examen Final - Arquitectura de Software: DDD, Hexagonal, Clean, Microservicios"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué distingue una decisión arquitectónica de una de diseño?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El costo de cambio y el impacto en la estructura del sistema" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La tecnología utilizada" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La complejidad del código" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El número de líneas de código afectadas" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál de los siguientes NO es un estilo arquitectónico?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Singleton (es un patrón de diseño)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Monolito" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Pipes-and-Filters" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Microkernel" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué estilo arquitectónico utiliza un núcleo mínimo con funcionalidades extensibles mediante plugins?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Microkernel" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cliente-Servidor" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Capas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Peer-to-Peer" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es un Bounded Context en DDD?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Un límite explícito donde un modelo de dominio específico es válido" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un límite de memoria para evitar memory leaks" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una restricción de base de datos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un tipo de aggregate" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre Entity y Value Object en DDD?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Las entidades tienen identidad, los VOs se definen por sus atributos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Las entidades son inmutables, los VOs son mutables" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No hay diferencia, son lo mismo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Los VOs tienen ID, las entidades no" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Quién propuso la Arquitectura Hexagonal?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Alistair Cockburn" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Robert C. Martin" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Eric Evans" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Martin Fowler" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre puerto primario y secundario en arquitectura hexagonal?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Los primarios son llamados por adaptadores externos (driving), los secundarios por el núcleo (driven)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Los primarios son REST, los secundarios son JPA" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No hay diferencia" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Los primarios son de red, los secundarios son locales" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles son las 4 capas de Clean Architecture (de adentro hacia afuera)?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Entities → Use Cases → Interface Adapters → Frameworks & Drivers" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Frameworks → Interface Adapters → Use Cases → Entities" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Use Cases → Entities → Interface Adapters → Frameworks" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Interface Adapters → Entities → Use Cases → Frameworks" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa Screaming Architecture?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "La arquitectura debe reflejar el dominio del problema, no la tecnología" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La arquitectura debe ser ruidosa" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El sistema debe tener logs extensivos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La documentación debe ser extensa" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa CQRS?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Command Query Responsibility Segregation" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Complete Query Response System" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Concurrent Queue Resource Service" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Central Query Routing System" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es Event Sourcing?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Almacenar eventos de cambio (append-only) en lugar del estado actual" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Publicar eventos en Kafka" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una herramienta de logging" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un framework de Spring" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre un Evento y un Comando?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Un evento indica que algo ocurrió (pasado), un comando solicita que algo ocurra (imperativo)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un evento es una solicitud, un comando es una notificación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No hay diferencia" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Los eventos son más rápidos que los comandos" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Por qué es importante la idempotencia en consumidores de eventos?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Para que procesar el mismo evento dos veces no tenga efectos secundarios no deseados" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Para hacer el código más rápido" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Para reducir el uso de memoria" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Para mejorar la legibilidad" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón se usa para migrar incrementalmente de monolito a microservicios?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Strangler Fig" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Circuit Breaker" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Saga Pattern" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "CQRS" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué protocolo y serialización usa gRPC?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "HTTP/2 con Protocol Buffers (Protobuf)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "HTTP/1.1 con JSON" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "TCP puro con XML" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "UDP con YAML" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles son los tres estados de un Circuit Breaker?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "CLOSED, OPEN, HALF_OPEN" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "START, STOP, PAUSE" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ON, OFF, STANDBY" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "UP, DOWN, DEGRADED" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa ACID en bases de datos SQL?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Atomicity, Consistency, Isolation, Durability" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Availability, Consistency, Isolation, Durability" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Atomicity, Consistency, Integrity, Durability" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Availability, Consistency, Integrity, Distribution" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es Poliglota Persistence?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Usar diferentes bases de datos según la necesidad de cada contexto" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usar la misma base de datos para todo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una base de datos que soporta múltiples lenguajes" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una técnica de migración de datos" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué método se usa para evaluar arquitecturas identificando trade-offs, risks y sensitivity points?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "ATAM (Architecture Tradeoff Analysis Method)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "SOLID" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Scrum" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "CMMI" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es el \"Boy Scout Rule\" en refactorización?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Dejar el código mejor de lo que lo encontraste" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cambiar todo el código legacy" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No tocar código que funciona" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Escribir tests después del código" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué metodología de arquitectura empresarial usa el ciclo ADM?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "TOGAF" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Zachman" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ITIL" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "COBIT" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son patrones tácticos de DDD? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Aggregate Root" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Repository" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Circuit Breaker" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Bulkhead" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles son patrones de resiliencia en comunicación entre servicios? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Circuit Breaker" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Bulkhead" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Factory" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Singleton" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son tipos de bases de datos NoSQL? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Document (ej: MongoDB)" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Graph (ej: Neo4j)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Relacional (ej: PostgreSQL)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "In-Memory Cache (ej: Redis)" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa la sigla YAGNI en arquitectura de software?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "You Aren't Gonna Need It" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué formato de diagrama es nativo de GitHub Markdown?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "Mermaid" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué herramienta mide la deuda técnica en días estimados de refactorización?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "SonarQube" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué infraestructura gestiona la comunicación entre servicios a nivel de red con sidecars?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "Service Mesh" }
+[[slides.TypeAnswer.answers]]
+content = { Text = "Istio" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena las capas de Clean Architecture desde la más interna a la más externa:"
+points_awarded = 1000
+axis_labels = { from = "Más interna", to = "Más externa" }
+[[slides.Order.answers]]
+content = { Text = "Entities" }
+[[slides.Order.answers]]
+content = { Text = "Use Cases (Interactors)" }
+[[slides.Order.answers]]
+content = { Text = "Interface Adapters (Controllers, Presenters)" }
+[[slides.Order.answers]]
+content = { Text = "Frameworks & Drivers (Web, DB, UI)" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los niveles del C4 Model desde la vista más general a la más detallada:"
+points_awarded = 1000
+axis_labels = { from = "Más general", to = "Más detallada" }
+[[slides.Order.answers]]
+content = { Text = "Context (sistema + usuarios + sistemas externos)" }
+[[slides.Order.answers]]
+content = { Text = "Container (aplicaciones, bases de datos, servicios)" }
+[[slides.Order.answers]]
+content = { Text = "Component (módulos dentro de un contenedor)" }
+[[slides.Order.answers]]
+content = { Text = "Code (clases, interfaces, entidades)" }

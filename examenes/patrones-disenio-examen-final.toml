@@ -1,0 +1,566 @@
+title = "Examen Final - Patrones de Diseño: GoF + Modernos"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa GoF y cuántos patrones describe el libro original?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Gang of Four, 23 patrones" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Group of Functions, 17 patrones" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "General Object Framework, 26 patrones" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Gang of Five, 21 patrones" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles son las tres categorías de patrones GoF?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Creacionales, Estructurales, Comportamiento" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Singleton, Factory, Observer" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Funcionales, Estructurales, Comportamiento" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Creacionales, Adaptadores, Comportamiento" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la implementación de Singleton recomendada por Effective Java?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Enum" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Double-Checked Locking" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Inicialización temprana (Eager)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Synchronized method" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón crea familias de productos relacionados?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Abstract Factory" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Factory Method" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Builder" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Singleton" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué clase del JDK implementa el patrón Builder?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "StringBuilder" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "String" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ArrayList" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "HashMap" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón convierte una interfaz incompatible en una que el cliente espera?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Adapter" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Bridge" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Facade" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Proxy" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón permite tratar objetos individuales y compuestos de manera uniforme?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Composite" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Decorator" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Facade" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Proxy" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué clase del JDK es un ejemplo del patrón Decorator?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "BufferedInputStream" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "FileInputStream" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "InputStreamReader" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Scanner" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué tipo de Proxy carga un objeto solo cuando es estrictamente necesario?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Proxy virtual (Lazy Loading)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Proxy remoto" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Proxy de protección" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Proxy de logging" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón encapsula una solicitud como un objeto, permitiendo deshacer y rehacer operaciones?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Command" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Chain of Responsibility" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Strategy" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Observer" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón permite que múltiples handlers procesen una petición en secuencia?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Chain of Responsibility" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Command" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Mediator" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Decorator" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón define una dependencia uno-a-muchos para notificar cambios de estado?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Observer" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Mediator" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Memento" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "State" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia clave entre State y Strategy?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "State cambia según el estado interno; Strategy es seleccionado por el cliente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Son el mismo patrón con distinto nombre" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Strategy cambia el estado; State es estático" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "State es creacional; Strategy es estructural" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué anotación de Spring activa el patrón Proxy mediante AOP?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Transactional" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Autowired" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Component" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Configuration" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón implementa JdbcTemplate de Spring?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Template Method" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Strategy" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Adapter" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Factory Method" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón de React es una función que recibe un componente y retorna uno nuevo?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "HOC (Higher-Order Component)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Custom Hooks" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Render Props" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Compound Components" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué anti-patrón describe código sin estructura clara y difícil de mantener?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Spaghetti Code" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "God Class" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Golden Hammer" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Lava Flow" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué anti-patrón consiste en usar siempre la misma solución para todo?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Golden Hammer" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Premature Abstraction" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "God Class" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Boat Anchor" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón moderno previene fallos en cascada en sistemas distribuidos?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Circuit Breaker" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Saga" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Outbox" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Retry" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes patrones son del tipo creacional? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Prototype" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Builder" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Decorator" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Observer" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son roles del patrón Memento? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Originator (crea y restaura el estado)" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Caretaker (guarda los mementos)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Observer (notifica cambios)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Invoker (ejecuta comandos)" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes patrones usa Spring internamente? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Factory Method (@Bean en @Configuration)" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Chain of Responsibility (SecurityFilterChain)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Memento" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Prototype" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son anti-patrones de diseño? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Poltergeist (objetos temporales sin propósito)" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Lava Flow (código muerto persistente)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Iterator" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Bridge" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son patrones modernos para microservicios? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Saga (transacciones distribuidas)" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Outbox (consistencia eventual)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Singleton" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Adapter" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué principio SOLID establece que las clases deben depender de abstracciones, no de implementaciones?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "Dependency Inversion" }
+[[slides.TypeAnswer.answers]]
+content = { Text = "dependency inversion" }
+[[slides.TypeAnswer.answers]]
+content = { Text = "dependency inversion principle" }
+[[slides.TypeAnswer.answers]]
+content = { Text = "dip" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué interfaz de Java es un ejemplo clásico del patrón Command?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "Runnable" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón GoF se recomienda usar con Copy Constructor en lugar del método clone()?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "Prototype" }
+[[slides.TypeAnswer.answers]]
+content = { Text = "prototype" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los pasos del patrón Template Method en su ejecución:"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+[[slides.Order.answers]]
+content = { Text = "El cliente invoca el template method" }
+[[slides.Order.answers]]
+content = { Text = "Se ejecutan los pasos fijos definidos en la clase base" }
+[[slides.Order.answers]]
+content = { Text = "Se ejecutan los hooks (métodos opcionales)" }
+[[slides.Order.answers]]
+content = { Text = "Se ejecutan los pasos abstractos implementados por las subclases" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los tres estados del Circuit Breaker en su ciclo de vida:"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin del ciclo" }
+[[slides.Order.answers]]
+content = { Text = "Cerrado (Closed) - operación normal" }
+[[slides.Order.answers]]
+content = { Text = "Abierto (Open) - rechaza peticiones tras fallos" }
+[[slides.Order.answers]]
+content = { Text = "Semi-abierto (Half-Open) - permite peticiones de prueba" }
+[[slides.Order.answers]]
+content = { Text = "Cerrado (Closed) - se restablece el servicio" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los pasos del patrón Builder para construir un objeto inmutable:"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+[[slides.Order.answers]]
+content = { Text = "Crear instancia del Builder" }
+[[slides.Order.answers]]
+content = { Text = "Configurar parámetros opcionales con métodos fluidos" }
+[[slides.Order.answers]]
+content = { Text = "Validar el estado de la configuración" }
+[[slides.Order.answers]]
+content = { Text = "Llamar a build() para obtener el objeto inmutable" }

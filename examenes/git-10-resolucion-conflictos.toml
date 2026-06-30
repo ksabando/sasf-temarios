@@ -1,0 +1,179 @@
+title = "M10"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M10 - ¿Qué significan los marcadores de conflicto <<<<<<<, ======= y >>>>>>>?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Delimitan las versiones en conflicto: rama actual (<<<), separador (===), rama entrante (>>>)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Indican el inicio y fin de un archivo binario corrupto" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Muestran los límites de un stash guardado" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Señalan líneas que Git ha resuelto automáticamente" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M10 - ¿Cuál es el primer paso para resolver un conflicto manualmente?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Editar el archivo en conflicto para quedarse con la versión deseada y eliminar los marcadores" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Ejecutar git reset --hard para descartar todo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Borrar el archivo y volver a crearlo desde cero" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Hacer git commit sin modificar nada" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M10 - ¿Qué comando lanza una herramienta visual de resolución de conflictos?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git mergetool" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git conflicttool" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git resolve" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git diff --merge" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M10 - ¿Qué hace git merge --abort?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Cancela el merge en curso y restaura el estado previo al inicio del merge" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Borra todos los archivos con conflictos del disco" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Fuerza la finalización del merge usando la versión local" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Deshace el último commit de merge ya completado" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M10 - ¿Qué hace la estrategia 'ours' en un merge?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Resuelve conflictos quedándose con la versión de la rama actual" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Resuelve conflictos quedándose con la versión entrante" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Mezcla ambas versiones automáticamente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Elimina los archivos en conflicto del repositorio" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M10 - ¿Qué hace la estrategia 'theirs' en un merge?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Resuelve conflictos quedándose con la versión de la rama que estamos fusionando" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Resuelve conflictos quedándose con la versión de la rama actual" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Crea un parche con ambas versiones para revisión externa" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Aborta el merge automáticamente" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M10 - ¿Qué es git rerere?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Un sistema que recuerda cómo resolviste conflictos similares y los reaplica automáticamente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un comando para revertir un merge ya completado" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una herramienta de diff visual" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un plugin de Git para gestión de releases" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M10 - ¿Qué ocurre cuando hay conflictos durante un rebase?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El rebase se pausa y permite resolver cada conflicto commit por commit" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El rebase falla y se descartan todos los cambios" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Git resuelve automáticamente todos los conflictos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El rebase se convierte automáticamente en un merge" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M10 - ¿Qué comando se usa para indicar a Git que un conflicto ha sido resuelto?"
+case_sensitive = false
+answers = ["git add"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "M10 - Ordena los pasos para resolver un conflicto de merge"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["Ejecutar git merge y recibir el conflicto", "Abrir el archivo y localizar los marcadores de conflicto", "Editar el archivo para quedarse con el contenido deseado", "Ejecutar git add para marcar el conflicto como resuelto", "Ejecutar git commit para completar el merge"]

@@ -1,0 +1,190 @@
+title = "Módulo 13 - Patrones Modernos"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón elimina los null checks proporcionando un objeto por defecto?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Null Object" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Optional" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Strategy" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Template Method" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón abstrae la capa de persistencia con interfaz tipo colección?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Repository" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Data Mapper" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Active Record" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "DAO" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre Data Mapper y Active Record?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Data Mapper separa lógica de persistencia; Active Record la fusiona" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Data Mapper es más lento" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Active Record no soporta herencia" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No hay diferencia" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón almacena eventos en lugar de estado actual?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Event Sourcing" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Saga" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Outbox" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "CQRS" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón maneja transacciones distribuidas con compensaciones?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Saga" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Circuit Breaker" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Outbox" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Event Sourcing" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón previene fallos en cascada en sistemas distribuidos?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Circuit Breaker" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Saga" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Outbox" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Retry" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son estados de un Circuit Breaker? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Abierto (Open)" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Semi-abierto (Half-Open)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "En espera (Pending)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Reiniciando (Restarting)" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón garantiza consistencia eventual entre base de datos y mensajes en microservicios?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "Outbox" }
+[[slides.TypeAnswer.answers]]
+content = { Text = "outbox" }
+[[slides.TypeAnswer.answers]]
+content = { Text = "Outbox pattern" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los estados de un Circuit Breaker en su ciclo de vida típico:"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin del ciclo" }
+[[slides.Order.answers]]
+content = { Text = "Cerrado (Closed) - operación normal" }
+[[slides.Order.answers]]
+content = { Text = "Abierto (Open) - rechaza peticiones tras fallos" }
+[[slides.Order.answers]]
+content = { Text = "Semi-abierto (Half-Open) - permite peticiones limitadas" }
+[[slides.Order.answers]]
+content = { Text = "Cerrado (Closed) - se restablece si las pruebas pasan" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son beneficios de Event Sourcing? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Auditoría completa (historial de cambios)" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Permite reconstruir el estado en cualquier momento" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Reduce el almacenamiento necesario" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Simplifica las consultas de lectura" }

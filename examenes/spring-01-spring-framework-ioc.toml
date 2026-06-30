@@ -1,0 +1,188 @@
+title = "Módulo 01 - Spring Framework e IoC"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué es la Inversión de Control (IoC) en Spring?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Un principio donde el contenedor controla el flujo y la creación de objetos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un patrón para crear objetos manualmente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un tipo de base de datos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un método de logging" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Cuál es la forma RECOMENDADA de inyectar dependencias en Spring?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Inyección por constructor" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Inyección por campo (@Autowired)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Inyección por setter" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Inyección por interfaz" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué interfaz representa el contenedor principal de IoC en Spring?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "ApplicationContext" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "BeanFactory" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "SpringContainer" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ObjectFactory" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué diferencia a BeanFactory de ApplicationContext?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "ApplicationContext extiende BeanFactory con más funcionalidades empresariales" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "BeanFactory es más moderno" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ApplicationContext solo sirve para web" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Son exactamente iguales" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación se usa para marcar una clase como configuración de Spring?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Configuration" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Component" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Bean" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@SpringBootApplication" }
+
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación se usa en un método dentro de @Configuration para declarar un bean?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["@Bean"]
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Cuál es el scope por defecto de un bean en Spring?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Singleton" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Prototype" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Request" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Session" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación resuelve ambigüedades cuando hay múltiples beans del mismo tipo?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Qualifier" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Primary" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Autowired" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Bean" }
+
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 60000
+title = "Ordena el ciclo de vida de un bean Spring"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+answers = ["Instanciación", "Inyección de dependencias", "@PostConstruct", "Inicialización", "@PreDestroy"]
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación retrasa la inicialización de un bean hasta que sea solicitado?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Lazy" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Delay" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Postponed" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Eager" }
+

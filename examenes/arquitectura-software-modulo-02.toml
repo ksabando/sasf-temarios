@@ -1,0 +1,179 @@
+title = "Módulo 02 - Estilos Arquitectónicos"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál de los siguientes NO es un estilo arquitectónico?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Singleton (es un patrón de diseño, no estilo arquitectónico)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Monolito" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Pipes-and-Filters" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cliente-Servidor" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué estilo arquitectónico utiliza un núcleo mínimo con funcionalidades extensibles mediante plugins?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Microkernel" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cliente-Servidor" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Space-Based" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Capas" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la principal desventaja de la arquitectura en capas?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Sangría de capas y tendencia a Big Ball of Mud" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Baja seguridad" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No permite separación de responsabilidades" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es difícil de entender" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿En qué estilo arquitectónico todos los nodos son iguales (no hay servidor central)?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Peer-to-Peer" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cliente-Servidor" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Capas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Microkernel" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Para qué tipo de aplicación es más adecuado el estilo Pipes-and-Filters?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Procesamiento secuencial de datos (ETL, stream processing)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Aplicaciones interactivas tipo dashboard" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Sistemas con muchos usuarios concurrentes" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Aplicaciones móviles" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es una ventaja de la arquitectura monolítica?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Latencia mínima (todo en un proceso)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Escalado horizontal independiente por componente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Equipos autónomos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Aislamiento de fallos" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son estilos arquitectónicos reales? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Space-Based Architecture" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Microkernel" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Singleton" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Factory Method" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué ley establece que las organizaciones diseñan sistemas que reflejan su estructura de comunicación?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "Ley de Conway" }
+[[slides.TypeAnswer.answers]]
+content = { Text = "Conway's Law" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué anti-patrón describe un sistema sin estructura arquitectónica clara, resultado del crecimiento descontrolado?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "Big Ball of Mud" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los estilos arquitectónicos por nivel de acoplamiento (de menor a mayor acoplamiento):"
+points_awarded = 1000
+axis_labels = { from = "Menor acoplamiento", to = "Mayor acoplamiento" }
+[[slides.Order.answers]]
+content = { Text = "Monolito (todo en un solo proceso)" }
+[[slides.Order.answers]]
+content = { Text = "Arquitectura en Capas" }
+[[slides.Order.answers]]
+content = { Text = "Microkernel" }
+[[slides.Order.answers]]
+content = { Text = "Microservicios (distribuido)" }

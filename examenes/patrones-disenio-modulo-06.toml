@@ -1,0 +1,186 @@
+title = "Módulo 06 - Patrones Estructurales: Facade, Flyweight y Proxy"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es el propósito del patrón Facade?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Proporcionar una interfaz simplificada a un subsistema" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Controlar acceso a un objeto" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Compartir objetos granulares" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Agregar responsabilidades dinámicamente" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué clase de Spring es un ejemplo de Facade?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "JdbcTemplate" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ApplicationContext" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "BeanFactory" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "DispatcherServlet" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es el estado intrínseco en Flyweight?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El que se comparte entre objetos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El que cambia según el contexto" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El que se pasa como parámetro" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El que se almacena en el cliente" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué tipo de Proxy carga un objeto solo cuando es necesario?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Proxy virtual (Lazy Loading)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Proxy remoto" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Proxy de protección" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Proxy de caché" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué mecanismo de Java usa Flyweight internamente?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "String pool" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ClassLoader" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Garbage Collector" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Thread pool" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué anotación de Spring hace que el framework cree un Proxy?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Transactional" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Autowired" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Component" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Value" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son tipos de Proxy? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Proxy de protección (control de acceso)" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Proxy virtual (carga bajo demanda)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Proxy de clonación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Proxy de compilación" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es el rango de cacheo por defecto del método Integer.valueOf() en Java?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "-128 a 127" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los tipos de Proxy por nivel de cercanía al objeto real (del más cercano al más lejano):"
+points_awarded = 1000
+axis_labels = { from = "Más cercano", to = "Más lejano" }
+[[slides.Order.answers]]
+content = { Text = "Proxy de protección (misma JVM)" }
+[[slides.Order.answers]]
+content = { Text = "Proxy virtual (misma JVM, carga diferida)" }
+[[slides.Order.answers]]
+content = { Text = "Proxy de caché (misma JVM)" }
+[[slides.Order.answers]]
+content = { Text = "Proxy remoto (diferente JVM)" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son verdaderos sobre Facade? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Simplifica el uso de subsistemas complejos" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Puede convertirse en un God Object si no se controla" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Reemplaza completamente al subsistema" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Solo funciona con APIs REST" }

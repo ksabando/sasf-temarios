@@ -1,0 +1,135 @@
+title = "M01 - Introducción al Control de Versiones y Git"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Quién creó Git en 2005?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Linus Torvalds" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Richard Stallman" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Guido van Rossum" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "James Gosling" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+points_awarded = 1000
+title = "¿Cuál es la diferencia clave entre un VCS centralizado y uno distribuido?"
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "En un VCS distribuido cada clon tiene una copia completa del historial" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "En un VCS centralizado el repositorio principal está en un servidor" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Git es un sistema centralizado" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "SVN es un sistema distribuido" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué algoritmo usa Git para identificar objetos?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "SHA-1" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "MD5" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "SHA-256" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "AES-128" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué tipo de objeto NO existe en el modelo interno de Git?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Blob" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Tree" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Commit" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Branch" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Cuál es el nombre del estado en Git que indica que un archivo ha sido modificado pero no agregado al staging?"
+case_sensitive = false
+answers = ["modified", "modificado"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué objeto de Git almacena el contenido de un archivo tal cual?"
+case_sensitive = false
+answers = ["blob"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "Nombra una plataforma de alojamiento de repositorios Git"
+case_sensitive = false
+answers = ["GitHub", "GitLab", "Bitbucket"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "Ordena los tres estados de un archivo en Git (de primero a último)"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["Working Directory", "Staging Area", "Repository"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "Ordena los objetos de Git según la jerarquía de un commit"
+axis_labels = { from = "Nivel inferior", to = "Nivel superior" }
+answers = ["Blob", "Tree", "Commit"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "Ordena los pasos típicos para contribuir en GitHub (de primero a último)"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["Fork del repositorio", "Clonar el fork", "Crear una rama", "Abrir un Pull Request"]

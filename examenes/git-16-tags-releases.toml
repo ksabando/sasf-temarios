@@ -1,0 +1,146 @@
+title = "M16 - Tags y Releases"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Cuál es la diferencia entre un tag ligero y un tag anotado en Git?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Un tag anotado almacena el nombre del etiquetador, correo, fecha y un mensaje; un tag ligero es solo un puntero a un commit" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un tag ligero almacena metadatos mientras que un tag anotado no" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Los tags anotados solo pueden crearlos los propietarios del repositorio" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Los tags ligeros se almacenan en una base de datos separada de los tags anotados" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando crea un tag anotado llamado v1.0 con un mensaje?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git tag -a v1.0 -m \"Versión 1.0 lanzada\"" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git tag v1.0 -m \"Versión 1.0 lanzada\"" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git tag --annotate v1.0" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git tag -s v1.0" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Cómo se sube un solo tag llamado v1.0 a un repositorio remoto?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git push origin v1.0" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git push --tags" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git push origin --all" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git push origin refs/tags/v1.0" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué hace la bandera -s al crear un tag anotado?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Crea un tag firmado con GPG" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Crea un tag ligero" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Omite el mensaje del tag" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Elimina el tag del historial de commits" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando elimina un tag llamado v1.0 del repositorio local?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git tag -d v1.0" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git tag --remove v1.0" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git delete tag v1.0" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git branch -d v1.0" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Cuál es el formato estándar del versionado semántico (tres partes separadas por puntos)?"
+case_sensitive = false
+answers = ["MAYOR.MENOR.PARCHE", "MAJOR.MINOR.PATCH", "major.minor.patch"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "¿Qué subcomando de Git lista todos los tags existentes en el repositorio?"
+case_sensitive = false
+answers = ["git tag", "git tag -l", "git tag --list"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando de Git sube todos los tags al remoto de una sola vez?"
+case_sensitive = false
+answers = ["git push --tags"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "Ordena los pasos para crear y subir un tag anotado"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["git add . && git commit -m \"feat: lanzamiento v2.0\"", "git tag -a v2.0 -m \"Versión 2.0 lanzada\"", "git push origin v2.0"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "Ordena los componentes del versionado semántico del más significativo al menos significativo"
+axis_labels = { from = "Más significativo", to = "Menos significativo" }
+answers = ["MAYOR", "MENOR", "PARCHE"]

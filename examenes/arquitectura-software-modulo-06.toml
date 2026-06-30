@@ -1,0 +1,189 @@
+title = "Módulo 06 - CQRS (Command Query Responsibility Segregation)"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa CQRS?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Command Query Responsibility Segregation" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Complete Query Response System" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Concurrent Queue Resource Service" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Central Query Routing System" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre un Command y una Query?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Un command cambia el estado, una query no" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un command es más rápido que una query" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un command usa GET, una query usa POST" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No hay diferencia" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué principio previo inspiró CQRS?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "CQS (Command-Query Separation) de Bertrand Meyer" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "SOLID" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "DRY" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "YAGNI" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es una proyección (projection) en CQRS?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Una vista derivada de los eventos que actualiza el read model" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una consulta a la base de datos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un tipo de comando" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un diagrama de base de datos" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuándo NO es recomendable aplicar CQRS?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "En sistemas CRUD simples donde queries y commands son similares" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cuando lecturas y escrituras tienen requerimientos muy diferentes" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cuando se necesita auditoría completa" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "En sistemas con alta carga de lectura" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo se sincronizan normalmente el write model y el read model en CQRS?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Mediante eventos asíncronos (event-driven)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Mediante transacciones distribuidas (2PC)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Mediante llamadas REST síncronas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No se sincronizan" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es Event Sourcing?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Almacenar eventos de cambio en lugar del estado actual" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una base de datos SQL tradicional" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una herramienta de logging" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un framework de eventos" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles son patrones de sincronización en CQRS? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Event-Driven (eventos asíncronos)" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "CDC (Change Data Capture) con Debezium" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Polling cada 5 minutos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Llamadas HTTP directas al read model" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué problema resuelve un Snapshot en Event Sourcing?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "Reducir el número de eventos a replay" }
+[[slides.TypeAnswer.answers]]
+content = { Text = "reducir el replay de eventos" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena el flujo típico de CQRS con Event Sourcing:"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+[[slides.Order.answers]]
+content = { Text = "El cliente envía un Command" }
+[[slides.Order.answers]]
+content = { Text = "El Command Handler procesa y genera eventos de dominio" }
+[[slides.Order.answers]]
+content = { Text = "Los eventos se almacenan en el Event Store" }
+[[slides.Order.answers]]
+content = { Text = "Las proyecciones actualizan el Read Model" }

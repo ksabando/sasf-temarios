@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkc_users_ksabando_app_data_local_temp_docusaurus_init=globalThis.webpackChunkc_users_ksabando_app_data_local_temp_docusaurus_init||[]).push([[61235],{88552(a){a.exports=JSON.parse('{"name":"docusaurus-plugin-content-pages","id":"default"}')}}]);

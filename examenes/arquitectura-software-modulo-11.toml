@@ -1,0 +1,189 @@
+title = "Módulo 11 - Calidad Arquitectónica"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es un atributo de calidad (Quality Attribute) en arquitectura?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Una propiedad medible del sistema (disponibilidad, performance, seguridad)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una característica del lenguaje de programación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El número de líneas de código" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La versión del framework" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuánto downtime por año permite un 99.99% de disponibilidad?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "52.56 minutos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "8.76 horas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "5.26 minutos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "3.65 días" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué métrica de performance indica el tiempo de respuesta del 95% de las solicitudes?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "p95" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "p50" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "p99" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Throughput" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa CIA en seguridad de la información?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Confidentiality, Integrity, Availability" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Control, Identification, Authentication" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Centralized, Isolated, Auditable" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Code, Infrastructure, Application" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué método se usa para evaluar arquitecturas identificando trade-offs, risks y sensitivity points?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "ATAM (Architecture Tradeoff Analysis Method)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "SOLID" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Scrum" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "CMMI" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué tipo de escalado agrega más instancias en lugar de más recursos a una máquina?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Escalado horizontal" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Escalado vertical" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Escalado diagonal" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Escalado jerárquico" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son atributos de calidad? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Disponibilidad" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Mantenibilidad" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Número de líneas de código" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Nombre del framework" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué táctica arquitectónica mejora la disponibilidad?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Redundancia y failover" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Caching" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Sharding" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Encriptación" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón de testing sugiere muchos tests unitarios, algunos de integración y pocos E2E?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "Testing Pyramid" }
+[[slides.TypeAnswer.answers]]
+content = { Text = "Pirámide de Testing" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los pasos del método ATAM para evaluar una arquitectura:"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+[[slides.Order.answers]]
+content = { Text = "Presentar el negocio y los drivers arquitectónicos" }
+[[slides.Order.answers]]
+content = { Text = "Presentar la arquitectura actual" }
+[[slides.Order.answers]]
+content = { Text = "Identificar enfoques arquitectónicos y analizar QAs" }
+[[slides.Order.answers]]
+content = { Text = "Identificar sensitivity points, trade-off points y riesgos" }

@@ -1,0 +1,188 @@
+title = "Módulo 03 - Beans y Configuración"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación de estereotipo se usa para la capa de servicio?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Service" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Component" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Repository" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Controller" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación se usa en un método factory dentro de @Configuration?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Bean" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Component" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Service" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Autowired" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué método del ciclo de vida se ejecuta después de la inyección de dependencias?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@PostConstruct" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@PreDestroy" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "constructor" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "afterPropertiesSet" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué scope crea una nueva instancia del bean cada vez que se solicita?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Prototype" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Singleton" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Request" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Session" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué hace @Primary en un bean?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Le da prioridad cuando hay múltiples candidatos del mismo tipo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Lo marca como bean principal de configuración" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Lo hace singleton" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Lo hace eager" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué scope está disponible solo en aplicaciones web Spring?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Request" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Singleton" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Prototype" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Application" }
+
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué interfaz debe implementar un bean para ejecutar lógica después de que se establezcan las propiedades?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["InitializingBean"]
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación permite importar múltiples clases de configuración?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Import" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Include" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Configuration" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@ComponentScan" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué hace la anotación @Scope en un bean?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Define el alcance del bean (singleton, prototype, etc.)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Define el paquete del bean" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Define el nombre del bean" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Define el tipo del bean" }
+
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 60000
+title = "Ordena las anotaciones de estereotipo de Spring según su especialización"
+points_awarded = 1000
+axis_labels = { from = "General", to = "Específico" }
+answers = ["@Component", "@Service", "@Repository", "@Controller"]
+

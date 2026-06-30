@@ -1,0 +1,539 @@
+title = "Examen Final - React de Cero a Experto"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué comando se usa para crear un proyecto con Vite + React + TypeScript?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "npm create vite@latest -- --template react-ts" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "npx create-react-app my-app --template typescript" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "npm init react-app --ts" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "npx vite create my-app --react" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué convención de nomenclatura se usa para nombrar componentes en React?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "PascalCase (ej: Button, TaskCard)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "camelCase (ej: button, taskCard)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "snake_case (ej: task_card)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "kebab-case (ej: task-card)" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué retorna el hook useState?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Un par [valor, setter] — el valor actual y una función para actualizarlo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Solo el valor actual" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Solo la función setter" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un objeto con value y set" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la forma correcta de agregar un elemento a un array en el estado?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "setArray(prev => [...prev, newElement])" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "setArray(array.push(newElement))" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "array.push(newElement)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "setArray(array + newElement)" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué operador se usa para renderizado condicional cuando solo hay un caso verdadero?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "&& — ejemplo: {tasks.length === 0 && <p>Vacío</p>}" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "|| — ejemplo: {tasks.length === 0 || <p>Vacío</p>}" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "!! — ejemplo: {!!tasks.length && <p>Vacío</p>}" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "?? — ejemplo: {tasks ?? <p>Vacío</p>}" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Por qué no se debe usar el índice del .map() como key?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Al agregar/eliminar/reordenar elementos, los índices cambian y React reutiliza componentes incorrectamente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Porque el índice no es único" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Porque TypeScript no lo permite" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Porque afecta el rendimiento de Vite" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué función de React Hook Form se usa para conectar un input al formulario?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "register()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "connect()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "bind()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "link()" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué arreglo de dependencias hace que useEffect se ejecute solo al montar?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "[]" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "[null]" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "[undefined]" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Sin array de dependencias" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué función de React crea un contexto?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "createContext()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "createStore()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "createProvider()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "createGlobal()" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuándo conviene usar useReducer en lugar de useState?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Cuando el estado es complejo con múltiples campos o muchas transiciones" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Siempre, useReducer es superior en todo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Solo cuando se usa TypeScript" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cuando el estado es un string o number" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué regla debe seguir el nombre de un custom hook?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Debe empezar con use" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Debe terminar con Hook" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Debe estar en mayúsculas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Debe ser un verbo en infinitivo" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué componente renderiza las rutas hijas dentro de un layout compartido en React Router?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Outlet" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Children" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "NestedRoute" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "SubRoute" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre useRef y useState?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "useState provoca re-render al cambiar; useRef persiste el valor sin causar re-renders" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "useRef es para strings; useState para objetos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "useRef solo funciona en componentes de clase" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No hay diferencia práctica" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué son los Compound Components y cómo comparten estado?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Componentes que comparten estado implícitamente mediante React Context" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Componentes que se renderizan en secuencia" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Componentes que usan herencia de clases" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Componentes agrupados en un solo archivo" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es React.lazy y cuáles son sus requisitos?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Permite importar componentes dinámicamente; requiere default export y Suspense" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Crea componentes que se renderizan con retraso" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Optimiza el rendimiento de listas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Carga imágenes de forma diferida" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué hace el operador satisfies en TypeScript?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Verifica que un valor cumpla con un tipo sin cambiar el tipo inferido" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Fuerza una conversión de tipo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Valida tipos en runtime" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es un alias de as" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre getByText y queryByText en Testing Library?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "getByText lanza error si no encuentra el elemento; queryByText retorna null" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "getByText es asíncrono; queryByText es síncrono" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "queryByText lanza error; getByText retorna null" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Son idénticos en comportamiento" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué middleware de Zustand persiste el estado en localStorage?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "persist" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "localStorage" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "storage" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "cache" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Para qué sirve staleTime en React Query?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Define cuánto tiempo los datos se consideran frescos antes de necesitar refetch" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Define el tiempo máximo de caché" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Define el timeout de la petición" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Define cada cuánto se limpia la caché" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué hook de React Hook Form permite agregar/remover campos dinámicamente?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "useFieldArray" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "useDynamicFields" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "useArrayField" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "useFormArray" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles son los tres estados comunes de una petición asíncrona en React?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["loading, success, error", "loading, data, error", "cargando, éxito, error"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo se envía el token JWT en cada petición con axios?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["Authorization: Bearer <token>", "Bearer token en headers", "config.headers.Authorization"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es un optimistic update en React Query?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["actualizar la UI antes de la respuesta del servidor con revert en caso de error", "actualizar UI inmediatamente con rollback", "cambiar UI antes del server response"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué diferencia hay entre una transición spring y una tween en Framer Motion?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["spring simula física con masa y rigidez; tween es lineal con easing", "spring física, tween easing", "spring vs tween"]
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles son las reglas de los hooks en React? (selecciona todas las correctas)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Llamar hooks solo en el nivel superior, no dentro de condicionales o loops" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Llamar hooks solo desde componentes funcionales o custom hooks" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Los hooks pueden llamarse en cualquier función JavaScript" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Se pueden llamar hooks dentro de if/else para optimizar" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo proteger una app React de XSS? (selecciona todas las correctas)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Sanitizar con DOMPurify antes de dangerouslySetInnerHTML" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Implementar Content Security Policy con script-src 'self'" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Deshabilitar JavaScript en el navegador" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No usar React" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué ventajas tiene la arquitectura feature-based sobre layer-based? (selecciona todas las correctas)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Cada feature es autocontenida con componentes, hooks, store y API" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Equipos pueden trabajar en features distintas sin conflictos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Reduce el número total de archivos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es obligatorio para usar TypeScript" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué herramientas y estrategias existen para medir el rendimiento? (selecciona todas las correctas)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "React DevTools Profiler con flame chart" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Lighthouse para Core Web Vitals (LCP, FID, CLS)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Console.log de tiempos de render" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Deshabilitar el modo strict" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los pasos del flujo de autenticación JWT con refresh token"
+points_awarded = 1000
+[slides.Order.axis_labels]
+from = "Inicio"
+to = "Fin"
+answers = ["Usuario hace login y recibe access + refresh token", "Interceptor añade Authorization header a cada petición", "API responde 401 si el token expiró", "Interceptor llama al endpoint de refresh", "Reintenta la petición original con el nuevo token"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los pasos de un Dockerfile multi-stage para una app React"
+points_awarded = 1000
+[slides.Order.axis_labels]
+from = "Inicio"
+to = "Fin"
+answers = ["FROM node:20-alpine AS builder", "Copiar package.json y ejecutar npm ci", "Copiar código fuente y ejecutar npm run build", "FROM nginx:alpine como imagen final", "Copiar dist/ del builder a /usr/share/nginx/html"]

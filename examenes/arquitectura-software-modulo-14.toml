@@ -1,0 +1,189 @@
+title = "Módulo 14 - Gobierno y Estándares de Arquitectura"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es gobierno de arquitectura?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El conjunto de procesos, estándares y políticas que guían las decisiones arquitectónicas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un framework de desarrollo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una herramienta de monitoreo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un tipo de base de datos" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué metodología de arquitectura empresarial usa el ciclo ADM?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "TOGAF" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Zachman" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ITIL" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "COBIT" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es el rol de un Arquitecto de Solución?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Se enfoca en la arquitectura de un proyecto/sistema específico" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Define la visión global de TI de la organización" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Administra la infraestructura de red" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Escribe todo el código del proyecto" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es un Architecture Review Board (ARB)?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Un comité que revisa decisiones arquitectónicas significativas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una herramienta de diagramación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un repositorio de código" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un tipo de test" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué categoría del Tech Radar significa \"tecnología probada que deberíamos usar\"?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Adopt" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Trial" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Assess" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Hold" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Con qué frecuencia se recomienda hacer un health check arquitectónico completo?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Semestral" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Diario" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Semanal" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cada 5 años" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué riesgo tiene un Architecture Review Board?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Burocracia excesiva que ralentiza las decisiones" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Mejora la calidad del código" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Reduce la deuda técnica" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Aumenta la autonomía de los equipos" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es un RFC (Request for Comments) en arquitectura?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Una propuesta técnica revisada por pares antes de tomar una decisión" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un documento de requerimientos funcionales" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un reporte de bugs" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un contrato legal" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué herramienta clasifica tecnologías en Adopt, Trial, Assess, Hold?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "Tech Radar" }
+[[slides.TypeAnswer.answers]]
+content = { Text = "ThoughtWorks Tech Radar" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena las categorías del Tech Radar de mayor a menor adopción recomendada:"
+points_awarded = 1000
+axis_labels = { from = "Mayor adopción", to = "Evitar" }
+[[slides.Order.answers]]
+content = { Text = "Adopt" }
+[[slides.Order.answers]]
+content = { Text = "Trial" }
+[[slides.Order.answers]]
+content = { Text = "Assess" }
+[[slides.Order.answers]]
+content = { Text = "Hold" }

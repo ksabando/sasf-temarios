@@ -1,0 +1,186 @@
+title = "Módulo 14 - Antipatrones"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué anti-patrón describe una clase con demasiadas responsabilidades?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "God Class" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Spaghetti Code" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Golden Hammer" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Lava Flow" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué anti-patrón consiste en usar la misma solución para todos los problemas?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Golden Hammer" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "God Class" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Premature Abstraction" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Boat Anchor" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué problema principal tiene el Singleton mal usado?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Dificulta el testing y crea acoplamiento global" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es lento" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Consume mucha memoria" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No compila en Java moderno" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué principio viola el Copy & Paste Programming?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "DRY (Don't Repeat Yourself)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "KISS" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "YAGNI" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "SOLID" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué anti-patrón describe código sin estructura clara?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Spaghetti Code" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "God Class" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Poltergeist" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Lava Flow" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué anti-patrón describe objetos temporales sin propósito real?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Poltergeist" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Lava Flow" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "God Class" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Spaghetti Code" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son anti-patrones de diseño de código? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "God Class" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Spaghetti Code" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Observer" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Factory Method" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué acrónimo recuerda no añadir funcionalidad hasta que sea realmente necesaria?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "YAGNI" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los anti-patrones por nivel de gravedad (del menos grave al más grave):"
+points_awarded = 1000
+axis_labels = { from = "Menos grave", to = "Más grave" }
+[[slides.Order.answers]]
+content = { Text = "Boat Anchor (dependencias no usadas)" }
+[[slides.Order.answers]]
+content = { Text = "Premature Abstraction (interfaces innecesarias)" }
+[[slides.Order.answers]]
+content = { Text = "Lava Flow (código muerto persistente)" }
+[[slides.Order.answers]]
+content = { Text = "God Class (clase con demasiadas responsabilidades)" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son principios que ayudan a evitar anti-patrones? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "DRY (Don't Repeat Yourself)" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "KISS (Keep It Simple, Stupid)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Golden Hammer" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "God Class" }

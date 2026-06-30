@@ -1,0 +1,188 @@
+title = "Módulo 18 - Spring AOP"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación marca una clase como aspecto en Spring AOP?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Aspect" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Component" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Bean" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Advice" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación habilita el procesamiento de aspectos en Spring Boot?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@EnableAspectJAutoProxy" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@EnableAop" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@AspectJ" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@SpringAop" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué advice se ejecuta antes y después del método, pudiendo modificar su ejecución?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Around" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Before" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@After" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@AfterReturning" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué expression pointcut ejecuta el advice para métodos con una anotación específica?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@annotation(annotationName)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "execution(* *.*(..))" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "within(package)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "bean(beanName)" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué objeto proporciona metadatos sobre el método interceptado en AOP?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "JoinPoint" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ProceedingJoinPoint" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "MethodInterceptor" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Aspect" }
+
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación se ejecuta después de que un método retorna exitosamente?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["@AfterReturning"]
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué tipo de proxy usa Spring AOP cuando la clase no implementa interfaces?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "CGLIB" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "JDK Dynamic Proxy" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Java Proxy" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "AspectJ" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación define el orden de ejecución de múltiples aspectos?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Order" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Priority" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Sequence" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Sort" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Cuál es el caso de uso más común de Spring AOP?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Logging y métricas de métodos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Autenticación de usuarios" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Conexión a base de datos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Serialización JSON" }
+
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 60000
+title = "Ordena los tipos de advice según su momento de ejecución"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+answers = ["@Before", "@Around (inicio)", "Ejecución del método", "@Around (fin)", "@AfterReturning"]
+

@@ -1,0 +1,188 @@
+title = "Módulo 03 - Patrones Creacionales: Abstract Factory y Builder"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón es mejor para crear familias de productos relacionados?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Abstract Factory" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Singleton" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Factory Method" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Prototype" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué problema resuelve el Builder pattern?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Telescoping constructors y objetos con muchos parámetros" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Clonación de objetos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Garantizar una única instancia" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Crear un solo producto" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo se llama la clonación que copia referencias sin crear nuevos objetos?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Shallow copy" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Deep copy" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Lazy copy" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Virtual copy" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué clase del JDK usa el patrón Builder?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "StringBuilder" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "String" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ArrayList" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "HashMap" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre shallow copy y deep copy?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Shallow copia referencias; deep clona objetos internos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Shallow copia objetos anidados; deep no" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Son idénticas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Deep copy es más rápida" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué anotación de Lombok implementa el patrón Builder?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Builder" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Data" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Value" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@NoArgsConstructor" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son beneficios del patrón Builder? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Evita constructores con muchos parámetros" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Permite crear objetos inmutables paso a paso" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Garantiza una única instancia global" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Elimina la necesidad de interfaces" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón recomienda usar Copy Constructor en lugar del método clone()?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "Prototype" }
+[[slides.TypeAnswer.answers]]
+content = { Text = "prototype" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los pasos del patrón Builder para construir un objeto:"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+[[slides.Order.answers]]
+content = { Text = "Crear la instancia del Builder" }
+[[slides.Order.answers]]
+content = { Text = "Configurar cada parámetro opcional" }
+[[slides.Order.answers]]
+content = { Text = "Validar la configuración" }
+[[slides.Order.answers]]
+content = { Text = "Llamar al método build() para obtener el producto" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son verdaderos sobre Abstract Factory? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Crea familias de productos relacionados" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Es útil para implementar temas intercambiables en UI" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Garantiza una única instancia por familia" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es más simple que Factory Method" }

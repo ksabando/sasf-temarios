@@ -1,0 +1,188 @@
+title = "Módulo 04 - Patrones Estructurales: Adapter y Bridge"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es el propósito del patrón Adapter?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Convertir una interfaz en otra que el cliente espera" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Separar abstracción de implementación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Crear objetos complejos paso a paso" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Controlar acceso a un objeto" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué clase de JDK es un ejemplo de Adapter?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "InputStreamReader" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ArrayList" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "StringBuilder" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "HashMap" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la principal diferencia entre Adapter y Bridge?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Adapter adapta código existente; Bridge se diseña desde el principio" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Adapter se diseña desde el principio; Bridge adapta código existente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Son el mismo patrón" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Adapter es creacional; Bridge es estructural" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón se usa en JDBC para conectar diferentes bases de datos?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Bridge" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Adapter" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Factory Method" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Proxy" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuántas jerarquías de clases tiene el patrón Bridge?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Dos (abstracción e implementación)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una (implementación)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Tres" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Depende del caso" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué componente de Spring MVC usa el patrón Adapter?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "HandlerAdapter" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "DispatcherServlet" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ViewResolver" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ModelAndView" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son roles del patrón Adapter? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Target (interfaz que el cliente espera)" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Adaptee (clase con interfaz incompatible)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Builder (constructor del objeto)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Singleton (instancia única)" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué tipo de Adapter usa composición en lugar de herencia múltiple?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "Object Adapter" }
+[[slides.TypeAnswer.answers]]
+content = { Text = "object adapter" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los pasos para aplicar el patrón Bridge correctamente:"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+[[slides.Order.answers]]
+content = { Text = "Identificar las dimensiones que varían independientemente" }
+[[slides.Order.answers]]
+content = { Text = "Definir la interfaz de abstracción" }
+[[slides.Order.answers]]
+content = { Text = "Definir la interfaz de implementación" }
+[[slides.Order.answers]]
+content = { Text = "Conectar abstracción e implementación mediante composición" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son verdaderos sobre el patrón Bridge? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Separa abstracción de implementación" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Permite que ambas jerarquías varíen independientemente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es idéntico al patrón Adapter" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Solo funciona con una jerarquía de clases" }

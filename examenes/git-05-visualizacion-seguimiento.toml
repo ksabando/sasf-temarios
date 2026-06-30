@@ -1,0 +1,135 @@
+title = "M05 - Visualización y Seguimiento"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué flag de git log muestra la historia como un grafo ASCII?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "--graph" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--oneline" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--all" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--pretty" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué opción de git log filtra commits por rango de fechas?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "--since y --until" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--before y --after" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--date y --range" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--from y --to" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué opción de git log permite buscar commits que modifican una cadena específica en el código?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "-S (pickaxe)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--grep" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--author" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--committer" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+points_awarded = 1000
+title = "¿Cuáles de las siguientes opciones son válidas para git log?"
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "--oneline" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "--graph" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "--all" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--fast" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando muestra el detalle completo de un commit específico?"
+case_sensitive = false
+answers = ["git show"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando muestra quién modificó cada línea de un archivo?"
+case_sensitive = false
+answers = ["git blame"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando de Git muestra el registro de operaciones de referencia (cambios de HEAD)?"
+case_sensitive = false
+answers = ["git reflog"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "Ordena las opciones de git log --pretty según su nivel de detalle (de menor a mayor)"
+axis_labels = { from = "Menos detalle", to = "Más detalle" }
+answers = ["oneline", "short", "medium", "fuller"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "Ordena los pasos para encontrar un commit perdido con reflog"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["git reflog", "Identificar el hash deseado", "git checkout hash", "Crear una rama para preservarlo"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "Ordena las columnas típicas de la salida de git blame"
+axis_labels = { from = "Primera columna", to = "Última columna" }
+answers = ["Hash del commit", "Nombre del autor", "Fecha del commit", "Número de línea"]

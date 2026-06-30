@@ -1,0 +1,188 @@
+title = "Módulo 09 - Documentación con OpenAPI/Swagger"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué dependencia starter agrega OpenAPI/Swagger a Spring Boot?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "springdoc-openapi-starter-webmvc-ui" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "spring-boot-starter-swagger" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "springfox-boot-starter" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "openapi-spring-starter" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué URL expone la especificación OpenAPI en formato JSON?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "/v3/api-docs" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "/swagger-ui.html" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "/openapi.json" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "/api/docs" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación describe una operación de un endpoint?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Operation" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@ApiResponse" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Schema" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Tag" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación define el esquema de una respuesta OpenAPI?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@ApiResponse" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Operation" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Schema" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Content" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación describe el schema de un modelo en OpenAPI?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Schema" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Model" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@ApiModel" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Dto" }
+
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué URL expone la interfaz gráfica de Swagger UI?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["/swagger-ui.html", "/swagger-ui/index.html"]
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación agrupa endpoints bajo una categoría en OpenAPI?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Tag" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Category" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Group" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Api" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué elemento de OpenAPI describe los servidores donde se despliega la API?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "servers" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "hosts" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "endpoints" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "baseUrl" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué propiedad de @Schema permite mostrar un valor de ejemplo en Swagger?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "example" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "default" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "description" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "pattern" }
+
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 60000
+title = "Ordena los pasos para documentar una API con OpenAPI"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+answers = ["Agregar dependencia springdoc", "Configurar OpenAPI bean", "Anotar endpoints con @Operation", "Anotar modelos con @Schema", "Acceder a Swagger UI"]
+

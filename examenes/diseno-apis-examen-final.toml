@@ -1,0 +1,527 @@
+title = "Examen Final - Diseño de APIs: REST, GraphQL, OpenAPI"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa REST?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Representational State Transfer" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Remote State Transfer" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Resource State Transition" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Reliable System Transfer" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál de los siguientes NO es un principio REST según Fielding?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Session-based" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Stateless" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cacheable" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Uniform Interface" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la convención correcta para nombres de recursos en URLs REST?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "kebab-case" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "PascalCase" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "camelCase" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "snake_case" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la forma correcta de representar las tareas de un usuario en REST?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "/users/{id}/tasks" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "/get-user-tasks?userId=5" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "/userTasks/5" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "/tasksOfUser/5" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué método HTTP NO es idempotente?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "POST" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "GET" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "PUT" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "DELETE" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué código HTTP retorna un POST exitoso que crea un recurso?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "201 Created" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "200 OK" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "202 Accepted" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "204 No Content" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre 401 y 403?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "401 es no autenticado, 403 es autenticado sin permisos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Son iguales" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "401 es no autorizado, 403 es no encontrado" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "401 es timeout, 403 es forbidden" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál de los siguientes es un breaking change?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Renombrar un campo existente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Añadir un campo opcional" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Añadir un nuevo endpoint" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Mejorar un mensaje de error" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué estrategia de versionado es más RESTful?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Header (Accept: application/vnd.api.v1+json)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "URL path (/v1/tasks)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Query param (?v=1)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Domain (v1.api.taskflow.com)" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué ventaja tiene cursor pagination sobre offset pagination?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Es consistente aunque haya inserciones concurrentes" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Permite saltar a cualquier página" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es más simple de implementar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No requiere base de datos" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo se expresa un filtro \"mayor o igual que\" en query string REST?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "?age=gte:18" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "?age>=18" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "?age=min:18" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "?age=from:18" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa HATEOAS?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Hypermedia as the Engine of Application State" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Hypertext And Transfer Extension Over Application State" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "High Availability Through Endpoint Object Access System" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Hypertext Application Transport Extension for Open API Systems" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué formato se usa típicamente para hypermedia en APIs REST?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "HAL (Hypertext Application Language)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "XML" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "YAML" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "CSV" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa el enfoque API-First?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Escribir el contrato OpenAPI primero, generar código después" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Escribir código primero, generar OpenAPI después" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usar solo APIs de terceros" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No usar OpenAPI" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué composición de schema en OpenAPI combina múltiples schemas como herencia?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "allOf" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "oneOf" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "anyOf" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "noneOf" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre autenticación y autorización?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Autenticación = ¿quién eres?, Autorización = ¿qué puedes hacer?" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Son lo mismo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Autenticación = ¿qué puedes hacer?, Autorización = ¿quién eres?" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No hay diferencia práctica" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué flujo OAuth2 es más seguro para aplicaciones frontend SPA?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Authorization Code + PKCE" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Client Credentials" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Implicit Grant" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Resource Owner Password" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué código HTTP retorna rate limiting?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "429 Too Many Requests" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "400 Bad Request" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "403 Forbidden" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "503 Service Unavailable" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué ventaja principal tiene GraphQL sobre REST?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El cliente especifica exactamente qué datos necesita" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es más rápido" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usa HTTP/2" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es más maduro" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué formato usa gRPC para serialización?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Protocol Buffers" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "JSON" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "XML" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "YAML" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué header HTTP indica la URL del recurso creado tras un POST exitoso?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["Location", "location"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa CORS?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["Cross-Origin Resource Sharing", "cross origin resource sharing"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué herramienta se usa para linting de especificaciones OpenAPI?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["Spectral", "spectral"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué ley de diseño de APIs dice: sé conservador en lo que envías, liberal en lo que aceptas?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["Postel's Law", "Ley de Postel", "Postel", "Principio de Robustez"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué solución de GraphQL evita el problema N+1?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["DataLoader", "dataloader", "data loader"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué propiedad en oneOf de OpenAPI determina qué schema usar en tiempo de ejecución?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["discriminator", "discriminator property", "discriminador"]
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son claims estándar de JWT? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "sub (subject)" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "exp (expiration)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "pwd (password)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "tok (token type)" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son formatos de hypermedia válidos? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "HAL" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Siren" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Plain JSON" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "CSV" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los niveles del Richardson Maturity Model del más básico al más maduro."
+points_awarded = 1000
+axis_labels = { from = "Básico", to = "Maduro" }
+[[slides.Order.answers]]
+content = { Text = "Nivel 0 — POX: un solo endpoint, sin recursos" }
+[[slides.Order.answers]]
+content = { Text = "Nivel 1 — Recursos: múltiples URIs identifican recursos" }
+[[slides.Order.answers]]
+content = { Text = "Nivel 2 — Verbos HTTP: uso correcto de GET, POST, PUT, DELETE" }
+[[slides.Order.answers]]
+content = { Text = "Nivel 3 — HATEOAS: hypermedia controla el estado" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena el ciclo de vida de una versión de API, desde su publicación hasta su eliminación."
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+[[slides.Order.answers]]
+content = { Text = "Publicación y anuncio del changelog" }
+[[slides.Order.answers]]
+content = { Text = "Uso activo con soporte" }
+[[slides.Order.answers]]
+content = { Text = "Deprecation anunciado (header Deprecation + Sunset)" }
+[[slides.Order.answers]]
+content = { Text = "Eliminación definitiva" }

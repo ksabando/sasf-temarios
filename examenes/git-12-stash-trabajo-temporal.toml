@@ -1,0 +1,146 @@
+title = "M12 - Stash y Trabajo Temporal"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando guarda los cambios sin confirmar en el stash?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git stash push" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git stash save" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git stash store" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git stash commit" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Cuál es la diferencia entre git stash pop y git stash apply?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Pop aplica los cambios en una rama nueva y apply en la actual" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Pop aplica los cambios y los elimina del stash; apply solo los aplica" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Apply requiere resolver conflictos; pop no" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Pop solo funciona con el stash más reciente" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando muestra todos los stashes guardados?"
+case_sensitive = false
+answers = ["git stash list"]
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué hace git stash drop?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Aplica el stash y lo mantiene en la lista" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Elimina todos los stashes sin posibilidad de recuperación" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Elimina un stash específico de la lista" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Descarta los cambios del working directory" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+points_awarded = 1000
+title = "¿Qué efectos tiene git stash clear?"
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Elimina todos los stashes de la lista" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Solo elimina el stash más antiguo" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "No se puede deshacer fácilmente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Aplica y elimina cada stash uno por uno" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "Ordena la secuencia típica para usar stash con cambios parciales"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["Hacer cambios en el working directory", "Ejecutar git stash push -m 'WIP: feature x'", "Cambiar a otra rama para trabajar", "Volver a la rama original y ejecutar git stash pop"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué flag de git stash incluye archivos no rastreados (untracked)?"
+case_sensitive = false
+answers = ["-u", "--include-untracked"]
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué hace git stash branch <nombre>?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Crea una nueva rama, aplica el stash y lo elimina de la lista" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Crea una rama nueva vacía vinculada al stash" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Renombra el stash actual con el nombre de una rama" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Mueve el stash a otra rama existente" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "Ordena los pasos para stash con parche interactivo"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["Ejecutar git stash -p", "Revisar cada fragmento (hunk) y decidir si stash o no", "Los fragmentos seleccionados se guardan en el stash", "Los fragmentos no seleccionados permanecen en el working directory"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando muestra el contenido detallado de un stash sin aplicarlo?"
+case_sensitive = false
+answers = ["git stash show", "git stash show -p"]

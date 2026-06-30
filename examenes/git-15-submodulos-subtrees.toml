@@ -1,0 +1,146 @@
+title = "M15 - Submódulos y Subtrees"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué hace git submodule add <url> <ruta>?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Agrega un repositorio externo como subdirectorio vinculado al proyecto principal" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Copia todo el contenido del repositorio externo al proyecto" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Crea un enlace simbólico al repositorio externo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Descarga el repositorio como un archivo comprimido" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando se ejecuta después de clonar un repositorio con submódulos para inicializarlos?"
+case_sensitive = false
+answers = ["git submodule init", "git submodule update"]
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué hace git submodule update --remote?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Actualiza la URL remota de todos los submódulos" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Actualiza cada submódulo al último commit de su rama remota configurada" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Elimina submódulos que ya no existen en el remoto" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Forza la actualización ignorando conflictos" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué hace el flag --recurse-submodules al clonar?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Inicializa y actualiza automáticamente todos los submódulos durante el clonado" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Clona solo los submódulos ignorando el repositorio padre" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Omite los submódulos durante la clonación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Muestra los submódulos disponibles sin clonarlos" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "Ordena los pasos para agregar un submódulo correctamente"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["Ejecutar git submodule add <url> <ruta>", "Hacer commit del archivo .gitmodules y los cambios", "Empujar los cambios al repositorio remoto"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando ejecuta una acción en cada submódulo?"
+case_sensitive = false
+answers = ["git submodule foreach"]
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+points_awarded = 1000
+title = "¿Qué ventaja tiene git subtree sobre git submodule?"
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El código del subtree se incluye directamente en el repositorio principal" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "No requiere comandos adicionales para que otros contribuyentes lo usen" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Solo funciona con repositorios públicos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Permite ignorar cambios del repositorio externo automáticamente" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "Ordena la secuencia para agregar un subtree"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["git subtree add --prefix=<dir> <url> <rama> --squash", "Verificar que los archivos se agregaron correctamente", "Hacer commit del resultado"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando trae los últimos cambios de un repositorio externo en un subtree?"
+case_sensitive = false
+answers = ["git subtree pull", "git subtree pull --prefix=<dir> <url> <rama>"]
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué hace git subtree push?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Envía los cambios del subtree de vuelta al repositorio original" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Empuja todo el repositorio incluyendo el subtree" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Elimina el subtree del repositorio remoto" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Actualiza el subtree con los cambios del remoto" }

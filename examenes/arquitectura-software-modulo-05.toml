@@ -1,0 +1,197 @@
+title = "Módulo 05 - Clean Architecture"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Quién propuso Clean Architecture?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Robert C. Martin (Uncle Bob)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Eric Evans" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Alistair Cockburn" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Martin Fowler" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la regla fundamental de Clean Architecture?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Las dependencias deben ir hacia adentro" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usar siempre microservicios" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El frontend debe ser React" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Todas las clases deben ser interfaces" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles son las 4 capas de Clean Architecture (de adentro hacia afuera)?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Entities → Use Cases → Interface Adapters → Frameworks & Drivers" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Frameworks → Interface Adapters → Use Cases → Entities" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Use Cases → Entities → Interface Adapters → Frameworks" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Interface Adapters → Entities → Use Cases → Frameworks" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué contiene la capa de Entities en Clean Architecture?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Reglas de negocio empresariales de alto nivel" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Controladores REST y DTOs" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Implementaciones de base de datos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Configuración de Spring" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es un Interactor en Clean Architecture?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "La implementación de un caso de uso" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un controlador REST" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un adaptador de base de datos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un framework" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa Screaming Architecture?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "La arquitectura debe reflejar el dominio del problema, no la tecnología" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La arquitectura debe ser ruidosa" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El sistema debe tener logs extensivos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La documentación debe ser extensa" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Dónde deben definirse las interfaces de repositorio en Clean Architecture?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "En la capa de Use Cases (output boundaries)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "En la capa de Entities" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "En la capa de Frameworks" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "En la capa de Interface Adapters" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia principal entre Clean Architecture y Hexagonal?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Clean Architecture añade la separación Entities/Use Cases y el patrón Presenter" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Hexagonal es más moderna" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Clean Architecture no usa interfaces" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Son exactamente iguales" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles son patrones utilizados en Clean Architecture? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Presenter" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Interactor" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Observer" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Factory" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena las capas de Clean Architecture desde la más interna a la más externa:"
+points_awarded = 1000
+axis_labels = { from = "Más interna", to = "Más externa" }
+[[slides.Order.answers]]
+content = { Text = "Entities" }
+[[slides.Order.answers]]
+content = { Text = "Use Cases (Interactors)" }
+[[slides.Order.answers]]
+content = { Text = "Interface Adapters (Controllers, Presenters)" }
+[[slides.Order.answers]]
+content = { Text = "Frameworks & Drivers (Web, DB, UI)" }

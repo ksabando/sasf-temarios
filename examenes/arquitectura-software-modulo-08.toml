@@ -1,0 +1,189 @@
+title = "Módulo 08 - Microservicios vs Monolito"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la principal ventaja del monolito frente a microservicios?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Simplicidad y desarrollo rápido inicial" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Escalado independiente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Equipos autónomos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Tecnología heterogénea" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón se usa para migrar incrementalmente de monolito a microservicios?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Strangler Fig" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Circuit Breaker" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Saga Pattern" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "CQRS" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es un Modular Monolith?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Un monolito con módulos bien delimitados que podría separarse en microservicios" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un monolito con mala arquitectura" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un sistema completamente distribuido" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un tipo de base de datos" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué ley explica por qué la estructura organizacional afecta la arquitectura del sistema?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Ley de Conway" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Ley de Moore" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Ley de Murphy" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Ley de Demeter" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuánto es recomendable empezar con microservicios en lugar de monolito?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Casi nunca, empezar con monolito modular y evolucionar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Siempre, los microservicios son mejores" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cuando el equipo es pequeño y el presupuesto limitado" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cuando el proyecto usa Java" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es una desventaja de los microservicios?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Complejidad distribuida y overhead operacional" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Escalado independiente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Equipos autónomos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Deploys independientes" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón de descomposición de microservicios se basa en DDD?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Por subdominio / bounded context" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Por capas técnicas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Por tamaño de código" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Por tecnología" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuándo es señal de que un monolito debería migrar a microservicios? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Cuando los deploys tardan semanas" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Cuando cambios no relacionados se bloquean mutuamente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cuando el equipo tiene menos de 5 personas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cuando la aplicación tiene menos de 10 tablas" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es el tamaño ideal de un microservicio según la filosofía de arquitectura?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "Suficientemente pequeño para un equipo, suficientemente grande para tener sentido de negocio" }
+[[slides.TypeAnswer.answers]]
+content = { Text = "tamaño adecuado al equipo y con sentido de negocio" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los pasos para migrar de monolito a microservicios con Strangler Fig:"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+[[slides.Order.answers]]
+content = { Text = "Identificar bounded contexts en el monolito" }
+[[slides.Order.answers]]
+content = { Text = "Crear un Modular Monolith primero" }
+[[slides.Order.answers]]
+content = { Text = "Extraer progresivamente cada módulo como microservicio independiente" }
+[[slides.Order.answers]]
+content = { Text = "Eliminar el código legacy del monolito cuando ya no se usa" }

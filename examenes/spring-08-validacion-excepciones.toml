@@ -1,0 +1,199 @@
+title = "Módulo 08 - Validación y Manejo de Excepciones"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación de Jakarta Bean Validation valida que un campo no sea nulo?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@NotNull" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@NotEmpty" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@NotBlank" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@NonNull" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación se usa en controladores para activar la validación?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Valid" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Validated" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@NotNull" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@AssertTrue" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación de validación verifica que un string no esté vacío (ni nulo, ni '')?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@NotBlank" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@NotEmpty" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@NotNull" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Size" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué clase se usa para el manejo global de excepciones en Spring?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@ControllerAdvice" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@ExceptionHandler" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@RestController" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@GlobalException" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué estándar usa Spring Boot 3.x para devolver errores en formato JSON?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "RFC 9457 Problem Details" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "JSON:API" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "GraphQL Errors" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "SOAP Fault" }
+
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación se usa en un método para manejarlo como handler de excepciones?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["@ExceptionHandler"]
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación de Bean Validation valida una expresión regular?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Pattern" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Regex" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Match" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Format" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Cómo se crea una validación personalizada en Spring?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Implementando ConstraintValidator y creando una anotación @Constraint" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Escribiendo código en el controlador" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usando @CustomValidation" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Extendiendo una clase abstracta" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación agrupa validaciones en Spring?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Validated" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Valid" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Group" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@ValidationGroup" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué clase abstracta se extiende para personalizar el manejo de errores con ResponseEntity?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "ResponseEntityExceptionHandler" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ExceptionHandler" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ControllerAdvice" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "DefaultErrorAttributes" }
+

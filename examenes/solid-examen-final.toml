@@ -1,0 +1,571 @@
+title = "Examen Final - Principios SOLID"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significan las siglas SOLID?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Simple, Open, Lightweight, Integrated, Dynamic" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Structured, Optimized, Layered, Isolated, Distributed" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Scalable, Observable, Liskov, Inheritable, Deployable" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Quién acuñó el acrónimo SOLID y quién formuló los principios?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Acrónimo: Michael Feathers. Principios: Robert C. Martin (Uncle Bob) alrededor del año 2000" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Acrónimo: Martin Fowler. Principios: Kent Beck en 1999" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Acrónimo: Robert C. Martin. Principios: Michael Feathers en 2005" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Acrónimo: Grady Booch. Principios: Erich Gamma en 1995" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los rangos de complejidad ciclomática de menor a mayor severidad"
+points_awarded = 1000
+axis_labels = { from = "Menor severidad", to = "Mayor severidad" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "1-10: Baja (código simple y bien estructurado)" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "11-20: Moderada (revisar)" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "21-50: Alta (refactorizar urgente)" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "50+: Inmantenible" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la definición formal del Single Responsibility Principle?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Una clase debe tener una sola razón para cambiar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una clase debe tener un solo método público" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una clase debe implementar una sola interfaz" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una clase debe contener un máximo de 100 líneas de código" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué code smell indica directamente una violación de SRP?"
+points_awarded = 1000
+answer_mode = "TypeAnswer"
+case_sensitive = false
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "God Class" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Long Method" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles son beneficios concretos de aplicar SRP? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Mayor testabilidad: clases pequeñas se prueban de forma aislada" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Menos conflictos de merge: cada clase cambia por razones distintas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Menor cantidad de archivos en el proyecto" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Mayor velocidad de compilación por tener menos imports" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la definición del Open/Closed Principle?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Las entidades de software deben estar abiertas para extensión pero cerradas para modificación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Las clases deben estar abiertas para modificación pero cerradas para herencia" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Los métodos públicos deben estar abiertos y los privados cerrados" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El código debe ser open source para permitir extensión comunitaria" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es el anti-patrón más común que viola OCP?"
+points_awarded = 1000
+answer_mode = "TypeAnswer"
+case_sensitive = false
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El switch o if-else gigante que debe modificarse para agregar cada nueva variante" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Switch statement que crece con cada nuevo requerimiento" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles son señales de violación de OCP? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Tener que modificar una clase existente para agregar nueva funcionalidad" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Métodos con nombres como processType1, processType2, handleVariantA" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Uso de inyección de dependencias por constructor con interfaces" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Aplicación del patrón Strategy con múltiples implementaciones" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la definición formal del Liskov Substitution Principle?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Si S es un subtipo de T, los objetos de tipo T deben poder reemplazarse por objetos de tipo S sin alterar el programa" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Toda subclase debe agregar al menos un método nuevo no presente en la clase base" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Las jerarquías de herencia no deben superar los 3 niveles de profundidad" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Las subclases deben ser más restrictivas que sus clases base" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Por qué el ejemplo Rectángulo vs Cuadrado viola LSP?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Square hereda de Rectangle pero sobrescribe setWidth para también cambiar la altura, rompiendo la expectativa del cliente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Porque Square tiene menos métodos que Rectangle y no puede implementarlos todos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Porque Rectangle y Square deben ser clases independientes sin relación de herencia" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Porque el área de un cuadrado se calcula diferente a la de un rectángulo" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué establece Design by Contract sobre precondiciones y postcondiciones en subclases?"
+points_awarded = 1000
+answer_mode = "TypeAnswer"
+case_sensitive = false
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "La subclase no puede fortalecer precondiciones ni debilitar postcondiciones; debe mantener los invariantes" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Precondiciones no se fortalecen, postcondiciones no se debilitan, invariantes se mantienen" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la definición del Interface Segregation Principle?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Los clientes no deben ser forzados a depender de interfaces que no usan; es mejor tener interfaces pequeñas y específicas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Todas las interfaces deben tener exactamente un método abstracto" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Las interfaces deben ser segregadas por paquete, no por funcionalidad" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cada clase debe implementar exactamente una interfaz" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Diferencia entre 'fat interface' y 'role interface'?"
+points_awarded = 1000
+answer_mode = "TypeAnswer"
+case_sensitive = false
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Fat interface tiene muchos métodos que no todos usan; role interface es pequeña y representa una capacidad específica" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Fat interface es grande y genérica; role interface es pequeña y especializada" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo aplica ISP Spring Data JPA?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Con CrudRepository (CRUD básico), PagingAndSortingRepository (paginación) y JpaRepository (flush) para que cada cliente dependa solo de lo que necesita" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Obligando a que todos los repositorios extiendan JpaRepository" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Eliminando las interfaces y usando anotaciones directamente en las clases" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Creando una única interfaz Repository con todos los métodos posibles" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la definición del Dependency Inversion Principle?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Módulos de alto nivel no deben depender de bajo nivel; ambos deben depender de abstracciones. Las abstracciones no dependen de detalles" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Todas las dependencias deben ser inyectadas por un contenedor IoC" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Los detalles deben controlar las abstracciones para garantizar el funcionamiento" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cada módulo debe tener su propio sistema de dependencias independiente" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre DIP (principio) y DI (patrón)?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "DIP es el principio (qué): depender de abstracciones. DI es el patrón (cómo): inyectar dependencias desde fuera" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Son lo mismo, Dependency Injection es el nombre moderno de DIP" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "DI es el principio y DIP es el patrón de implementación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "DIP aplica en backend y DI en frontend" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles son señales de violación de DIP? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Uso de new para instanciar clases concretas dentro de constructores o métodos" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Llamadas a métodos estáticos de clases concretas como FileUtils o DatabaseManager" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Declaración de variables usando tipos de interfaz en lugar de clases concretas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Inyección de dependencias por constructor con validación de nulls" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo promueve Spring el SRP mediante su arquitectura en capas?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Controller (HTTP), @Service (lógica de negocio) y @Repository (persistencia), cada una con una responsabilidad única" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usando @Component para todas las clases y delegando la organización al desarrollador" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Forzando que cada bean implemente al menos 3 interfaces de Spring" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Centralizando toda la lógica de negocio en el application.properties" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón Spring reemplaza un switch/if-else en servicios para cumplir OCP?"
+points_awarded = 1000
+answer_mode = "TypeAnswer"
+case_sensitive = false
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Strategy con inyección de lista de beans (@Component + List<Interfaz>)" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Patrón Strategy usando beans de Spring" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles son violaciones SOLID comunes en aplicaciones Spring? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Controllers que hacen validación, lógica, persistencia y notificaciones (viola SRP)" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Switches/if-else en servicios en lugar de estrategias polimórficas (viola OCP)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Uso de @Service para lógica de negocio separada" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Inyección por constructor con interfaces como tipo de parámetro" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo se aplica SRP en React?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Componentes de presentación para UI, custom hooks para lógica/efectos y componentes contenedor para orquestación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un solo componente que maneje todo: estado, efectos, renderizado y llamadas API" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Poniendo toda la lógica en el JSX y dejando los hooks solo para estilos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usando clases en lugar de funciones para agrupar toda la lógica" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo se aplica DIP en React?"
+points_awarded = 1000
+answer_mode = "TypeAnswer"
+case_sensitive = false
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Custom hooks y Context API actúan como abstracciones que ocultan implementaciones concretas (fetch, axios)" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Los componentes dependen de abstracciones (hooks/context) sin conocer los detalles de implementación" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo se aplica ISP en componentes React?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Componentes atómicos con props mínimas (UserAvatar, UserName) en lugar de un UserCard con 10 props opcionales" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Pasando todas las props posibles a cada componente para máxima flexibilidad" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usando un solo hook global que contenga todos los datos de la aplicación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Definiendo interfaces con al menos 10 métodos opcionales por componente" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es el primer principio SOLID que debe aplicarse en una refactorización?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "SRP: es el más fácil de identificar y al separar responsabilidades se facilita aplicar los demás principios" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "DIP: porque sin inversión de dependencias no se puede refactorizar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "LSP: porque la sustituibilidad es la base de todo diseño orientado a objetos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ISP: porque las interfaces definen la arquitectura completa del sistema" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es 'Big Bang Refactoring' y por qué es peligroso?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Refactorizar todo de una vez en una rama separada; peligroso por rotura masiva, conflictos de merge y sin punto de retorno claro" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Refactorizar en pequeños incrementos con pruebas continuas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Eliminar el código legacy y reescribirlo desde cero con un equipo nuevo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Hacer refactoring solo durante los fines de semana" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los pasos para refactorizar un sistema legacy sin pruebas"
+points_awarded = 1000
+axis_labels = { from = "Primer paso", to = "Último paso" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Escribir pruebas de caracterización del comportamiento actual" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Identificar seams (puntos de extensión) en el código" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Refactorizar en pequeñas iteraciones con pruebas verdes" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Verificar métricas de mejora: complejidad, cobertura, líneas por clase" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la relación entre SOLID y los Design Patterns?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "SOLID son principios; Design Patterns son soluciones que implementan esos principios: Strategy para OCP, Factory para DIP" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Design Patterns reemplazan a SOLID por ser más concretos y prácticos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "SOLID y Design Patterns son escuelas incompatibles de diseño de software" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Design Patterns son los principios y SOLID es la implementación práctica" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuándo NO se debe aplicar SOLID? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "En prototipos o MVPs donde la velocidad de entrega es prioritaria" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Cuando la abstracción introduce más complejidad que el beneficio obtenido (YAGNI)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "En sistemas empresariales con lógica de negocio compleja y larga vida útil" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "En aplicaciones que requieren alta mantenibilidad a largo plazo" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los principios SOLID según su secuencia lógica de aplicación en un diseño nuevo"
+points_awarded = 1000
+axis_labels = { from = "Primero", to = "Último" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "SRP: Una responsabilidad por clase" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "OCP: Extensión sin modificación mediante abstracciones" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "LSP: Subtipos sustituibles sin romper el comportamiento" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "ISP y DIP: Interfaces segregadas y dependencia de abstracciones" }

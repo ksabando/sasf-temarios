@@ -1,0 +1,146 @@
+title = "M18 - Git Hooks Servidor y CI/CD"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "¿Qué hook del lado del servidor se ejecuta una vez al inicio de un push y puede rechazar todo el push?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "pre-receive" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "post-receive" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "update" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "pre-push" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "¿Qué hook del lado del servidor se ejecuta una vez por rama al hacer push y puede rechazar ramas individuales?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "update" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "pre-receive" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "post-receive" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "post-update" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "¿Qué hook del servidor se usa típicamente para disparar pipelines de CI/CD o enviar notificaciones después de un push?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "post-receive" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "pre-receive" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "update" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "pre-commit" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "¿Qué evento de GitHub Actions dispara un flujo de trabajo cuando se sube código a cualquier rama?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "push" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "pull_request" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "workflow_dispatch" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "schedule" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué es un webhook en el contexto de CI/CD y Git?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Una llamada HTTP disparada por eventos del repositorio para notificar a servicios externos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un script almacenado en .git/hooks del servidor" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un comando de Git que despliega código a producción" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un ejecutor de pipelines CI/CD incorporado" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué evento de GitHub Actions dispara un flujo de trabajo cuando se abre o actualiza un pull request?"
+case_sensitive = false
+answers = ["pull_request"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué formato de archivo de GitLab CI define los pipelines de CI/CD?"
+case_sensitive = false
+answers = [".gitlab-ci.yml", ".gitlab-ci.yaml"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Cuál es el nombre de archivo por defecto para un flujo de trabajo de GitHub Actions (sin la extensión .yml)?"
+case_sensitive = false
+answers = ["main", "ci"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "Ordena los eventos en el ciclo de vida de una ejecución de CI de GitHub Actions disparada por un push"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["El desarrollador sube commits a una rama", "GitHub detecta el evento push", "El ejecutor del flujo de trabajo clona el repositorio", "Los jobs definidos en el flujo de trabajo se ejecutan", "Los resultados se reportan en el estado del commit"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "Ordena los hooks en el orden en que se ejecutan en el servidor durante un push"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["pre-receive", "update", "post-receive"]

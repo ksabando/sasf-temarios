@@ -1,0 +1,188 @@
+title = "Módulo 10 - Testing de APIs"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación limita el contexto de Spring a solo los controladores web?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@WebMvcTest" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@SpringBootTest" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@DataJpaTest" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@RestControllerTest" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué clase se usa para realizar peticiones HTTP simuladas en tests?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "MockMvc" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "WebTestClient" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "TestRestTemplate" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "HttpClient" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación de Mockito reemplaza un bean real por un mock en el contexto de Spring?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@MockBean" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Mock" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@InjectMocks" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@SpyBean" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué biblioteca se usa para hacer assertions sobre respuestas JSON en MockMvc?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "JsonPath" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Hamcrest" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "AssertJ" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "JUnit" }
+
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué método de MockMvc ejecuta la petición HTTP simulada?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["perform"]
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué plugin de Maven genera reportes de cobertura de código?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "jacoco-maven-plugin" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "surefire-plugin" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "coverage-plugin" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "maven-checkstyle-plugin" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación de Spring Boot inicia el servidor en un puerto aleatorio para tests?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@SpringBootTest(webEnvironment = RANDOM_PORT)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@SpringBootTest" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@WebMvcTest" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@IntegrationTest" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué método de ResultActions verifica el código de estado HTTP?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "andExpect(status().isOk())" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "andReturn()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "andDo()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "andVerify()" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación permite auto-configurar MockMvc en un test?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@AutoConfigureMockMvc" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@EnableMockMvc" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@MockMvcTest" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@WebMvcTest" }
+
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 60000
+title = "Ordena las fases de un test con MockMvc"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+answers = ["Configurar MockMvc", "Construir petición HTTP", "Ejecutar perform", "Verificar con andExpect", "Verificar interacciones con Mockito"]
+

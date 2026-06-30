@@ -1,0 +1,186 @@
+title = "Módulo 02 - Patrones Creacionales: Singleton y Factory"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la mejor implementación de Singleton según Effective Java?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Enum" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Double-Checked Locking" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Inicialización temprana" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Bill Pugh" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué problema principal tiene Singleton en testing?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Introduce estado global difícil de mockear" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es demasiado rápido" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No se puede compilar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Consume mucha memoria" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Por qué Double-Checked Locking no es recomendado?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Complejidad innecesaria y propenso a errores" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es lento en todos los casos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No compila en Java" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Solo funciona con enum" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es el propósito del patrón Factory Method?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Definir una interfaz para crear objetos delegando a subclases" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Garantizar una única instancia" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Construir objetos complejos paso a paso" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Clonar objetos existentes" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "En Spring, ¿cuál es el scope por defecto de los beans?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "singleton" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "prototype" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "request" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "session" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué método de JDK usa Factory Method?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Calendar.getInstance()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "String.valueOf()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Math.max()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "System.out.println()" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son escenarios donde deberías EVITAR usar Singleton? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Cuando necesitas mockear el objeto en pruebas" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Cuando el estado global dificulta la mantenibilidad" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cuando necesitas una única instancia de configuración" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cuando trabajas con loggers" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué ventaja tiene la implementación Bill Pugh sobre Double-Checked Locking en Singleton?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "No necesita sincronización explícita" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena las implementaciones de Singleton de la menos recomendada a la más recomendada:"
+points_awarded = 1000
+axis_labels = { from = "Menos recomendada", to = "Más recomendada" }
+[[slides.Order.answers]]
+content = { Text = "Double-Checked Locking" }
+[[slides.Order.answers]]
+content = { Text = "Inicialización temprana (Eager)" }
+[[slides.Order.answers]]
+content = { Text = "Bill Pugh (Inner Static Class)" }
+[[slides.Order.answers]]
+content = { Text = "Enum" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes patrones son de tipo Creacional? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Singleton" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Factory Method" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Adapter" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Observer" }

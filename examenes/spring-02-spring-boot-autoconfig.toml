@@ -1,0 +1,188 @@
+title = "Módulo 02 - Spring Boot y Auto-Configuración"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación reemplaza a @Configuration + @EnableAutoConfiguration + @ComponentScan?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@SpringBootApplication" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@SpringBoot" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@EnableSpring" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@SpringBootConfig" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué contenedor embebido usa Spring Boot por defecto?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Tomcat" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Jetty" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Undertow" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Netty" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué son los Starters en Spring Boot?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Dependencias predefinidas que agrupan librerías para una funcionalidad" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Clases de inicio de la aplicación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Plugins de Maven" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Scripts de configuración" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué hace @EnableAutoConfiguration?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Configura automáticamente beans basándose en las dependencias del classpath" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Habilita la seguridad" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Configura la base de datos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Genera documentación" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Cuál es el puerto HTTP por defecto de Spring Boot?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "8080" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "80" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "443" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "9090" }
+
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué comando de Maven empaqueta una aplicación Spring Boot como fat JAR?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["mvn package", "mvn clean package"]
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué plugin de Maven permite ejecutar una app Spring Boot con 'mvn spring-boot:run'?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "spring-boot-maven-plugin" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "maven-compiler-plugin" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "exec-maven-plugin" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "tomcat-maven-plugin" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Cómo se cambia el servidor embebido a Undertow en Spring Boot?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Excluir Tomcat e incluir Undertow en pom.xml" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Configurar en application.properties" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usar @EnableUndertow" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No es posible cambiar" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué dependencia starter se usa para aplicaciones web REST?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "spring-boot-starter-web" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "spring-boot-starter" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "spring-boot-starter-rest" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "spring-web-starter" }
+
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué flag de JVM se usa para depurar la auto-configuración de Spring Boot?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["--debug"]
+

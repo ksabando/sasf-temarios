@@ -1,0 +1,188 @@
+title = "Módulo 05 - DevTools y Empaquetado"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué funcionalidad ofrece Spring Boot DevTools?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Reinicio automático y LiveReload" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Compilación optimizada" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Despliegue en la nube" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Generación de código" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué dependencia starter incluye DevTools?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "spring-boot-devtools" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "spring-boot-starter-web" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "spring-boot-starter" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "spring-devtools" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué comando genera un fat JAR ejecutable con Maven?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "mvn package" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "mvn compile" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "mvn install" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "mvn build" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Cómo se ejecuta un fat JAR de Spring Boot?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "java -jar target/app.jar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "mvn spring-boot:run" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "docker run" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "java -cp target/app.jar" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué función tienen las capas (layers) optimizadas en Docker para Spring Boot?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Separar dependencias del código para caché eficiente de Docker" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Segmentar la red" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Aumentar la seguridad" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Mejorar el logging" }
+
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué comando de Gradle construye un fat JAR ejecutable de Spring Boot?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["gradle bootJar", "gradle bootjar"]
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué herramienta permite crear imágenes Docker sin Dockerfile en Spring Boot?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Buildpacks" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Docker Compose" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Kubernetes" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Podman" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué desactiva DevTools cuando se ejecuta la app como un JAR empaquetado?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Se desactiva automáticamente al ejecutar como JAR" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Hay que configurarlo manualmente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Se activa con un flag" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Depende del perfil" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué propiedad deshabilita el reinicio automático de DevTools?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "spring.devtools.restart.enabled=false" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "devtools.restart=false" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "spring.restart.enabled=false" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "spring.devtools.enabled=false" }
+
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué flag se pasa a java -jar para cambiar el puerto?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["--server.port=8081", "-Dserver.port=8081"]
+

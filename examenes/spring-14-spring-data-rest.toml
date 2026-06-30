@@ -1,0 +1,199 @@
+title = "Módulo 14 - Spring Data REST"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué starter expone repositorios JPA como API REST automáticamente?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "spring-boot-starter-data-rest" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "spring-boot-starter-data-jpa" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "spring-boot-starter-web" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "spring-boot-starter-hateoas" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué formato de hipermedia usa Spring Data REST por defecto?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "HAL" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "JSON:API" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Siren" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Collection+JSON" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación personaliza la ruta expuesta por un repositorio REST?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@RepositoryRestResource" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@RestResource" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Repository" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@RequestMapping" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación maneja eventos del ciclo de vida de las entidades en Data REST?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@RepositoryEventHandler" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@EventHandler" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Event" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@HandleEvent" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué evento se dispara antes de crear una entidad en Data REST?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "BeforeCreate" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "AfterCreate" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "BeforeSave" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "AfterSave" }
+
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué propiedad de @RepositoryRestResource permite ocultar un método del repositorio?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["exported = false"]
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué explorador HAL se usa para navegar APIs de Spring Data REST?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "HAL Explorer" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Swagger UI" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Postman" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "cURL" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Cómo se accede a las asociaciones de una entidad en Spring Data REST?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Mediante enlaces HAL en el response" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Con joins en la URL" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Con @Query" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Con @Association" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué interfaz deben extender los repositorios para exponerse como REST?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "JpaRepository" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "CrudRepository" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "PagingAndSortingRepository" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Repository" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué HTTP method actualiza parcialmente un recurso en Spring Data REST?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "PATCH" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "PUT" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "POST" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "UPDATE" }
+

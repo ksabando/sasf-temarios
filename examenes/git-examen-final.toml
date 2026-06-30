@@ -1,0 +1,513 @@
+title = "Examen Final - Git de Cero a Experto"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Cuál de los siguientes NO es un estado de un archivo en Git?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Compilado" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Modified" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Staged" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Committed" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué comando se usa para inicializar un repositorio de Git?"
+case_sensitive = false
+answers = ["git init"]
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué nivel de configuración de Git afecta a todos los repositorios del sistema?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "--system" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--local" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--global" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--worktree" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué comando se usa para modificar el mensaje del último commit sin cambiar su contenido?"
+case_sensitive = false
+answers = ["git commit --amend"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "Ordena los tres estados de Git según el flujo de trabajo"
+axis_labels = { from = "Inicio", to = "Fin" }
+answers = ["Working Directory", "Staging Area", "Repositorio"]
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué comando se usa para agregar archivos al área de staging?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git add" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git commit" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git push" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git stage" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué flag de git log permite ver el historial con una representación gráfica?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "--graph" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--oneline" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--all" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--pretty" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué comando muestra quién modificó cada línea de un archivo?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git blame" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git log -p" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git diff" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git show" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué archivo se utiliza en Git para excluir archivos del control de versiones?"
+case_sensitive = false
+answers = [".gitignore"]
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué comando lista todas las ramas locales en Git?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git branch" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git switch" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git merge" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git remote" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Cuál es la estrategia de merge por defecto en Git?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Recursive" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Octopus" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Ours" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Resolve" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "Ordena las ramas de Git Flow desde la menos estable hasta la más estable"
+axis_labels = { from = "Menos estable", to = "Más estable" }
+answers = ["feature", "develop", "release", "main"]
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Cuál es la rama principal y de producción en Git Flow?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "main" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "develop" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "feature" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "release" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué comando agrega un repositorio remoto a la configuración local?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git remote add" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git remote" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git clone" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git fetch" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué comando envía los commits de la rama local al repositorio remoto?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git push" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git pull" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git fetch" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git merge" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué comando inicia un rebase interactivo de los últimos 3 commits?"
+case_sensitive = false
+answers = ["git rebase -i HEAD~3"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué comando guarda temporalmente los cambios del working directory sin hacer commit?"
+case_sensitive = false
+answers = ["git stash"]
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 20000
+points_awarded = 1000
+title = "¿Cuáles son modos válidos del comando git reset? (Selecciona todos los que apliquen)"
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "--soft" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "--mixed" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "--hard" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--merge" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué comando aplica un commit específico de otra rama en la rama actual?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git cherry-pick" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git apply" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git merge" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git rebase" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué comando utiliza búsqueda binaria para encontrar el commit que introdujo un bug?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git bisect" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git blame" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git log" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git search" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué flag de git tag crea un tag anotado con metadatos?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "-a" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "-l" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "-d" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "-v" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿En qué directorio se encuentran los hooks de Git?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = ".git/hooks" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = ".git" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = ".github" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "hooks" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Cuál es el propósito principal de un pipeline de CI/CD?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Automatizar la integración y el despliegue continuo de código" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Gestionar las ramas de un repositorio" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Revisar el código de forma manual" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Documentar los cambios del proyecto" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué comando permite trabajar en múltiples ramas simultáneamente con directorios separados?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git worktree add" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git branch" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git clone" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git switch" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué comando de Git LFS se usa para especificar qué archivos grandes rastrear?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git lfs track" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git lfs install" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git lfs push" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git lfs status" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 20000
+points_awarded = 1000
+title = "¿Cuáles son estrategias de merge válidas en Git? (Selecciona todos los que apliquen)"
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Recursive" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Octopus" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Ours" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Manual" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué evento de GitHub Actions se usa para ejecutar un workflow cuando se suben cambios a una rama?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "push" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "pull_request" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "schedule" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "workflow_dispatch" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué bandera de git commit se usa para firmar el commit con una clave GPG?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "-S" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "-s" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "-g" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "-k" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "Ordena los elementos del formato de Conventional Commits"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["tipo", "(ámbito)", ":", "descripción"]
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué comando se usa para reescribir la historia de Git eliminando archivos sensibles de todo el historial?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git filter-repo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git filter-branch" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git rebase" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git reset" }

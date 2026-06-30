@@ -1,0 +1,188 @@
+title = "Módulo 15 - Proyecto Final y Entrevista"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón creacional garantiza una única instancia de una clase?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Singleton" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Factory Method" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Builder" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Prototype" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la mejor implementación de Singleton en Java moderno?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Enum" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Double-Checked Locking" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Inicialización temprana" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Bill Pugh" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón convierte una interfaz en otra que el cliente espera?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Adapter" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Bridge" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Proxy" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Facade" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón separa abstracción de implementación?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Bridge" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Adapter" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Composite" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Decorator" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón agrega responsabilidades dinámicamente a un objeto?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Decorator" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Composite" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Adapter" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Bridge" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón proporciona acceso secuencial a una colección sin exponer su estructura interna?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Iterator" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Mediator" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Observer" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Visitor" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes patrones son del tipo estructural? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Facade" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Flyweight" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Observer" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Strategy" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón centraliza la comunicación entre objetos para reducir dependencias directas?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "Mediator" }
+[[slides.TypeAnswer.answers]]
+content = { Text = "mediator" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los pasos para preparar una entrevista técnica sobre patrones de diseño:"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+[[slides.Order.answers]]
+content = { Text = "Repasar los 23 patrones GoF y sus categorías" }
+[[slides.Order.answers]]
+content = { Text = "Practicar ejemplos de código para cada patrón" }
+[[slides.Order.answers]]
+content = { Text = "Identificar patrones usados en proyectos propios" }
+[[slides.Order.answers]]
+content = { Text = "Explicar trade-offs y anti-patrones comunes" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son consejos para una entrevista técnica sobre patrones? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Saber cuándo NO usar un patrón" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Poder explicar la diferencia entre patrones similares" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Memorizar todos los nombres sin entenderlos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usar siempre todos los patrones en cada proyecto" }

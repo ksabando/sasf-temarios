@@ -1,0 +1,197 @@
+title = "Módulo 15 - Proyecto Final y Entrevista de Arquitectura"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué caracteriza a una decisión arquitectónica?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Tiene alto costo de cambio y afecta la estructura del sistema" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es fácil de cambiar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Solo afecta a un método" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La toma un desarrollador junior" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es un stakeholder en arquitectura?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Una parte interesada con preocupaciones sobre el sistema" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un desarrollador del equipo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una herramienta de testing" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un tipo de base de datos" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre arquitectura y diseño?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "La arquitectura son decisiones de alto nivel difíciles de cambiar, el diseño es implementación local" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No hay diferencia" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El diseño es más importante" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La arquitectura se hace al final" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es un Bounded Context en DDD?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Un límite explícito donde un modelo de dominio es válido" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una restricción de memoria" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un tipo de base de datos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un patrón de diseño" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es Event Sourcing?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Almacenar eventos de cambio (append-only) en lugar del estado actual" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Publicar eventos en Kafka" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una herramienta de logging" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un framework de Spring" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles son los 4 niveles del C4 Model?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Context, Container, Component, Code" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Code, Class, Component, Container" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Context, Class, Component, Code" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Container, Class, Component, Context" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa CQRS?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Command Query Responsibility Segregation" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Complete Query Response System" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Concurrent Queue Resource Service" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Central Query Routing System" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles son los 3 estados de un Circuit Breaker?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "CLOSED, OPEN, HALF_OPEN" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "START, STOP, PAUSE" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ON, OFF, STANDBY" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "UP, DOWN, DEGRADED" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son patrones tácticos de DDD? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Aggregate" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Repository" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Circuit Breaker" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Bulkhead" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena las capas de Clean Architecture desde la más interna a la más externa:"
+points_awarded = 1000
+axis_labels = { from = "Más interna", to = "Más externa" }
+[[slides.Order.answers]]
+content = { Text = "Entities" }
+[[slides.Order.answers]]
+content = { Text = "Use Cases (Interactors)" }
+[[slides.Order.answers]]
+content = { Text = "Interface Adapters (Controllers, Presenters)" }
+[[slides.Order.answers]]
+content = { Text = "Frameworks & Drivers (Web, DB, UI)" }

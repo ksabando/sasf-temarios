@@ -1,0 +1,186 @@
+title = "Módulo 11 - Patrones en Spring"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón GoF es central en Spring Boot?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Dependency Injection (IoC)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Singleton" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Factory Method" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Proxy" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es el alcance (scope) por defecto de un bean en Spring?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "singleton" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "prototype" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "request" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "session" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué anotación de Spring hace que el framework cree un Proxy AOP?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Transactional" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Autowired" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Component" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Service" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón implementa JdbcTemplate?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Template Method" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Strategy" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Factory Method" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Adapter" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo se implementa Observer en Spring?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@EventListener + ApplicationEventPublisher" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Autowired + @Component" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Bean + @Configuration" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Transactional + @Service" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón implementa SecurityFilterChain?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Chain of Responsibility" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Decorator" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Command" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Strategy" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son patrones usados internamente por Spring? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Proxy (AOP)" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Template Method (JdbcTemplate, RestTemplate)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Memento" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Visitor" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué interfaz de Spring permite crear beans con lógica personalizada de creación?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "FactoryBean" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena el flujo de creación de un bean en Spring:"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+[[slides.Order.answers]]
+content = { Text = "Spring escanea y detecta la definición del bean" }
+[[slides.Order.answers]]
+content = { Text = "Spring invoca el Factory Method (@Bean) o constructor" }
+[[slides.Order.answers]]
+content = { Text = "BeanPostProcessors aplican lógica antes y después de la inicialización" }
+[[slides.Order.answers]]
+content = { Text = "El bean está listo para ser inyectado" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de las siguientes anotaciones de Spring activan comportamiento basado en patrones? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Async (Command asíncrono)" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Cacheable (Proxy de caché)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Deprecated" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Override" }

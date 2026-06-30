@@ -1,0 +1,135 @@
+title = "M04 - Staging, Commit y Ciclo de Vida"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Cuál es el estado de un archivo recién creado que aún no ha sido agregado al staging?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Untracked" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Modified" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Staged" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Unmodified" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando permite agregar partes específicas de un archivo al staging?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git add -p" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git add ." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git add -a" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git commit -p" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+points_awarded = 1000
+title = "¿En qué estados puede estar un archivo dentro del ciclo de vida de Git?"
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Untracked" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Staged" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Modified" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Unmodified" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué flag permite corregir el mensaje del último commit?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "--amend" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--fix" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--edit" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--reword" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué archivo especial se usa en Git para ignorar archivos intencionalmente?"
+case_sensitive = false
+answers = [".gitignore"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando muestra un resumen de los commits agrupados por autor?"
+case_sensitive = false
+answers = ["git shortlog"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Cuál es la convención de Git para la longitud máxima del asunto en un mensaje de commit?"
+case_sensitive = false
+answers = ["50 caracteres", "50"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "Ordena el ciclo de vida de un archivo en Git (de creación a commit)"
+axis_labels = { from = "Inicio", to = "Final" }
+answers = ["Untracked", "Staged", "Unmodified", "Modified"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "Ordena los pasos para corregir un commit con --amend"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["Modificar archivos", "git add archivos_modificados", "git commit --amend -m nuevo_mensaje", "Verificar con git log"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "Ordena los pasos recomendados para escribir un buen mensaje de commit"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["Línea de asunto (máx. 50 caracteres)", "Línea en blanco", "Cuerpo explicativo (72 caracteres por línea)", "Referencias a issues si aplica"]

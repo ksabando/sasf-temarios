@@ -1,0 +1,512 @@
+title = "Examen Final - Clean Code (Código Limpio)"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es deuda técnica según Ward Cunningham?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Código mal escrito que genera 'intereses' en tiempo de mantenimiento" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El dinero que cuesta mantener un servidor" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Bugs reportados por usuarios" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La diferencia entre el código planeado y el implementado" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué propone la regla del Boy Scout?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Dejar el código más limpio de como lo encontraste" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Escribir código rápido para cumplir deadlines" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Solo modificar archivos que tengas en tu tarea" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No tocar código que funciona" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál de las siguientes NO es una de las 4 reglas simples de Kent Beck?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Usa patrones de diseño avanzados" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Pasa todos los tests" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Revela intención" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No tiene duplicación" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué deben revelar los nombres según Clean Code?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "La intención (por qué existe, qué hace, cómo se usa)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El tipo de dato" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La ubicación en memoria" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La versión del código" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es el número ideal de parámetros en una función?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "0" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "1" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "3" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Depende del lenguaje" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué propone Command Query Separation (CQS)?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Un método debe ser comando (modifica) o consulta (retorna), no ambos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Separar comandos SQL de consultas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Separar la UI de la lógica" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Tener comandos y consultas en archivos separados" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué dice Kernighan sobre los comentarios?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "No comentes código malo, reescríbelo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Todo código debe tener comentarios" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Los comentarios son obligatorios en Java" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Los comentarios mejoran el rendimiento" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué dice la Ley de Demeter?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Habla solo con tus amigos inmediatos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Todos los objetos deben tener getters" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Los DTOs deben ser inmutables" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No uses estructuras de datos" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es un Train Wreck?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Una cadena de llamadas como a.getB().getC().getD()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un error de compilación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una función con muchos parámetros" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un bucle infinito" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué problema tiene un objeto híbrido?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Mezcla datos públicos con comportamiento (peor de ambos mundos)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es difícil de serializar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No se puede hacer mock" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es más lento" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Por qué los códigos de error son problemáticos?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Porque obligan al caller a revisar el resultado en cada llamada" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Porque son más lentos que las excepciones" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Porque no se pueden personalizar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Porque usan int en lugar de enum" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué debes hacer con la causa original al atrapar una excepción?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Preservarla pasándola al constructor de la nueva excepción" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Ignorarla" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Hacer println del stack trace" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Sobrescribirla" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la alternativa recomendada a retornar null?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Usar Optional, Null Object o lanzar excepción" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Retornar -1" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Retornar un string vacío" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Retornar un objeto vacío creado con new" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la alternativa recomendada a retornar null?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Aísla el código de negocio de los cambios en librerías externas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Hace el código más rápido" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Reduce la cantidad de clases" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Elimina la necesidad de tests" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es el ciclo de TDD?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Red → Green → Refactor" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Green → Red → Refactor" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Red → Refactor → Green" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Refactor → Red → Green" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa 'F' en FIRST?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Fast (rápido)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Final" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "First (primero)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Functional" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa SRP (Single Responsibility Principle)?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Una clase debe tener una sola razón para cambiar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una clase debe tener un solo método" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una clase debe implementar una sola interfaz" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una clase debe tener un solo campo" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué trade-offs existen al aplicar Clean Code en proyectos legacy?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Requiere tiempo, puede romper funcionalidad existente sin tests" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No tiene desventajas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es más barato que escribir código sucio" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Solo aplica a proyectos nuevos" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué debe tener una excepción bien diseñada? (selecciona todas las correctas)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Un mensaje descriptivo del error" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Los valores relevantes y la causa original" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Solo el stack trace" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El nombre del método que falló" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles son características de los tests limpios según FIRST? (selecciona las correctas)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Fast (rápido) e Independent (independiente)" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Repeatable (repetible) y Self-validating (auto-validable)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Los tests deben depender de datos en base de datos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Los tests deben ejecutarse en orden específico" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué problemas tiene service.getRepository().findAll()? (selecciona las correctas)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Es una violación de la Ley de Demeter" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Expone la implementación interna del servicio" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es la práctica recomendada en Spring" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Mejora la cohesión del código" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo deben organizarse los miembros de una clase? (selecciona las correctas)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Constantes → Campos → Constructores → Públicos → Privados" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Funciones de alto nivel arriba, detalles abajo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Alfabéticamente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Métodos privados primero" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Cómo se llama el principio que dice 'deja el código más limpio de como lo encontraste'?"
+case_sensitive = false
+answers = ["Regla del Boy Scout", "Boy Scout Rule"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué significa DRY en el contexto de Clean Code?"
+case_sensitive = false
+answers = ["Don't Repeat Yourself", "Dont Repeat Yourself"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Cómo se llama la regla que establece que funciones de alto nivel van arriba y detalles abajo?"
+case_sensitive = false
+answers = ["Stepdown Rule", "Step-down Rule"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué tipo de palabra (verbo o sustantivo) debe usarse para nombrar un método?"
+case_sensitive = false
+answers = ["Verbo"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué método de Java se usa para validar que un objeto no sea null lanzando NullPointerException?"
+case_sensitive = false
+answers = ["requireNonNull"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "Ordena las fases del ciclo TDD en el orden correcto"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["Red (escribir test que falle)", "Green (código mínimo para pasar)", "Refactor (mejorar el código)", "Repeat (repetir el ciclo)"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "Ordena los pasos para integrar una librería externa correctamente"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["Escribir Learning Tests", "Crear una interfaz (Puerto)", "Implementar el Adapter", "Usar el puerto en el código de negocio"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "Ordena estos nombres de variables de mejor a peor según Clean Code"
+axis_labels = { from = "Mejor", to = "Peor" }
+answers = ["generationTimestamp", "genTimestamp", "genTS", "g"]

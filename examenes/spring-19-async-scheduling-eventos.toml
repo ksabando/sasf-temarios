@@ -1,0 +1,188 @@
+title = "Módulo 19 - Async, Scheduling y Eventos"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación hace que un método se ejecute en un hilo separado?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Async" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Scheduled" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Asyncronous" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Thread" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación habilita el procesamiento asíncrono en Spring?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@EnableAsync" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Async" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@EnableScheduling" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@EnableThreading" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación ejecuta un método en intervalos de tiempo fijos?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Scheduled" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Async" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Cron" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Timer" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué atributo de @Scheduled ejecuta una tarea con una expresión de tiempo?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "cron" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "fixedRate" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "fixedDelay" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "initialDelay" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué interfaz de Spring publica eventos de aplicación?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "ApplicationEventPublisher" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "EventPublisher" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "EventBus" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "NotificationPublisher" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación escucha eventos de aplicación en Spring?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@EventListener" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Event" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Listener" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@OnEvent" }
+
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué clase envolvente se usa con @Async para obtener el resultado futuro?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["CompletableFuture", "Future"]
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué diferencia hay entre fixedRate y fixedDelay en @Scheduled?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "fixedRate ejecuta cada N ms desde el inicio; fixedDelay N ms después de terminar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Son iguales" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "fixedDelay es más rápido" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "fixedRate no funciona en producción" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación vincula un evento a una transacción (ejecutándose después del commit)?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@TransactionalEventListener" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Transactional" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@EventListener" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Event" }
+
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 60000
+title = "Ordena el flujo de un evento asíncrono en Spring"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+answers = ["Publicar evento con ApplicationEventPublisher", "Listener recibe evento", "Hilo del pool ejecuta listener", "Procesamiento asíncrono del evento", "Listener finaliza"]
+

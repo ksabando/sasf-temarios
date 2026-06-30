@@ -1,0 +1,199 @@
+title = "Módulo 07 - Peticiones, Respuestas y DTOs"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación vincula el cuerpo JSON de una petición a un objeto Java?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@RequestBody" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@RequestParam" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@PathVariable" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@ModelAttribute" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación extrae parámetros de la URL (path)?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@PathVariable" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@RequestParam" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@RequestBody" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@PathParam" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación extrae parámetros de consulta (query string)?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@RequestParam" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@PathVariable" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@RequestBody" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@QueryParam" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Cuál es la principal razón para usar DTOs?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Separar la representación externa de la entidad interna" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Aumentar el rendimiento" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Evitar SQL injection" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Reducir el código" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué librería facilita el mapeo entre DTOs y Entidades?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "MapStruct" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Lombok" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Hibernate" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Jackson" }
+
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué objeto de Spring representa una página de resultados paginados?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["Page<T>", "Page"]
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué interfaz de Spring representa la información de paginación en controladores?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Pageable" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Page" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Sort" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "PagingAndSortingRepository" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué devuelve Pageable en el controlador cuando se recibe ?page=0&size=10?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Una página con 10 resultados" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Todos los resultados" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un error" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Los primeros 5 resultados" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación de Lombok genera getters, setters, toString y equals?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Data" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Getter" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Setter" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Value" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué método de Pageable especifica el criterio de ordenamiento?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Sort" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Order" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "SortBy" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Direction" }
+

@@ -1,0 +1,179 @@
+title = "M09"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M09 - ¿Qué es un Pull Request?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Una solicitud para integrar cambios de una rama fuente en una rama destino mediante revisión" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un comando que descarga cambios del remoto automáticamente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una herramienta para clonar repositorios públicos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un backup de toda la rama de trabajo" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+points_awarded = 1000
+title = "M09 - ¿Cuál es el propósito principal del code review en un PR?"
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Detectar bugs y problemas de calidad antes de integrar" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Compartir conocimiento del código entre el equipo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Ralentizar intencionalmente el desarrollo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Reemplazar los tests automatizados" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M09 - ¿Qué caracteriza a un Draft Pull Request?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Indica que el PR está en desarrollo y no debe fusionarse aún" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es un PR que se ha fusionado automáticamente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Solo puede verlo el creador del repositorio" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es un PR cerrado sin posibilidad de reabrirse" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M09 - ¿Qué comando de gh CLI crea un Pull Request?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "gh pr create" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "gh pull new" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "gh create pr" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "gh pr open" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M09 - ¿Qué hace la estrategia 'merge commit' al cerrar un PR?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Conserva todos los commits de la rama feature y añade un commit de merge" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Combina todos los commits en uno solo antes de fusionar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Reescribe el historial completo de la rama destino" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Elimina la rama fuente automáticamente" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M09 - ¿Qué hace la estrategia 'squash and merge'?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Comprime todos los commits del PR en un solo commit sobre la rama destino" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Conserva el historial completo de la rama feature" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Elimina todos los cambios del PR" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Hace rebase de la rama feature contra main dos veces" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M09 - ¿Qué hace la estrategia 'rebase and merge'?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Aplica cada commit del PR sobre la punta de la rama destino sin crear merge commit" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Descarta los commits del PR y crea uno nuevo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Fusiona usando un merge commit de tres vías" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Borra la rama fuente automáticamente" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+points_awarded = 1000
+title = "M09 - ¿Para qué sirven las reglas de protección de rama (branch protection)?"
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Exigir que pasen los checks de CI antes de fusionar" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Requerir aprobaciones de revisores para fusionar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Impedir que nadie haga push incluyendo admins" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Forzar que todos los commits sean del mismo autor" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M09 - ¿Qué sigla de tres letras se usa comúnmente para referirse a un Pull Request?"
+case_sensitive = false
+answers = ["PR", "pr"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "M09 - Ordena el flujo típico de un Pull Request"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["Crear una rama feature desde main", "Hacer commits y push a la rama feature", "Abrir un Pull Request en GitHub", "Recibir review y hacer cambios si es necesario", "Fusionar el PR y eliminar la rama feature"]

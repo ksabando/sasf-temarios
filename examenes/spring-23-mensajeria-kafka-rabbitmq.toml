@@ -1,0 +1,188 @@
+title = "Módulo 23 - Mensajería con Spring (Kafka/RabbitMQ)"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué tipo de exchange de RabbitMQ enruta mensajes por routing key exacta?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Direct" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Topic" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Fanout" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Headers" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación de Spring escucha mensajes de RabbitMQ?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@RabbitListener" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@JmsListener" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@KafkaListener" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@QueueListener" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué exchange de RabbitMQ envía mensajes a todas las colas vinculadas?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Fanout" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Direct" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Topic" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Headers" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué patrón de mensajería usa Kafka para almacenar mensajes?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Log (registro secuencial)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cola FIFO" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Publicador-Suscriptor" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Point-to-Point" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación de Spring escucha mensajes de Kafka?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@KafkaListener" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@RabbitListener" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@JmsListener" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@StreamListener" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué es una Dead Letter Queue (DLQ)?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Una cola para mensajes que no pudieron procesarse" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una cola para mensajes urgentes" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una cola temporal" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un tipo de exchange" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué abstracción de Spring Cloud simplifica el uso de múltiples sistemas de mensajería?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Spring Cloud Stream" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Spring Cloud Bus" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Spring Cloud Messaging" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Spring Cloud Event" }
+
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué clase de Spring se usa para enviar mensajes a RabbitMQ?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["RabbitTemplate"]
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué concepto de Kafka permite escalar el consumo de mensajes?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Consumer Groups (grupos de consumidores)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Particiones múltiples" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Replicación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Topics" }
+
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 60000
+title = "Ordena el flujo de un mensaje en RabbitMQ"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+answers = ["Producer envía mensaje", "Exchange recibe el mensaje", "Exchange enruta a cola según binding", "Consumer recibe mensaje de la cola", "Consumer confirma recepción (ACK)"]
+

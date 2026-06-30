@@ -1,0 +1,179 @@
+title = "M07"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M07 - ¿Cuáles son las ramas principales de Git Flow?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "main y develop" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "main y feature" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "master y release" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "develop y hotfix" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M07 - ¿De qué rama se desprenden las ramas feature en Git Flow?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "develop" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "main" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "release" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "hotfix" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M07 - ¿Cuál es el propósito de una rama release en Git Flow?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Preparar una nueva versión de producción con correcciones menores y metadatos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Desarrollar nuevas funcionalidades experimentales" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Corregir bugs urgentes en producción" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Almacenar versiones anteriores del código" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M07 - ¿De qué rama nace y en qué rama se fusiona un hotfix?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Nace de main y se fusiona en main y develop" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Nace de develop y se fusiona solo en main" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Nace de release y se fusiona en develop" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Nace de feature y se fusiona en develop" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M07 - ¿Qué caracteriza a GitHub Flow?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Una sola rama principal (main) y ramas feature cortas con PRs" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Tres ramas principales: main, develop y release" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No usa pull requests, solo merges directos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Requiere aprobación de tres reviewers como mínimo" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M07 - ¿Qué añade GitLab Flow respecto a GitHub Flow?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Ramas de entorno (staging, production) y ramas por versión" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Elimina el uso de ramas feature" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Obliga a usar merge commits en vez de squash" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Solo permite despliegues manuales" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M07 - ¿Qué práctica define Trunk-Based Development?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Todos los desarrolladores integran en una sola rama (trunk) varias veces al día" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cada desarrollador tiene su propio fork del repositorio" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Las ramas feature duran semanas antes de integrarse" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Solo se usa una rama release para producción" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M07 - ¿Qué caracteriza una convención de nomenclatura semántica de ramas?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Prefijos como feature/, bugfix/, hotfix/ seguidos del ID o descripción" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Nombres de un solo word sin separadores" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usar solo números de versión como nombre" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Nombres en mayúsculas separados por guión bajo" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M07 - ¿Cuál es el nombre de la rama principal en Git Flow que contiene el historial de lanzamientos?"
+case_sensitive = false
+answers = ["main", "master"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "M07 - Ordena el ciclo de vida de una feature en Git Flow"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["Crear rama feature desde develop", "Desarrollar y commiteaar en la rama feature", "Fusionar feature en develop", "Crear rama release desde develop", "Fusionar release en main y develop"]
