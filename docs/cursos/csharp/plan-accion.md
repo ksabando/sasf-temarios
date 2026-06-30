@@ -109,3 +109,100 @@ sidebar_label: "Plan de Acción"
 | E06 | 06 | Dominio con C# moderno |
 | E07 | 07 | Suite de tests unitarios |
 | E08 | 08 | Proyecto integrador C# |
+
+---
+
+## Extension Avanzada - Modulos 09 a 16
+
+### Dia 9 - Reflexion y atributos
+**Objetivo:** inspeccionar tipos en runtime y crear validacion por atributos.
+
+| Hora | Actividad | Tipo |
+|------|-----------|------|
+| 0:00-1:00 | Reflexion: Type, PropertyInfo, Activator | Teoria |
+| 1:00-2:00 | Atributos personalizados y DataAnnotations | Teoria |
+| 2:00-2:15 | Break | - |
+| 2:15-4:00 | Validador generico por atributos | Laboratorio |
+
+### Dia 10 - Programacion funcional
+**Objetivo:** aplicar funciones puras, composicion y Option pattern.
+
+| Hora | Actividad | Tipo |
+|------|-----------|------|
+| 0:00-1:00 | Funciones puras y higher-order | Teoria |
+| 1:00-2:00 | Option, tuplas y pipelines | Teoria |
+| 2:00-2:15 | Break | - |
+| 2:15-4:00 | Pipeline funcional de pedidos | Laboratorio |
+
+### Dia 11 - Patrones de diseno
+**Objetivo:** implementar Factory, Strategy, Repository y Decorator en C#.
+
+| Hora | Actividad | Tipo |
+|------|-----------|------|
+| 0:00-1:00 | Creacionales (Factory, Singleton, Builder) | Teoria |
+| 1:00-2:00 | Estructurales y comportamiento (Adapter, Strategy, Repository) | Teoria |
+| 2:00-2:15 | Break | - |
+| 2:15-4:00 | Aplicar patrones en sistema de inventario | Laboratorio |
+
+### Dia 12 - Concurrencia y paralelismo
+**Objetivo:** disenar pipelines concurrentes con Channels y PLINQ.
+
+| Hora | Actividad | Tipo |
+|------|-----------|------|
+| 0:00-1:00 | TPL, CancellationToken y colecciones concurrentes | Teoria |
+| 1:00-2:00 | Channels y productor-consumidor | Teoria |
+| 2:00-2:15 | Break | - |
+| 2:15-4:00 | Pipeline de procesamiento con Channels | Laboratorio |
+
+### Dia 13 - Performance y optimizacion
+**Objetivo:** medir y optimizar con Span, BenchmarkDotNet y pooling.
+
+| Hora | Actividad | Tipo |
+|------|-----------|------|
+| 0:00-1:00 | Span, Memory y StringBuilder | Teoria |
+| 1:00-2:00 | BenchmarkDotNet, ArrayPool y struct vs class | Teoria |
+| 2:00-2:15 | Break | - |
+| 2:15-4:00 | Optimizar procesador de archivos | Laboratorio |
+
+### Dia 14 - Serializacion y configuracion
+**Objetivo:** manejar JSON, XML, MessagePack y configuracion por ambiente.
+
+| Hora | Actividad | Tipo |
+|------|-----------|------|
+| 0:00-1:00 | JSON avanzado, XML y MessagePack | Teoria |
+| 1:00-2:00 | Configuration Builder y Options Pattern | Teoria |
+| 2:00-2:15 | Break | - |
+| 2:15-4:00 | Aplicacion configurable con User Secrets | Laboratorio |
+
+### Dia 15 - Logging y observabilidad
+**Objetivo:** implementar logs estructurados, health checks y OpenTelemetry.
+
+| Hora | Actividad | Tipo |
+|------|-----------|------|
+| 0:00-1:00 | ILogger, Serilog y logs estructurados | Teoria |
+| 1:00-2:00 | Health checks, Correlation IDs y OpenTelemetry | Teoria |
+| 2:00-2:15 | Break | - |
+| 2:15-4:00 | API observable con Serilog + health checks | Laboratorio |
+
+### Dia 16 - Arquitectura y SOLID
+**Objetivo:** refactorizar aplicacion aplicando SOLID, capas y CQRS basico.
+
+| Hora | Actividad | Tipo |
+|------|-----------|------|
+| 0:00-1:00 | SOLID en C# y contenedor DI | Teoria |
+| 1:00-2:00 | Capas, CQRS basico y Modular Monolith | Teoria |
+| 2:00-2:15 | Break | - |
+| 2:15-4:00 | Refactor aplicando SOLID + capas | Laboratorio |
+
+## Entregas avanzadas
+
+| Entrega | Modulo | Descripcion |
+|---------|--------|-------------|
+| E09 | 09 | Validador generico por atributos |
+| E10 | 10 | Pipeline funcional |
+| E11 | 11 | Patrones aplicados |
+| E12 | 12 | Pipeline concurrente |
+| E13 | 13 | Archivo procesado con optimizaciones |
+| E14 | 14 | Aplicacion configurable |
+| E15 | 15 | API observable |
+| E16 | 16 | Refactor con SOLID y capas |
