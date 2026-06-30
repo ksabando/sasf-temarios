@@ -1,0 +1,186 @@
+title = "Módulo 12 - Patrones en React"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón de React permite que componentes compartan estado implícito mediante Context?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Compound Components" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "HOC" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Render Props" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Custom Hooks" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón es una función que recibe un componente y retorna un nuevo componente?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "HOC (Higher-Order Component)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Provider Pattern" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Render Props" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "State Reducer" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la ventaja de Custom Hooks sobre HOCs?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "No envuelven el árbol de componentes y son más composables" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Son más rápidos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usan menos memoria" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Solo funcionan con clases" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón de React se asemeja al Strategy de GoF?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Custom Hooks" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Compound Components" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "HOC" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Provider Pattern" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón permite a los usuarios controlar las transiciones de estado internas de un componente?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "State Reducer" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Provider Pattern" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Render Props" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Compound Components" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué hook de React se usa típicamente en el Provider Pattern?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "useContext" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "useState" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "useReducer" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "useMemo" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son patrones de diseño en React? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Render Props" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Compound Components" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Abstract Factory" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Bridge" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué hook de React se relaciona directamente con el patrón Observer de GoF mediante el manejo de efectos y eventos?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "useEffect" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena la evolución de patrones en React de más antiguo a más moderno:"
+points_awarded = 1000
+axis_labels = { from = "Más antiguo", to = "Más moderno" }
+[[slides.Order.answers]]
+content = { Text = "HOC (Higher-Order Components)" }
+[[slides.Order.answers]]
+content = { Text = "Render Props" }
+[[slides.Order.answers]]
+content = { Text = "Custom Hooks" }
+[[slides.Order.answers]]
+content = { Text = "Compound Components + Provider" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son beneficios de Compound Components? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Comunicación padre-hijo sin prop drilling" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "API flexible y expresiva para el usuario del componente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Mejor rendimiento que cualquier otro patrón" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Elimina la necesidad de TypeScript" }

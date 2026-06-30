@@ -1,0 +1,179 @@
+title = "M08"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M08 - ¿Cuál es el comando para vincular un repositorio local con uno remoto?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git remote add origin <url>" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git clone --link origin <url>" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git connect origin <url>" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git remote create origin <url>" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M08 - ¿Qué hace git push?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Envía commits locales a una rama remota" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Descarga commits del remoto al local" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Sincroniza automáticamente todas las ramas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Borra el remoto tras enviar los datos" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M08 - ¿Cuál es la diferencia principal entre git pull y git fetch?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "fetch solo descarga datos; pull además fusiona los cambios en la rama actual" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "pull solo descarga metadatos; fetch descarga todo el historial" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "fetch requiere conexión SSH; pull funciona con HTTPS" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "pull es más rápido porque omite objetos grandes" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M08 - ¿Qué efecto tiene la bandera -u (--set-upstream) en git push?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Establece la relación de tracking entre la rama local y la remota" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Crea un usuario upstream en la configuración global" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Deshabilita la compresión durante el push" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Actualiza todos los repositorios upstream del proyecto" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M08 - ¿Qué protocolo usa por defecto GitHub para autenticación segura?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "HTTPS con token personal o SSH con clave pública" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "FTP con usuario y contraseña" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "HTTP sin autenticación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Telnet con credenciales en texto plano" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M08 - ¿Qué implica un git push --force?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Sobrescribe el historial remoto aunque haya divergencia con el local" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Añade un commit adicional de confirmación forzada" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Bloquea el remoto para que nadie más pueda hacer push" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cifra los datos antes de enviarlos" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M08 - ¿Qué protege git push --force-with-lease?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Verifica que el remoto no tenga commits nuevos que no conozcas antes de forzar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Encripta la conexión con el remoto" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Requiere aprobación de un reviewer para el push" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Crea un backup automático antes de sobrescribir" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M08 - ¿Qué hace git remote prune origin?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Elimina las referencias locales a ramas remotas que ya no existen en origin" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Borra todas las ramas locales que no tienen upstream" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Comprime el repositorio remoto para ahorrar espacio" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Corta la conexión con el remoto origin" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M08 - ¿Qué comando lista todos los remotos configurados en un repositorio?"
+case_sensitive = false
+answers = ["git remote -v", "git remote"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "M08 - Ordena el flujo típico al colaborar con un remoto"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["Clonar o agregar el remoto", "Hacer fetch para obtener cambios", "Crear una rama local para trabajar", "Hacer commits en la rama local", "Hacer push al remoto"]

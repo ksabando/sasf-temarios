@@ -1,0 +1,188 @@
+title = "Módulo 11 - Spring Data JPA y ORM"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué especificación de Java define el mapeo objeto-relacional?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "JPA" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "JDBC" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Hibernate" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "SQL" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación de JPA marca una clase como entidad de base de datos?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Entity" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Table" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Column" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Id" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué estrategia de generación de ID usa secuencias de base de datos?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "SEQUENCE" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "IDENTITY" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "AUTO" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "UUID" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué tipo de fetch es el defecto para @ManyToOne?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "EAGER" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "LAZY" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "DEFAULT" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "AUTO" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación evita la serialización circular en relaciones JPA?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@JsonIgnore" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@JsonManagedReference" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@ToString.Exclude" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@JsonBackReference" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué interfaz de Spring Data proporciona métodos CRUD básicos?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "CrudRepository" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "JpaRepository" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "PagingAndSortingRepository" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Repository" }
+
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación de JPA se usa para la estrategia de locking optimista?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["@Version"]
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación mapea una relación muchos a uno?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@ManyToOne" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@OneToMany" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@ManyToMany" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@OneToOne" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué interfaz de Spring Data combina CrudRepository y PagingAndSortingRepository?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "JpaRepository" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Repository" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "JPARepository" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "MongoRepository" }
+
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 60000
+title = "Ordena las capas de una aplicación Spring Data JPA"
+points_awarded = 1000
+axis_labels = { from = "BD", to = "Cliente" }
+answers = ["Entidad (@Entity)", "Repositorio (JpaRepository)", "Servicio (@Service)", "Controlador (@RestController)"]
+

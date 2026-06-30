@@ -1,0 +1,199 @@
+title = "Módulo 20 - Cache y Rendimiento"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación almacena el resultado de un método en caché?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Cacheable" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@CachePut" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@CacheEvict" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Cache" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación actualiza la caché con el resultado del método?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@CachePut" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Cacheable" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@CacheEvict" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@CacheUpdate" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación elimina entradas de la caché?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@CacheEvict" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Cacheable" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@CachePut" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@CacheRemove" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué gestor de caché en memoria usa Spring Boot por defecto?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "ConcurrentMapCacheManager" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "CaffeineCacheManager" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "RedisCacheManager" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "EhCacheCacheManager" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué proveedor de caché es recomendado para entornos de producción con un solo nodo?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Caffeine" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ConcurrentMap" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Simple" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "NoOp" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué proveedor de caché es distribuido y se usa con múltiples nodos?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Redis" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Caffeine" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ConcurrentMap" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "EhCache" }
+
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué atributo de @Cacheable define el nombre de la caché?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["cacheNames", "value", "cacheManager"]
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación permite agrupar múltiples operaciones de caché?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Caching" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@CacheGroup" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@CacheOperations" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@MultiCache" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué atributo de @CacheEvict elimina todas las entradas de la caché?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "allEntries = true" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "all = true" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "clear = true" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "flush = true" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué endpoint de Actuator expone métricas de caché?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "/actuator/caches" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "/actuator/metrics" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "/actuator/health" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "/actuator/info" }
+

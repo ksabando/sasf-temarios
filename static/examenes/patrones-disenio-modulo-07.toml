@@ -1,0 +1,188 @@
+title = "Módulo 07 - Patrones de Comportamiento: Chain of Responsibility y Command"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón permite que una petición pase por una cadena de handlers?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Chain of Responsibility" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Command" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Observer" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Mediator" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón encapsula una solicitud como un objeto?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Command" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Chain of Responsibility" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Strategy" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Template Method" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo se llama el método que deshace la operación en Command?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "undo() / unexecute()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "rollback()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "deshacer()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "cancel()" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué componente de Spring Boot usa Chain of Responsibility?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "SecurityFilterChain" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "JdbcTemplate" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ApplicationContext" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "BeanFactory" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre Chain y Decorator?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Chain puede detener el flujo; Decorator siempre envuelve" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Decorator puede detener el flujo; Chain siempre envuelve" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No hay diferencia" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Chain es estructural; Decorator es de comportamiento" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué interfaz de Java es un ejemplo de Command?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Runnable" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Comparable" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Iterable" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Serializable" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son roles del patrón Command? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Invoker (almacena y ejecuta comandos)" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Receiver (ejecuta la operación real)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Observer (notifica cambios)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Builder (construye el comando)" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón se combina con Command para implementar la funcionalidad de undo?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "Memento" }
+[[slides.TypeAnswer.answers]]
+content = { Text = "memento" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena el flujo de Chain of Responsibility desde que llega la petición:"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+[[slides.Order.answers]]
+content = { Text = "La petición llega al primer handler de la cadena" }
+[[slides.Order.answers]]
+content = { Text = "El handler decide si puede procesarla" }
+[[slides.Order.answers]]
+content = { Text = "Si no puede, pasa la petición al siguiente handler" }
+[[slides.Order.answers]]
+content = { Text = "Un handler procesa la petición o llega al final sin procesar" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son usos válidos de Command? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Implementar sistemas de undo/redo" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Encolar y programar operaciones" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Crear objetos complejos paso a paso" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Compartir estado entre múltiples objetos" }

@@ -1,0 +1,189 @@
+title = "Módulo 09 - Comunicación entre Servicios"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la principal desventaja de la comunicación síncrona (REST) entre servicios?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Acoplamiento temporal: el cliente debe esperar y si el servidor falla, el cliente falla" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es difícil de implementar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No soporta JSON" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es lenta siempre" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué protocolo usa gRPC?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "HTTP/2" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "HTTP/1.1" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "TCP puro" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "UDP" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué serialización usa gRPC?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Protocol Buffers (Protobuf)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "JSON" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "XML" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "YAML" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón de resiliencia evita fallos en cascada al prevenir llamadas a un servicio que está fallando?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Circuit Breaker" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Retry" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Timeout" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Bulkhead" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles son los tres estados de un Circuit Breaker?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "CLOSED, OPEN, HALF_OPEN" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "START, STOP, PAUSE" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ON, OFF, STANDBY" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "UP, DOWN, DEGRADED" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia principal entre Kafka y RabbitMQ?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Kafka es un log distribuido persistente; RabbitMQ es un broker de colas tradicional" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Kafka es más antiguo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "RabbitMQ no soporta mensajes" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Son iguales" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son patrones de resiliencia en comunicación? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Circuit Breaker" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Bulkhead" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Factory" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Observer" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿En qué se diferencia un Evento de un Comando en mensajería? (Selecciona 2 características)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Un evento notifica algo que ocurrió (pasado)" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Un comando solicita una acción (imperativo)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un evento solo puede tener 1 consumidor" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un comando puede tener múltiples handlers" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué infraestructura gestiona la comunicación entre servicios a nivel de red con sidecars?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "Service Mesh" }
+[[slides.TypeAnswer.answers]]
+content = { Text = "Istio" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los estados del Circuit Breaker en su ciclo de vida típico:"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin del ciclo" }
+[[slides.Order.answers]]
+content = { Text = "CLOSED (operación normal)" }
+[[slides.Order.answers]]
+content = { Text = "OPEN (fallos detectados, rechaza llamadas)" }
+[[slides.Order.answers]]
+content = { Text = "HALF_OPEN (permite algunas llamadas de prueba)" }
+[[slides.Order.answers]]
+content = { Text = "CLOSED (se restablece si las pruebas son exitosas)" }

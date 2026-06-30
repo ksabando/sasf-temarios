@@ -1,0 +1,167 @@
+title = "Módulo 02 - Nombres Significativos"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué deben revelar los nombres según Clean Code?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "La intención (por qué existe, qué hace, cómo se usa)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El tipo de dato" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La ubicación en memoria" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La versión del código" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Por qué 'accountList' es un nombre desinformativo?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Porque sugiere que es un List cuando podría no serlo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Porque es muy largo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Porque usa camelCase incorrectamente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Porque no tiene prefijo húngaro" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es el problema con 'getAccount()' y 'fetchAccount()' en el mismo proyecto?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Ambos hacen lo mismo con distinto nombre (inconsistencia)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Ninguno, es válido tener sinónimos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "fetch es más rápido que get" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Son palabras muy parecidas" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué hace que un nombre sea 'buscable'?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Que sea único y fácil de encontrar con Ctrl+F" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Que aparezca en Google" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Que tenga más de 10 caracteres" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Que use caracteres especiales" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Por qué 'genymdhms' es un mal nombre?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Porque no es pronunciable" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Porque tiene muchas letras" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Porque usa números" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Porque no usa mayúsculas" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué nombre de clase es correcto según Clean Code?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "class PaymentProcessor (sustantivo específico)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "class Manager (sin contexto adicional)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "class Data (muy genérico)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "class ProcessPayment (verbo)" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es el problema con prefijos como m_, _ o I (interfaces)?"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Son codificaciones innecesarias que no aportan información" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Dificultan la lectura y añaden ruido visual" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Ralentizan la compilación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Son obligatorios en Java" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué tipo de palabra (verbo o sustantivo) debe usarse para nombrar un método según Clean Code?"
+case_sensitive = false
+answers = ["Verbo"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué tipo de palabra (verbo o sustantivo) debe usarse para nombrar una clase según Clean Code?"
+case_sensitive = false
+answers = ["Sustantivo"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "Ordena estos nombres de variables de mejor a peor según Clean Code"
+axis_labels = { from = "Mejor", to = "Peor" }
+answers = ["generationTimestamp", "genTimestamp", "genTS", "g"]

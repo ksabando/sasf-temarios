@@ -1,0 +1,188 @@
+title = "Módulo 16 - Spring Security"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué bean central configura la cadena de filtros de seguridad?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "SecurityFilterChain" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "SecurityConfig" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "WebSecurityConfigurerAdapter" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "FilterChain" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué implementación de PasswordEncoder es la más recomendada?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "BCryptPasswordEncoder" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "NoOpPasswordEncoder" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "MD5PasswordEncoder" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ShaPasswordEncoder" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué interfaz carga datos del usuario desde la base de datos?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "UserDetailsService" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "UserService" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "AuthenticationProvider" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "UserRepository" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación habilita la seguridad a nivel de método?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@EnableMethodSecurity" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@EnableWebSecurity" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@PreAuthorize" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Secured" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué expresión de seguridad verifica si el usuario tiene un rol específico?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "hasRole('ADMIN')" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "isAdmin()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "hasAuthority('ADMIN')" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "isAuthenticated()" }
+
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación de Spring Security protege un método basado en una expresión SpEL?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["@PreAuthorize"]
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué debe configurarse en un API REST sin formularios de login?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "CSRF deshabilitado y stateless session" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "CSRF habilitado" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Sessions stateful" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Form login" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación configura el origen cruzado (CORS)?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@CrossOrigin" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Cors" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@EnableCors" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Origin" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué método de SecurityFilterChain autoriza todas las peticiones autenticadas?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "anyRequest().authenticated()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "allRequests().authenticated()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "anyRequest().permitAll()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "requests().authenticated()" }
+
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 60000
+title = "Ordena la cadena de autenticación en Spring Security"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+answers = ["Petición HTTP", "SecurityFilterChain", "AuthenticationProvider", "UserDetailsService", "Generación de SecurityContext"]
+

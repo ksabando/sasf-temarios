@@ -1,0 +1,76 @@
+---
+private: true
+sidebar_class_name: private
+sidebar_label: "Cuestionario"
+---
+
+### 2. [Investigar] Dan North, creador de BDD, propuso los principios CUPID en oposición a SOLID. ¿Cómo el principio "Domain-based" de CUPID se relaciona con SRP? ¿Por qué North argumenta que "Domain-based" es superior a SRP para decidir cómo dividir el código?
+
+**Respuesta**: "Domain-based" propone que el código debe reflejar el lenguaje del dominio, no las responsabilidades técnicas. La diferencia con SRP es sutil pero profunda: SRP divide por "razón para cambiar" (¿quién pide el cambio? = actor/stakeholder), mientras que Domain-based divide por "lenguaje ubicuo" (¿cómo habla el negocio de esta responsabilidad?). Ejemplo concreto de North: en un sistema de reservas, SRP produciría `BookingValidator`, `BookingCalculator`, `BookingRepository` (separación técnica). Domain-based produciría `Booking`, `PricingPolicy`, `CancellationPolicy` (separación por concepto de dominio). North argumenta que Domain-based es superior porque: (1) el código es legible para el experto de dominio sin traducir conceptos de negocio a conceptos técnicos; (2) las responsabilidades de dominio son más estables que las técnicas (un `Booking` siempre será un Booking, pero un `BookingValidator` puede fusionarse o dividirse según cambios técnicos); (3) evita la proliferación de clases técnicas sin significado de negocio.
+
+**Por qué**: Dan North presentó CUPID en 2021 en NDC. Domain-based toma inspiración de Domain-Driven Design (Eric Evans, 2003) donde el código debe hablar el lenguaje del dominio. North argumenta que SRP produce código "técnicamente correcto pero sin alma de negocio".
+
+---
+
+### 3. [Investigar] Robert C. Martin refinó su definición de SRP en "Clean Architecture" (2017) respecto a la versión original de los años 2000. ¿Cuál fue el cambio clave y por qué lo hizo? ¿Qué problema práctico resolvió este refinamiento?
+
+**Respuesta**: El cambio clave fue pasar de "una clase debe tener una sola razón para cambiar" (definición 2000) a "una clase debe ser responsable ante un único actor" (Clean Architecture, 2017). La diferencia: la definición original era circular (¿qué es una "razón"? — "algo que hace cambiar la clase" lo cual es tautológico). El refinamiento introduce el concepto de "actor" como stakeholder organizacional (departamento, rol, equipo). Problema práctico resuelto: en la definición original, dos métodos `calculateTax()` y `calculateRetirement()` en la misma clase `EmployeeFinance` podrían considerarse "una sola responsabilidad" porque ambos son "cálculos financieros del empleado". Pero con la definición refinada, `calculateTax()` responde a Contabilidad y `calculateRetirement()` responde a Beneficios/RRHH — son dos actores distintos, viola SRP. El refinamiento hace SRP verificable: preguntá "¿quién pediría este cambio?" en lugar de "¿esto es una o dos responsabilidades?".
+
+**Por qué**: Martin explicó este refinamiento en Clean Architecture, Capítulo 7. La definición original causaba debates interminables sobre qué constituye "una responsabilidad". La definición por actor es objetiva: identificá los stakeholders y si dos stakeholders distintos pueden pedir cambios en la misma clase, viola SRP.
+
+---
+
+### 4. [Investigar] ¿Cómo se relaciona SRP con los "Bounded Contexts" de Domain-Driven Design (Eric Evans, 2003)? ¿Puede un Bounded Context contener múltiples clases que individualmente violen SRP pero colectivamente cumplan CCP? Explicá con un ejemplo de e-commerce.
+
+**Respuesta**: SRP y Bounded Contexts operan a diferentes niveles pero comparten filosofía: cada uno persigue "una razón para cambiar" pero a distinta granularidad. Un Bounded Context es un límite conceptual donde un modelo de dominio es consistente; cada BC tiene su propio "actor" (equipo, área de negocio). SRP aplica la misma idea a nivel de clase. Es perfectamente posible — y deseable — que un Bounded Context contenga clases que individualmente son "pequeñas" (cumplen SRP a nivel de clase) pero que comparten la misma razón de cambio a nivel de contexto (cumplen CCP a nivel de paquete). Ejemplo e-commerce: Bounded Context "Pricing" contiene `DiscountCalculator`, `TaxCalculator`, `PricingRule`, `CurrencyConverter`. Cada clase cumple SRP (una razón para cambiar), pero todas comparten el actor "Equipo de Pricing/Finanzas" y viven en el mismo BC. CCP asegura que los cambios de Pricing no afectan al BC "Shipping" ni "Inventory". La relación es: Bounded Context ≈ CCP aplicado a nivel de subsistema. SRP ≈ CCP aplicado a nivel de clase.
+
+**Por qué**: Eric Evans no menciona SRP explícitamente, pero Bounded Contexts es la materialización de la separación por actores a nivel arquitectónico. Vaughn Vernon en "Implementing DDD" conecta explícitamente SRP con BCs: "un Bounded Context es el lugar donde un modelo tiene una sola razón para cambiar".
+
+---
+
+### 5. [Conectar] Clase discute que SRP mejora la testabilidad. Investigá el trabajo de Michael Feathers en "Working Effectively with Legacy Code" (2004) sobre "seams" y explicá cómo SRP crea seams que habilitan pruebas unitarias en código que de otra forma sería intestable.
+
+**Respuesta**: Michael Feathers define "seam" como "un lugar donde se puede alterar el comportamiento sin modificar el código en ese lugar". SRP crea seams al separar responsabilidades en clases distintas con interfaces: cada separación es un punto de inyección donde se puede insertar un mock. Ejemplo del caso EmployeeService de la clase: antes de SRP, `validarEmpleado()` y `calcularSalarioNeto()` y `guardarEmpleado()` están en la misma clase. No hay seam para probar `calcularSalarioNeto()` aisladamente porque está acoplado a la validación y persistencia. Después de SRP, `NominaCalculator.calcularSalarioNeto()` es una clase independiente con su propia interfaz — es un seam perfecto. Se puede probar pasando un `Empleado` mock sin BD ni validación. Feathers llama a esto "breaking dependencies": cada separación SRP es una dependencia rota que antes era monolítica. La técnica de Feathers "Extract and Override Call" es esencialmente "aplicá SRP en pequeño: extraé un método, movelo a una nueva clase, e injectala".
+
+**Por qué**: Feathers y Martin convergen: SRP es simultáneamente un principio de diseño y una técnica de testabilidad. Cada responsabilidad separada es un punto de testeo aislado. Legacy code que no se puede probar es, por definición de Feathers, código sin SRP.
+
+---
+
+### 6. [Conectar] La clase menciona "la prueba del nombre" para detectar violaciones SRP. Relacioná esto con el trabajo de Eric Evans sobre el "Lenguaje Ubicuo" en DDD. ¿Por qué un nombre vago como `Manager`, `Handler`, `Processor` es señal de violación SRP en ambos marcos conceptuales?
+
+**Respuesta**: Eric Evans define el Lenguaje Ubicuo como un vocabulario compartido entre desarrolladores y expertos de dominio donde cada término tiene un significado preciso. Una clase con nombre vago (`Manager`, `Handler`, `Processor`) viola el Lenguaje Ubicuo porque estos sufijos no existen en el dominio del negocio — un experto en nóminas no dice "el Procesador de Empleado", dice "el cálculo de nómina" o "la validación de datos del empleado". La conexión con SRP: un nombre vago es síntoma de que la clase tiene múltiples responsabilidades que no se pueden nombrar con un solo término del dominio. Si al intentar nombrar la clase solo se te ocurre `OrderManager`, es porque la clase maneja validación, cálculo, persistencia y notificación — ninguna palabra del dominio abarca todas esas responsabilidades. En DDD, esto se corrige encontrando los agregados y servicios de dominio correctos; en SRP, separando responsabilidades hasta que cada clase reciba un nombre del dominio. La convergencia: ambos marcos detectan el mismo problema (mezcla de responsabilidades) con la misma señal (imposibilidad de nombrar con precisión).
+
+**Por qué**: Evans y Martin, desde DDD y SOLID respectivamente, llegan a la misma heurística: el código bien diseñado se nombra con términos del negocio. Un sufijo técnico genérico indica que el diseño no refleja el dominio.
+
+---
+
+### 7. [Conectar] ¿Cómo se relaciona SRP con el concepto de "Vertical Slice Architecture" (Jimmy Bogard, 2018)? ¿Es Vertical Slice Architecture una alternativa a SRP o una aplicación de SRP a nivel arquitectónico?
+
+**Respuesta**: Vertical Slice Architecture (VSA) organiza el código por funcionalidad de negocio (feature), no por capa técnica. En lugar de capas horizontales (Controllers/, Services/, Repositories/), cada feature es una "rebanada vertical" (CreateOrder/, CancelOrder/, GetOrderHistory/) que contiene todo lo necesario para esa funcionalidad. La relación con SRP: VSA aplica SRP a nivel de módulo/feature: cada feature es responsable ante un solo actor y cambia por una sola razón. Es SRP a nivel arquitectónico. Contraste con la arquitectura en capas de la clase: en capas, `OrderService` contiene lógica de crear, cancelar, y buscar órdenes — múltiples razones para cambiar (crear vs cancelar son casos de uso distintos, potencialmente con actores distintos). En VSA, `CreateOrder` y `CancelOrder` son módulos independientes, cada uno con su propio mini-controller, mini-service, mini-repository. VSA no reemplaza SRP; lo escala a nivel de módulo. La pregunta SRP clásica ("¿cuántas razones para cambiar tiene esta clase?") se convierte en "¿cuántas razones para cambiar tiene este feature folder?".
+
+**Por qué**: Jimmy Bogard (creador de MediatR y AutoMapper) propuso VSA como respuesta a la arquitectura en capas tradicional donde los servicios tienden a violar SRP porque agrupan casos de uso no relacionados. VSA es la aplicación de SRP + CQRS a nivel de estructura de proyecto.
+
+---
+
+### 8. [Cuestionar] David Heinemeier Hansson ha argumentado que SRP destruye la cohesión del dominio y produce modelos anémicos. En Rails, un modelo `User` con validaciones, callbacks, scopes y lógica de negocio es idiomático y productivo. ¿Es SRP incompatible con el estilo Active Record? ¿Dónde está el equilibrio?
+
+**Respuesta**: Hay una tensión real. **Argumento a favor de DHH**: Un modelo `User` en Rails que contiene validaciones de email, lógica de autenticación, scopes de búsqueda, y callbacks de notificación es altamente cohesivo en el dominio: todo gira alrededor del concepto "usuario". Separarlo en `UserValidator`, `UserAuthenticator`, `UserNotifier`, `UserQuery` según SRP destruiría la cohesión conceptual y crearía 15 archivos donde antes había 1, haciendo más difícil entender "qué puede hacer un usuario". El framework Active Record intencionalmente integra persistencia y lógica de dominio. **Defensa de SRP**: SRP no exige atomizar el modelo de dominio; exige separar responsabilidades que cambian por razones distintas. Un `User` puede contener lógica de dominio (validar email) pero no debería contener lógica de infraestructura (enviar email via SMTP, escribir en BD). La capa de dominio puede ser cohesiva; lo que SRP separa son responsabilidades de infraestructura y orquestación. El equilibrio: "fat models, skinny services" de Rails es compatible con SRP si el modelo contiene lógica de dominio pura (reglas de negocio) y delega infraestructura a colaboradores inyectados.
+
+**Por qué**: La crítica de DHH (expuesta en "The Rails Doctrine" y en múltiples debates con Martin Fowler) apunta a la aplicación dogmática de SRP, no al principio en sí. Martin Fowler respondió que SRP y Active Record no son incompatibles si se entiende que "responsabilidad" no significa "una sola operación" sino "atender a un solo stakeholder".
+
+---
+
+### 9. [Cuestionar] ¿Puede SRP llevar a una explosión de clases que empeore la mantenibilidad en lugar de mejorarla? Investigá el fenómeno de "ravioli code" (código ravioli: muchas clases pequeñas, difícil de seguir) como contraparte de "spaghetti code". ¿Dónde está el punto de equilibrio según la literatura?
+
+**Respuesta**: "Ravioli code" es el término usado para describir sistemas donde las responsabilidades están tan atomizadas que seguir el flujo de ejecución requiere saltar entre 20 archivos. Es la antítesis del spaghetti code: mientras que spaghetti code tiene todo en una clase, ravioli code tiene cada operación en una clase separada con capas de indirección. SRP mal aplicado produce ravioli. El punto de equilibrio según la literatura (Martin Fowler, Robert Martin): (1) **Cohesión funcional**: si dos responsabilidades siempre cambian juntas, no las separes aunque formalmente sean "responsabilidades distintas". CCP tiene prioridad sobre SRP. (2) **El "Rule of Three"**: no abstraigas hasta que hayas visto el patrón repetirse al menos tres veces. (3) **Tamaño de clase**: no es un fin en sí mismo. Una clase de 80 líneas con una sola responsabilidad bien definida es mejor que 4 clases de 20 líneas que requieren una coreografía compleja. (4) **Narrativa del código**: un nuevo desarrollador debería poder entender un caso de uso leyendo 3-5 archivos, no 25. Si SRP produce más de 5 archivos por caso de uso, probablemente es excesivo.
+
+**Por qué**: El término "ravioli code" fue popularizado por desarrolladores que observaron que la aplicación dogmática de SOLID en Java enterprise producía sistemas con miles de clases diminutas y fábricas de fábricas. Martin respondió en Clean Architecture: "SRP no es sobre hacer las clases más pequeñas; es sobre asegurar que cada clase responda a un solo actor".
+
+---
+
+### 10. [Cuestionar] Yegor Bugayenko en "Elegant Objects" (Vol. 1, 2016) argumenta que los objetos no deberían tener getters ni setters, y que la verdadera encapsulación hace innecesario SRP. ¿Es SRP un parche para la falta de encapsulamiento real? ¿Qué pasaría si siguiéramos los principios de Bugayenko en lugar de SOLID?
+
+**Respuesta**: Bugayenko sostiene que un objeto verdaderamente encapsulado no expone su estado y solo expone comportamiento. En ese paradigma, el problema que SRP intenta resolver (mezcla de responsabilidades) no ocurre porque: (1) un objeto sin getters no puede ser usado por otros para extraer datos y hacer lógica externa (evitando Feature Envy); (2) un objeto sin setters es inmutable, eliminando efectos colaterales; (3) la composición estricta significa que cada objeto delegaría en colaboradores en lugar de mezclar lógica. Si se siguieran los principios de Bugayenko en lugar de SOLID: las clases serían más grandes (porque contendrían lógica de dominio rica) pero con interfaces mínimas (sin getters), más inmutables (sin setters), y compuestas de otros objetos (no de servicios). El "Employee" de Bugayenko tendría método `salary()` que internamente calcula, valida y persiste colaborando con objetos compuestos, sin exponer nunca `getSalary()` como double. En este paradigma, SRP no se necesita como principio explícito porque la encapsulación estricta lo fuerza naturalmente: un objeto solo puede hacer una cosa — su responsabilidad definida por su interfaz pública.
+
+**Por qué**: Bugayenko es una voz disidente desde dentro de OOP. Su crítica es que SOLID es una solución a problemas creados por el estilo JavaBeans (objetos pasivos con getters/setters) que no deberían existir en OOP genuina. Si los objetos fueran verdaderamente autónomos, no necesitarían que principios externos les digan que no mezclen responsabilidades — simplemente no podrían.
+

@@ -1,0 +1,167 @@
+title = "Módulo 03 - Funciones"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la primera regla de las funciones según Clean Code?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Deben ser pequeñas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Deben tener nombres largos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Deben tener al menos 30 líneas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Deben tener comentarios" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa 'una función debe hacer una sola cosa'?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "No debe mezclar diferentes niveles de abstracción" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Debe tener solo una línea de código" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Debe tener solo un parámetro" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Debe llamar a una sola función" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es el número ideal de parámetros en una función?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "0" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "3" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Depende del lenguaje" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cuantos más, mejor" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué problema tienen los argumentos de salida?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Crean dependencia oculta y sorprenden al llamante" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Son más lentos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No se pueden depurar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Requieren más memoria" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué propone Command Query Separation (CQS)?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Un método debe ser comando (modifica) o consulta (retorna), no ambos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Separar comandos SQL de consultas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Separar la UI de la lógica" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Tener comandos y consultas en archivos separados" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Por qué DRY es importante en funciones?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Porque el código duplicado duplica los bugs" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Porque ahorra espacio en disco" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Porque compila más rápido" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Porque mejora el rendimiento" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la alternativa recomendada a los códigos de error en funciones?"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Excepciones" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Optional o Null Object Pattern" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Mensajes en consola" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Variables globales" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Cómo se llama la regla que dice que las funciones de alto nivel deben ir arriba y los detalles abajo?"
+case_sensitive = false
+answers = ["Stepdown Rule", "Step-down Rule"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué hacer cuando un switch crece demasiado según Clean Code?"
+case_sensitive = false
+answers = ["Enterrarlo en una fábrica y usar polimorfismo", "Usar polimorfismo", "Polimorfismo"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "Ordena las etapas de la Stepdown Rule de mayor a menor nivel de abstracción"
+axis_labels = { from = "Alto nivel", to = "Bajo nivel" }
+answers = ["Función pública principal", "Funciones de lógica de negocio", "Funciones de validación", "Funciones de utilidad privadas"]

@@ -1,0 +1,188 @@
+title = "Módulo 21 - Cloud Config y Service Discovery"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué servidor centraliza la configuración de microservicios en Spring Cloud?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Spring Cloud Config Server" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Eureka Server" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Spring Cloud Gateway" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Consul" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿De dónde puede leer la configuración el Config Server?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Git, sistema de archivos o Vault" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Solo de base de datos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Solo de variables de entorno" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Solo de YAML" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué servicio de descubrimiento usa Spring Cloud por defecto?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Eureka" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Consul" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Zookeeper" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Kubernetes" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación marca un servicio como servidor de descubrimiento?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@EnableEurekaServer" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@EnableEurekaClient" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@EnableDiscoveryClient" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@EurekaServer" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación en el cliente permite registrarse en Eureka?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@EnableDiscoveryClient" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@EnableEurekaClient" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@EnableEurekaServer" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@EurekaClient" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué componente de Spring Cloud permite refrescar la configuración en caliente?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Spring Cloud Bus" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Spring Cloud Config" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Spring Cloud Stream" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Spring Cloud Sleuth" }
+
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué dependencia starter se usa para el servidor de configuración?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["spring-cloud-config-server"]
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación permite balanceo de carga con RestTemplate?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@LoadBalanced" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@LoadBalance" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Balanced" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@EnableLoadBalancer" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué ventaja principal ofrece Service Discovery?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Ubicar servicios dinámicamente sin direcciones fijas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Aumentar la seguridad" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Reducir el tiempo de respuesta" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Simplificar el logging" }
+
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 60000
+title = "Ordena el arranque de microservicios con Eureka"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+answers = ["Iniciar Eureka Server", "Microservicio se registra en Eureka", "Cliente consulta Eureka", "LoadBalancer selecciona instancia", "Cliente llama a la instancia"]
+

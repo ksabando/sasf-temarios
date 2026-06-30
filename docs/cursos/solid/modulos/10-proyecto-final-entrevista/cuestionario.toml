@@ -1,0 +1,191 @@
+title = "Módulo 10 - Proyecto Final: Entrevista SOLID"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es el Single Responsibility Principle y quién lo definió?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Definido por Robert C. Martin: 'Una clase debe tener una sola razón para cambiar'" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Definido por Martin Fowler: 'Una clase debe tener un solo método público'" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Definido por Kent Beck: 'Una clase debe implementar una sola interfaz'" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Definido por Erich Gamma: 'Una clase debe pertenecer a un solo paquete'" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo resuelve el patrón Strategy la violación de OCP?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Encapsula cada algoritmo en su propia clase con una interfaz común; para agregar variantes solo se crean nuevas clases sin modificar existentes" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Centraliza todos los algoritmos en un solo método con un switch actualizado manualmente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usa reflexión para cargar dinámicamente todas las variantes desde un archivo de configuración" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Convierte el código en funciones lambda sin necesidad de clases" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué dice Design by Contract sobre las precondiciones y postcondiciones en subclases?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "La subclase no puede fortalecer precondiciones ni debilitar postcondiciones; debe mantener los invariantes de la clase base" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La subclase debe fortalecer precondiciones para mayor seguridad y puede debilitar postcondiciones" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Las precondiciones y postcondiciones no aplican en jerarquías de herencia" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La subclase puede ignorar todas las condiciones del padre si usa composición" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre 'fat interface' y 'role interface' en ISP?"
+points_awarded = 1000
+answer_mode = "TypeAnswer"
+case_sensitive = false
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Fat interface declara muchos métodos que no todos los clientes usan; role interface representa una capacidad específica que un cliente necesita" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Role interface es pequeña y específica; fat interface es grande y obliga a implementar métodos innecesarios" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre DIP y Dependency Injection?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "DIP es un principio (depender de abstracciones); DI es un patrón de implementación (inyectar dependencias desde fuera)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "DIP es el patrón y DI es el principio; son jerarquías diferentes" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Son sinónimos exactos en el contexto de Spring Framework" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "DI solo aplica en Java y DIP solo en TypeScript" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles son los 5 principios SOLID en una frase cada uno? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "SRP: Una clase debe tener una sola razón para cambiar" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "OCP: Abierto a extensión, cerrado a modificación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "DRY: No repetir código en múltiples lugares" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "KISS: Mantener el diseño lo más simple posible" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "Da un ejemplo de violación LSP en un sistema de pagos."
+points_awarded = 1000
+answer_mode = "TypeAnswer"
+case_sensitive = false
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "CashPayment implementa Payment pero refund() lanza excepción porque el efectivo no se reembolsa; la solución es segregar en ProcessablePayment y RefundablePayment" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Una subclase que rechaza un método heredado lanzando UnsupportedOperationException" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los principios SOLID según el orden recomendado de aplicación en una refactorización"
+points_awarded = 1000
+axis_labels = { from = "Primero", to = "Último" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "SRP: Separar responsabilidades en clases con un solo propósito" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "OCP: Usar abstracciones para permitir extensión sin modificación" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "LSP: Garantizar que las subclases sean sustituibles" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "ISP y DIP: Segregar interfaces y depender de abstracciones" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la relación entre SOLID y Design Patterns?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "SOLID son principios de diseño; Design Patterns son soluciones recurrentes que implementan esos principios (Strategy para OCP, Factory para DIP, etc.)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Design Patterns reemplazan a SOLID porque son más concretos y prácticos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "SOLID y Design Patterns son escuelas de diseño diferentes e incompatibles" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Design Patterns son principios y SOLID es la implementación práctica" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuándo NO debes aplicar SOLID? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "En prototipos o MVPs donde la velocidad de entrega es prioritaria" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Cuando la abstracción introduce más complejidad que beneficio (YAGNI)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "En aplicaciones empresariales con lógica de negocio compleja" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "En sistemas que requieren mantenimiento a largo plazo" }

@@ -1,0 +1,187 @@
+title = "Módulo 10 - Bases de Datos en Arquitectura"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa ACID en bases de datos SQL?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Atomicity, Consistency, Isolation, Durability" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Availability, Consistency, Isolation, Durability" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Atomicity, Consistency, Integrity, Durability" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Availability, Consistency, Integrity, Distribution" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué propiedad del teorema CAP sacrifica Cassandra típicamente?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Consistencia (fuerte) — Cassandra es AP" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Disponibilidad" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Tolerancia a particiones" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Durabilidad" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es Poliglota Persistence?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Usar diferentes bases de datos según la necesidad de cada contexto" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usar la misma base de datos para todo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una base de datos que soporta múltiples lenguajes" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una técnica de migración de datos" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué problema resuelve el patrón Transaction Outbox?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Publicación confiable de eventos en sistemas distribuidos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Replicación de base de datos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Caché de consultas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Balanceo de carga" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es una Saga en sistemas distribuidos?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Una secuencia de transacciones locales con compensaciones en caso de fallo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una base de datos distribuida" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un framework de mensajería" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un tipo de NoSQL" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué base de datos es más adecuada para un carrito de compras que requiere baja latencia y TTL?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Redis" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "PostgreSQL" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "MongoDB" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cassandra" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son tipos de bases de datos NoSQL? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Document (ej: MongoDB)" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Graph (ej: Neo4j)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Relacional con SQL" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "File system" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa BASE en NoSQL?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Basically Available, Soft state, Eventual consistency" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Basic Atomic Soft Eventual" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Base de datos Asíncrona Síncrona Eventual" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Balanced Atomic System Entity" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué alternativa a Transaction Outbox usa Change Data Capture para publicar eventos desde la base de datos?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "Debezium" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los tipos de bases de datos NoSQL por complejidad en relaciones (de más simple a más complejo):"
+points_awarded = 1000
+axis_labels = { from = "Modelo simple", to = "Relaciones complejas" }
+[[slides.Order.answers]]
+content = { Text = "Key-Value (ej: Redis)" }
+[[slides.Order.answers]]
+content = { Text = "Document (ej: MongoDB)" }
+[[slides.Order.answers]]
+content = { Text = "Column-Family (ej: Cassandra)" }
+[[slides.Order.answers]]
+content = { Text = "Graph (ej: Neo4j)" }

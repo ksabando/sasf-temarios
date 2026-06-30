@@ -1,0 +1,175 @@
+title = "Módulo 04 — Versionado y Evolución de APIs"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál de los siguientes es un breaking change?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Renombrar un campo existente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Añadir un campo opcional" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Añadir un nuevo endpoint" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Mejorar un mensaje de error" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué estrategia de versionado es considerada más RESTful?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Header (Accept: application/vnd.api.v1+json)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "URL path (/v1/tasks)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Query param (?v=1)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Domain (v1.api.taskflow.com)" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué indica el header Deprecation: true?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "La API está obsoleta y será eliminada" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El recurso no existe" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El método no está permitido" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La autenticación falló" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "En SemVer, ¿qué cambio requiere incrementar la versión MAJOR?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Breaking change" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Bug fix" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "New feature backward compatible" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Documentation update" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué header indica cuándo una API será descontinuada?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Sunset" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Deprecation" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Expires" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Retry-After" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la principal desventaja del versionado por URL path?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El recurso cambia de URL (menos RESTful)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es difícil de implementar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No es visible para el cliente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No permite múltiples versiones" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes NO son breaking changes? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Añadir un campo opcional en la respuesta" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Añadir un nuevo endpoint" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Eliminar un campo existente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cambiar el tipo de dato de un campo" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué ley de diseño de APIs dice: sé conservador en lo que envías, liberal en lo que aceptas?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["Postel's Law", "Ley de Postel", "Postel", "Principio de Robustez", "Robustness Principle"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuánto tiempo mínimo se recomienda mantener una versión deprecada antes de eliminarla? (en meses)"
+points_awarded = 1000
+case_sensitive = false
+answers = ["6", "seis", "6 meses"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena el ciclo de vida de una versión de API, desde su creación hasta su eliminación."
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+[[slides.Order.answers]]
+content = { Text = "1. Publicación y anuncio del changelog" }
+[[slides.Order.answers]]
+content = { Text = "2. Uso activo con soporte" }
+[[slides.Order.answers]]
+content = { Text = "3. Deprecation anunciado (header Deprecation + Sunset)" }
+[[slides.Order.answers]]
+content = { Text = "4. Eliminación definitiva" }

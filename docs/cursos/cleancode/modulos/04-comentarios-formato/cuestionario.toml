@@ -1,0 +1,167 @@
+title = "Módulo 04 - Comentarios y Formato"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué dice Kernighan sobre los comentarios?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "No comentes código malo, reescríbelo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Todo código debe tener comentarios" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Los comentarios son obligatorios en Java" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Los comentarios mejoran el rendimiento" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál de los siguientes es un comentario necesario?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "// ADVERTENCIA: método no thread-safe" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "// getter antes de un getter" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "// variable para el total" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "// 2024-01-01: Juan modificó" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué problema tienen los marcadores de posición como '// ===== CONSTRUCTORS ====='?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Son ruido visual que el IDE ya proporciona con folding" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Ayudan a navegar el código" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Son estándar de la industria" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Mejoran la legibilidad" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es el ancho de línea recomendado?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "80-120 caracteres" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "60 caracteres" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "200 caracteres" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Sin límite" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué tipo de comentario es '// Constructor por defecto'?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Ruido (explica lo obvio)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Legal" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Advertencia" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Clarificación" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Por qué el código comentado es malo?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Porque es código muerto que nadie se atreve a eliminar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Porque ralentiza el compilador" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Porque da errores de sintaxis" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Porque ocupa espacio en el IDE" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo deben organizarse los miembros de una clase según Clean Code?"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Constantes → Campos → Constructores → Públicos → Privados" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Siguiendo la Newspaper Metaphor (alto nivel arriba, detalles abajo)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Alfabéticamente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Públicos primero sin importar el orden" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Cómo se llama la metáfora de formato que compara el código con un periódico (titulares arriba, detalles abajo)?"
+case_sensitive = false
+answers = ["Newspaper Metaphor"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué herramienta se recomienda para mantener formato consistente en equipo?"
+case_sensitive = false
+answers = ["Spotless", "Prettier", "Formateador automático", "Formateador automatico"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "Ordena los miembros de una clase según la convención de Clean Code (de arriba hacia abajo)"
+axis_labels = { from = "Arriba", to = "Abajo" }
+answers = ["Constantes", "Campos", "Constructores", "Métodos públicos", "Métodos privados"]

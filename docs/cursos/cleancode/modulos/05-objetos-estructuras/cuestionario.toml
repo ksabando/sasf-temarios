@@ -1,0 +1,167 @@
+title = "Módulo 05 - Objetos y Estructuras de Datos"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué dice la Ley de Demeter?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Habla solo con tus amigos inmediatos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Todos los objetos deben tener getters" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Los DTOs deben ser inmutables" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No uses estructuras de datos" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es un Train Wreck?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Una cadena de llamadas como a.getB().getC().getD()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un error de compilación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una función con muchos parámetros" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un bucle infinito" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre un DTO y un Objeto de Dominio?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "DTO expone datos, Objeto expone comportamiento" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "DTO tiene getters/setters, Objeto tiene lógica" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "DTO es para web, Objeto es para base de datos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No hay diferencia" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Por qué getSalary() que devuelve el campo directo NO es encapsulación?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Porque expone el dato sin abstraer el comportamiento" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Porque el getter es público" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Porque usa double en lugar de BigDecimal" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Porque el campo es privado" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué método respeta la Ley de Demeter?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "order.getCustomerZipCode()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "order.getCustomer().getAddress().getZipCode()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "service.getRepository().findById(id).getData()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "db.getConnection().query(sql).get(0)" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué problema tiene un objeto híbrido?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Mezcla datos públicos con comportamiento (peor de ambos mundos)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es difícil de serializar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No se puede hacer mock" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es más lento" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué deben exponer los objetos según Clean Code?"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Comportamiento, no datos" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Abstracciones que ocultan la implementación interna" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Todos sus datos a través de getters públicos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Datos y comportamiento por igual" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Cómo se llama el principio que establece 'habla solo con tus amigos inmediatos'?"
+case_sensitive = false
+answers = ["Ley de Demeter", "Law of Demeter"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué tipo de objeto expone datos sin comportamiento (getters/setters) y se usa para transferencia de datos?"
+case_sensitive = false
+answers = ["DTO", "Data Transfer Object"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "Ordena de mejor a peor estas llamadas según la Ley de Demeter"
+axis_labels = { from = "Mejor", to = "Peor" }
+answers = ["order.getCustomerZipCode()", "order.getCustomer().getZipCode()", "order.getCustomer().getAddress().getZipCode()", "service.getRepository().findById(id).getData()"]

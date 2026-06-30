@@ -1,0 +1,188 @@
+title = "Módulo 24 - Actuator y Monitoreo"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué dependencia starter agrega endpoints de monitoreo a Spring Boot?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "spring-boot-starter-actuator" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "spring-boot-starter-monitor" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "spring-boot-starter-metrics" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "spring-boot-starter-health" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué endpoint de Actuator muestra el estado de salud de la aplicación?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "/actuator/health" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "/actuator/info" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "/actuator/metrics" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "/actuator/env" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué endpoint de Actuator expone métricas como el uso de memoria?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "/actuator/metrics" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "/actuator/health" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "/actuator/info" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "/actuator/prometheus" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué sistema de monitoreo usa Prometheus para recolectar métricas?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Pull (scrapeo periódico de endpoints)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Push (envío desde la app)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Streaming" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Event-driven" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué herramienta visualiza dashboards de Prometheus?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Grafana" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Kibana" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Tableau" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Power BI" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué framework de tracing distribuido usa Spring Boot 3.x?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Micrometer Tracing" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Spring Cloud Sleuth" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "OpenTelemetry" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Jaeger" }
+
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué endpoint de Actuator muestra un thread dump de la JVM?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["/actuator/threaddump", "/actuator/threaddump"]
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué interfaz se implementa para crear un health check personalizado?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "HealthIndicator" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Health" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "HealthCheck" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Indicator" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué herramienta visualiza traces distribuidos en Spring?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Zipkin" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Prometheus" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Grafana" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ELK" }
+
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 60000
+title = "Ordena el flujo de monitoreo con Prometheus y Grafana"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+answers = ["App expone /actuator/prometheus", "Prometheus scrapea métricas", "Métricas almacenadas en TSDB", "Grafana consulta Prometheus", "Dashboard muestra métricas"]
+

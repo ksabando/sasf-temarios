@@ -1,0 +1,191 @@
+title = "Módulo 08 - SOLID en React"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo se aplica SRP en React?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Separando componentes de presentación (solo UI), custom hooks (lógica y efectos) y componentes contenedor (orquestación)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usando un solo componente gigante que maneje toda la lógica y el renderizado de la página" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Poniendo toda la lógica de negocio en los archivos CSS" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usando Redux para todo, incluso para el estado local de un formulario" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrones de React implementan OCP?"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Compound Components: el padre define la estructura y los hijos se componen de forma flexible" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Higher-Order Components: envuelven un componente agregando comportamiento sin modificar el original" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Uso de switch/case en el render para seleccionar el componente según el tipo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Modificar directamente el código fuente de componentes de terceros" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo se viola LSP en React y cómo se corrige?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Cuando un componente variante ignora props esperadas (ej. LinkButton ignora onClick); se corrige definiendo interfaces de props coherentes y no implementando contratos que no se cumplen" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cuando se usan demasiados hooks en un componente; se corrige reduciendo a máximo 2 hooks" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cuando un componente recibe más de 5 props; se corrige usando un solo objeto de configuración" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "LSP no aplica en React porque los componentes no usan herencia de clases" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo se aplica ISP en componentes React?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Creando componentes atómicos con props mínimas (UserAvatar, UserName, UserActions) en lugar de un UserCard con 10 props opcionales" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Pasando todas las props disponibles a cada componente para máxima flexibilidad" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usando un solo hook useApp que retorne todos los datos y funciones de la aplicación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Definiendo interfaces con más de 15 métodos opcionales para cubrir todos los casos" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo se aplica DIP en React mediante Context API?"
+points_awarded = 1000
+answer_mode = "TypeAnswer"
+case_sensitive = false
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Context API actúa como contenedor de inyección de dependencias: se proveen implementaciones desde arriba y los componentes consumen abstracciones sin conocer detalles" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Se inyectan servicios como contexto y los componentes dependen de la interfaz del contexto, no de implementaciones concretas" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo harías testeable un componente que llama a fetch directamente aplicando DIP?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Crear un custom hook que abstraiga la llamada y permita inyectar un mock en pruebas mediante Context API o inyección de props" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Llamar a fetch directamente pero con un timeout más largo en el entorno de pruebas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usar un switch dentro del componente para decidir si llamar a la API real o devolver datos mock" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Comentar las llamadas fetch durante las pruebas y descomentarlas en producción" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los pasos para refactorizar un God Component en React"
+points_awarded = 1000
+axis_labels = { from = "Primer paso", to = "Último paso" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Extraer la lógica de datos en custom hooks (useUsers, useProducts)" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Separar la UI en componentes de presentación (UserTable, SearchBar)" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Crear componentes de layout (Sidebar, MainContent)" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Mover servicios externos a módulos separados" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la relación entre Compound Components y OCP en React?"
+points_awarded = 1000
+answer_mode = "TypeAnswer"
+case_sensitive = false
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El componente padre está cerrado a modificación pero abierto a extensión mediante la composición flexible de componentes hijos" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Se pueden agregar nuevas variantes de hijos sin modificar el componente padre, cumpliendo OCP" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón usarías para evitar pasar 10 props a un componente aplicando ISP?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Dividir el componente en componentes atómicos más pequeños que reciban solo las props que necesitan" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usar el operador spread (...props) para pasar todas las props sin declararlas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Convertir todas las props en un solo string JSON" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Ignorar ISP y mantener el componente grande porque es más fácil de mantener" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo implementarías un sistema de notificaciones extensible en React aplicando OCP?"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Definir interfaz NotificationChannel con método notify y crear implementaciones ToastChannel, BannerChannel" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Usar NotificationProvider con Context que acepte una lista de canales; agregar nuevos sin modificar el provider" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usar un switch dentro del componente para cada tipo de notificación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Implementar las notificaciones directamente en cada componente que las necesite" }

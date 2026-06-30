@@ -1,0 +1,186 @@
+title = "Módulo 10 - Patrones de Comportamiento: Strategy, Template Method y Visitor"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón permite intercambiar algoritmos en tiempo de ejecución?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Strategy" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Template Method" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Visitor" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "State" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón define el esqueleto de un algoritmo y difiere pasos a subclases?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Template Method" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Strategy" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Visitor" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Command" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué interfaz de Java es un ejemplo clásico de Strategy?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Comparator" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Iterable" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Runnable" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Serializable" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué método en Template Method se marca como final?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El template method" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Los pasos abstractos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Los hooks" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Ninguno" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón permite agregar nuevas operaciones a una jerarquía de clases sin modificarlas?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Visitor" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Strategy" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Template Method" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Command" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo se llama el método en el elemento que recibe al Visitor?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "accept()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "visit()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "execute()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "handle()" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son verdaderos sobre Template Method? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Define el esqueleto de un algoritmo en la clase base" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Los hooks son métodos con implementación por defecto que pueden ser sobrescritos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Permite cambiar algoritmos en tiempo de ejecución" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Utiliza composición en lugar de herencia" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué clase de Spring es un ejemplo clásico del patrón Template Method?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "JdbcTemplate" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena el flujo de ejecución del patrón Visitor:"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+[[slides.Order.answers]]
+content = { Text = "El cliente crea un Visitor concreto" }
+[[slides.Order.answers]]
+content = { Text = "El cliente pasa el Visitor al elemento raíz" }
+[[slides.Order.answers]]
+content = { Text = "El elemento llama a accept(visitor)" }
+[[slides.Order.answers]]
+content = { Text = "El Visitor ejecuta su operación sobre el elemento" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son diferencias entre Strategy y Template Method? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Strategy usa composición; Template Method usa herencia" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Strategy permite cambiar el algoritmo completo; Template Method solo partes" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Strategy es creacional; Template Method es de comportamiento" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Ambos son exactamente iguales" }

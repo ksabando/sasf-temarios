@@ -1,0 +1,179 @@
+title = "Módulo 01 - Fundamentos de Arquitectura de Software"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué distingue una decisión arquitectónica de una de diseño?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El costo de cambio y el impacto en la estructura del sistema" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La tecnología utilizada" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La complejidad del código" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El número de líneas de código afectadas" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál de los siguientes NO es un stakeholder típico en una decisión arquitectónica?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El compilador" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Desarrolladores" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usuarios finales" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Operaciones" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué atributo de calidad se refiere al tiempo que el sistema está operativo?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Disponibilidad" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Performance" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Escalabilidad" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Mantenibilidad" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es un ejemplo de trade-off arquitectónico?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Microservicios mejoran escalabilidad pero aumentan complejidad distribuida" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usar tabs vs espacios" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Nombrar variables en inglés vs español" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usar un IDE vs otro" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "Según el principio de la Última Decisión Responsable, ¿cuándo se debe tomar una decisión arquitectónica?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "En el último momento responsable en que debe ser tomada" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Lo antes posible" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Al final del proyecto" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Solo cuando el cliente lo solicita" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es un ADR (Architecture Decision Record)?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Un documento que captura una decisión arquitectónica importante con contexto y consecuencias" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un registro de bugs en la arquitectura" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una herramienta de diagramación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un tipo de test de arquitectura" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son roles típicos de un arquitecto de software? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Visionario técnico" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Comunicador entre negocio y tecnología" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Escribir todo el código del proyecto" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Realizar pruebas manuales de QA" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa la sigla YAGNI en arquitectura de software?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "You Aren't Gonna Need It" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo se llama el fenómeno de elegir tecnologías basadas en moda o preferencia personal sin justificación técnica?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "Architecture by Resume" }
+[[slides.TypeAnswer.answers]]
+content = { Text = "Architecture by resume" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los pasos del proceso de toma de una decisión arquitectónica (de inicio a fin):"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+[[slides.Order.answers]]
+content = { Text = "Identificar el problema o necesidad arquitectónica" }
+[[slides.Order.answers]]
+content = { Text = "Evaluar alternativas y trade-offs" }
+[[slides.Order.answers]]
+content = { Text = "Documentar la decisión con un ADR" }
+[[slides.Order.answers]]
+content = { Text = "Implementar y validar la decisión" }

@@ -1,0 +1,191 @@
+title = "Módulo 03 - OCP (Open/Closed Principle)"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la definición del Open/Closed Principle?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Las entidades de software deben estar abiertas para extensión pero cerradas para modificación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Las clases deben estar abiertas para modificación pero cerradas para herencia" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Los métodos deben ser públicos (abiertos) dentro del paquete y privados (cerrados) fuera de él" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El código fuente debe ser open source para permitir extensión comunitaria" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es el anti-patrón más común que viola OCP?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El switch/if-else gigante que debe modificarse cada vez que se agrega una nueva variante" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El uso de interfaces con un solo método abstracto" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La inyección de dependencias por constructor" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El uso de clases abstractas como base para jerarquías" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo resuelve el patrón Strategy la violación de OCP?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Encapsula cada algoritmo en su propia clase que implementa una interfaz común; para agregar una variante solo se crea una nueva clase sin modificar las existentes" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Centraliza todas las variantes en un solo método con un switch que se actualiza manualmente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Convierte todas las variantes en clases estáticas que se cargan por reflexión" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Elimina todas las clases concretas y usa solo funciones lambda" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre Strategy Pattern y Template Method Pattern?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Strategy encapsula algoritmos completos intercambiables usando composición; Template Method define el esqueleto con pasos fijos y variables usando herencia" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Strategy usa herencia y Template Method usa composición" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Ambos son idénticos pero Strategy se usa en Java y Template Method en C#" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Strategy no requiere interfaces mientras que Template Method sí" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles son señales de que un código viola OCP? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Tener que modificar una clase existente para agregar nueva funcionalidad" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Métodos con nombres como processType1, processType2, handleVariantA" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Uso de interfaces con múltiples implementaciones intercambiables" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Inyección de una lista de estrategias por constructor" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón en React implementa OCP al permitir componer hijos flexibles sin modificar el componente padre?"
+points_awarded = 1000
+answer_mode = "TypeAnswer"
+case_sensitive = false
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Compound Components" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Componentes compuestos" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo promueve Spring Boot el cumplimiento de OCP?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Mediante @ConditionalOnProperty, @Profile e inyección de listas de beans que permiten agregar implementaciones sin modificar el consumidor" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Forzando que todas las clases extiendan de una clase base común del framework" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Generando código automáticamente para cada nueva variante mediante anotaciones" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Obligando a usar @Autowired en campo para todas las dependencias" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los pasos para implementar OCP en un sistema de notificaciones extensible"
+points_awarded = 1000
+axis_labels = { from = "Primer paso", to = "Último paso" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Definir la interfaz NotificationChannel con el método send" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Implementar canales concretos: EmailChannel, SMSChannel, PushChannel" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Crear NotificationService que recibe List<NotificationChannel>" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Agregar un nuevo canal (WhatsAppChannel) sin modificar el servicio" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuándo NO es necesario aplicar OCP?"
+points_awarded = 1000
+answer_mode = "TypeAnswer"
+case_sensitive = false
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Cuando la abstracción introduce complejidad innecesaria (YAGNI)" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "En prototipos o cuando el número de variantes es pequeño y no se espera que crezca" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué son las sealed classes en Java 17+ y cómo se relacionan con OCP?"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Permiten controlar qué clases pueden extender una interfaz o clase padre" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Garantizan exhaustividad en pattern matching cuando el conjunto de variantes es conocido" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Reemplazan completamente el polimorfismo eliminando la necesidad de interfaces" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Permiten modificar clases finales en tiempo de ejecución" }

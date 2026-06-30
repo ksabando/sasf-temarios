@@ -1,0 +1,146 @@
+title = "M20 - Git LFS"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué hace git lfs install?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Configura Git LFS instalando los filtros smudge y clean y configurando el repositorio local" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Instala el servidor LFS en la máquina local" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Descarga todos los archivos LFS del repositorio" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Elimina archivos grandes del repositorio" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué hace git lfs track \"*.psd\"?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Indica a Git LFS que rastree todos los archivos .psd y los almacene en LFS en lugar de Git" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Agrega archivos .psd a .gitignore" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Crea un enlace simbólico para archivos .psd" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Comprime archivos .psd antes de commiteados" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Dónde almacena Git LFS los patrones de rastreo que gestiona?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "En el archivo .gitattributes" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "En el archivo .gitignore" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "En el archivo .git/config" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "En el archivo .lfsconfig" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando muestra qué archivos están siendo rastreados por LFS y su estado?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git lfs status" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git lfs ls-files" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git lfs list" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git lfs track" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué hace git lfs ls-files --all?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Lista todos los archivos que han sido rastreados por LFS en todo el historial del repositorio" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Lista todos los archivos actualmente en el directorio de trabajo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Lista solo los archivos LFS eliminados" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Lista la configuración del servidor LFS" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando de Git LFS descarga contenido LFS para el checkout actual sin actualizar el árbol de trabajo?"
+case_sensitive = false
+answers = ["git lfs fetch"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando de Git LFS descarga y checkout el contenido LFS para la rama actual?"
+case_sensitive = false
+answers = ["git lfs pull"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando de Git LFS convierte archivos existentes rastreados por Git a LFS (dos palabras)?"
+case_sensitive = false
+answers = ["lfs migrate", "git lfs migrate"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "Ordena los pasos para empezar a usar LFS en un repositorio existente"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["git lfs install", "git lfs track \"*.zip\"", "git add .gitattributes", "git add archivo_grande.zip", "git commit -m \"Agregar archivo grande con LFS\"", "git push"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "Ordena las acciones realizadas por git lfs migrate import para convertir archivos existentes"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["Escanear el historial del repositorio en busca de patrones de archivo", "Reescribir commits para reemplazar archivos grandes con punteros LFS", "Actualizar .gitattributes con los patrones rastreados", "Subir el historial reescrito y los objetos LFS al remoto"]

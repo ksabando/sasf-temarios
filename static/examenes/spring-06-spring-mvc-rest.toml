@@ -1,0 +1,188 @@
+title = "Módulo 06 - Spring MVC y REST APIs"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación marca un controlador REST en Spring?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@RestController" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Controller" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@ResponseBody" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Rest" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué clase encapsula la respuesta HTTP incluyendo status, headers y body?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "ResponseEntity" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "HttpServletResponse" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ModelAndView" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ServerResponse" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación mapea peticiones GET a un método de controlador?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@GetMapping" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@RequestMapping(method=GET)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@PostMapping" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@PutMapping" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación se usa a nivel de clase para definir la ruta base de un controlador?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@RequestMapping" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@GetMapping" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@RestController" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Path" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Cuál de los siguientes NO es un método HTTP estándar en REST?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "TRACE" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "GET" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "POST" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "DELETE" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué significa que REST sea stateless?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Cada petición contiene toda la información necesaria" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El servidor guarda el estado del cliente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No se puede usar autenticación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Las APIs no tienen estado" }
+
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación de Spring MVC indica que el valor retornado debe ir en el cuerpo de la respuesta HTTP?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["@ResponseBody"]
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Cómo se especifica el tipo de contenido que produce un endpoint REST?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Con el atributo produces de @RequestMapping" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Con @ResponseBody" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Con @JsonFormat" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Con Content-Type en la URL" }
+
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 60000
+title = "Ordena los pasos de una petición REST en Spring MVC"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+answers = ["Cliente envía HTTP request", "DispatcherServlet recibe petición", "HandlerMapping determina controlador", "Controlador procesa y retorna respuesta", "MessageConverter serializa a JSON"]
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué código HTTP se retorna para un recurso creado exitosamente?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "201 Created" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "200 OK" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "204 No Content" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "301 Moved" }
+

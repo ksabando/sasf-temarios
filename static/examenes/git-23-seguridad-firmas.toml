@@ -1,0 +1,168 @@
+title = "¿Qué flag de git commit firma un commit con GPG?"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué flag de git commit firma un commit con GPG?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "-S" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "-s" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--verify" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--signoff" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué flag de git tag firma un tag con GPG?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "-s" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "-a" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "-S" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "-v" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando de Git muestra las firmas de los commits en el log?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git log --show-signature" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git log --verify" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git verify-commit" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git check-signature" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué configuración de git se debe cambiar para usar SSH en lugar de GPG para firmar?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "gpg.format = ssh" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "gpg.program = ssh" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "user.signingkey = ssh" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "commit.gpgsign = ssh" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué herramienta de GitHub escanea secretos en repositorios automáticamente?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Secret scanning" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "CodeQL" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Dependabot" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "GitHub Actions" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué herramienta de GitHub actualiza automáticamente las dependencias con vulnerabilidades?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Dependabot" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "CodeQL" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Secret scanning" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "GitHub Advanced Security" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué herramienta de análisis de seguridad realiza codeQL queries sobre el código?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "CodeQL" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Dependabot" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "SonarQube" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Snyk" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando genera un par de claves GPG en Linux?"
+case_sensitive = false
+answers = ["gpg --full-generate-key"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué flag de git commit permite firmar siempre automáticamente los commits?"
+case_sensitive = false
+answers = ["commit.gpgsign"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "Ordena los pasos para firmar commits con GPG:"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["Generar clave GPG", "Configurar git user.signingkey", "Usar git commit -S"]

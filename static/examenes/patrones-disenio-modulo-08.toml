@@ -1,0 +1,190 @@
+title = "Módulo 08 - Patrones de Comportamiento: Iterator y Mediator"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón permite acceder secuencialmente a elementos de una colección sin exponer su estructura?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Iterator" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Mediator" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Composite" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Visitor" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué interfaz de Java deben implementar las clases para soportar for-each?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Iterable" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Iterator" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Collection" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Stream" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es el propósito del patrón Mediator?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Reducir dependencias directas entre objetos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Acceder secuencialmente a colecciones" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Crear familias de objetos relacionados" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Agregar responsabilidades dinámicamente" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué componente de Spring actúa como Mediator?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "ApplicationEventPublisher" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "JdbcTemplate" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "BeanFactory" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Environment" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué ventaja tiene Iterator sobre acceder directamente a una lista?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Oculta la estructura interna de la colección" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es más rápido" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usa menos memoria" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es más fácil de implementar" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál de estos NO es un método de Iterator?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "add()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "hasNext()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "next()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "remove()" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son métodos válidos del patrón Iterator? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "hasNext()" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "next()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "add()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "insert()" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué API de Java 8+ usa iteración interna en lugar de iteración externa?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "Stream API" }
+[[slides.TypeAnswer.answers]]
+content = { Text = "stream api" }
+[[slides.TypeAnswer.answers]]
+content = { Text = "Stream" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena el flujo de comunicación con el patrón Mediator:"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+[[slides.Order.answers]]
+content = { Text = "Un colega envía un mensaje al Mediator" }
+[[slides.Order.answers]]
+content = { Text = "El Mediator recibe el mensaje centralizadamente" }
+[[slides.Order.answers]]
+content = { Text = "El Mediator determina qué colegas deben ser notificados" }
+[[slides.Order.answers]]
+content = { Text = "El Mediator redirige el mensaje a los colegas correspondientes" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son problemas que resuelve Mediator? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Acoplamiento excesivo entre objetos que se comunican" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Comunicación muchos-a-muchos difícil de mantener" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Crear objetos con muchos parámetros" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Acceso secuencial a elementos de colecciones" }

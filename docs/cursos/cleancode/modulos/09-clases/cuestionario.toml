@@ -1,0 +1,167 @@
+title = "Módulo 09 - Clases"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa SRP (Single Responsibility Principle)?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Una clase debe tener una sola razón para cambiar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una clase debe tener un solo método" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una clase debe implementar una sola interfaz" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una clase debe tener un solo campo" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué indica la baja cohesión en una clase?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Que los métodos no usan los campos de la clase" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Que la clase es muy pequeña" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Que la clase tiene un solo método" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Que la clase es abstracta" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo saber si una clase es demasiado grande?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "No puedes describirla en 25 palabras sin usar 'y' u 'o'" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Mide más de 200 líneas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Tiene más de 5 métodos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Tiene campos privados" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es una 'God Class' (clase Dios)?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Una clase que concentra demasiadas responsabilidades" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una clase que implementa una interfaz divina" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una clase abstracta de alto nivel" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una clase con métodos estáticos" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué caracteriza a una clase de dominio anémica?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Solo tiene getters/setters, sin comportamiento" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Tiene lógica de negocio compleja" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Tiene alta cohesión" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es inmutable" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la señal de que un método privado debería estar en otra clase?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "No usa ningún campo de la clase actual" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es privado" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Tiene más de 5 líneas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Tiene parámetros" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo aplica Spring el SRP a nivel de anotaciones?"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Service para lógica, @Repository para datos, @Controller para HTTP" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Cada anotación define una responsabilidad específica" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Autowired en todas las clases" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Component para todo sin distinción" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué principio SOLID establece que una clase debe tener una sola razón para cambiar?"
+case_sensitive = false
+answers = ["Single Responsibility Principle", "SRP", "Principio de Responsabilidad Única", "Principio de Responsabilidad Unica"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué orden deben seguir los miembros de una clase según Clean Code?"
+case_sensitive = false
+answers = ["Constantes, Campos, Constructores, Públicos, Privados"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "Ordena de mayor a menor cohesión los siguientes tipos de clase"
+axis_labels = { from = "Mayor cohesión", to = "Menor cohesión" }
+answers = ["Clase con responsabilidad única", "Clase con 2-3 responsabilidades relacionadas", "God Class (muchas responsabilidades)", "Clase de utilidad (métodos sueltos)"]

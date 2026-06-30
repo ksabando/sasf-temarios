@@ -1,0 +1,201 @@
+title = "M06"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M06 - ¿Qué es una rama (branch) en Git?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Un puntero móvil a un commit específico dentro del historial" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una copia completa de todo el repositorio" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un tag inmutable que marca una versión" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un directorio dentro del working tree" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M06 - ¿Cuál es el comando correcto para crear una nueva rama llamada 'feature/login'?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git branch feature/login" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git checkout --branch feature/login" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git create-branch feature/login" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git switch --new feature/login" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M06 - ¿Qué comando moderno se usa para cambiar de rama?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git switch nombre-rama" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git move nombre-rama" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git change nombre-rama" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git branch --move nombre-rama" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M06 - En un merge fast-forward, ¿qué ocurre?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Git mueve el puntero de la rama destino linealmente sin crear un commit de merge" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Se crea siempre un commit adicional de fusión" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Se borra automáticamente la rama fuente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Git obliga a resolver conflictos manualmente" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M06 - ¿Qué genera un merge de tres vías (3-way)?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Un merge commit con dos padres, combinando historiales divergentes" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un commit lineal sin historial de la otra rama" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un rebase automático de la rama secundaria" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La eliminación del commit base común" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M06 - ¿Qué hace git merge main estando en otra rama?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Trae los commits de main a la rama actual" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Fusiona la rama actual dentro de main" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Elimina la rama main" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Crea una nueva rama desde main" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M06 - Diferencia entre git branch -d y git branch -D"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "-d exige que la rama esté fusionada; -D fuerza el borrado sin verificar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "-d borra siempre; -D solo si está fusionada" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "-d borra la rama remota; -D la local" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "-d renombra la rama; -D la elimina" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M06 - ¿Cómo se elimina una rama remota?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git push origin --delete nombre-rama" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git branch --delete-remote nombre-rama" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git remote delete nombre-rama" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git rm --cached nombre-rama" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M06 - ¿Qué información muestra git branch -vv?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Lista las ramas locales con su upstream tracking y relación (adelantada/atrasada)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Muestra solo el nombre de las ramas locales" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Muestra el autor del último commit de cada rama" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Lista las ramas remotas del repositorio" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "M06 - ¿Qué efecto tiene la opción --no-ff en un merge?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Fuerza la creación de un merge commit aunque el merge pueda ser fast-forward" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Evita que se cree cualquier commit de merge" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Salta la verificación de conflictos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Borra la rama fuente automáticamente tras el merge" }

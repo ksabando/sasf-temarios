@@ -1,0 +1,146 @@
+title = "M14 - Cherry-pick y Bisect"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué hace git cherry-pick <commit>?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Aplica los cambios de un commit específico en la rama actual" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Elimina un commit de la rama actual" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Copia la rama entera en la posición actual" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Combina dos ramas automáticamente" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando cherry-pick permite aplicar un rango de commits?"
+case_sensitive = false
+answers = ["git cherry-pick A..B", "git cherry-pick A^..B"]
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+points_awarded = 1000
+title = "¿Qué haces cuando un cherry-pick genera conflictos?"
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Resolver los conflictos manualmente y ejecutar git cherry-pick --continue" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Ejecutar git cherry-pick --abort para cancelar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Ejecutar git rebase --continue" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Forzar el cherry-pick con git cherry-pick --force" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "Ordena los pasos para usar git bisect"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["git bisect start", "git bisect bad (commit actual con el bug)", "git bisect good (commit donde funcionaba)", "Probar el commit marcado por bisect y repetir good/bad", "git bisect reset"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando marca un commit como malo (con bug) durante una bisección?"
+case_sensitive = false
+answers = ["git bisect bad"]
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué hace git bisect run <script>?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Automatiza la bisección ejecutando un script que devuelve 0 (good) o distinto de 0 (bad)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Ejecuta pruebas solo en el commit final de la bisección" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Muestra el historial de comandos ejecutados en la sesión de bisect" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Reinicia la bisección desde cero" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "Ordena el proceso típico para cherry-pick de un rango"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["Identificar los commits en otra rama que se necesitan", "Situarse en la rama destino con git checkout", "Ejecutar git cherry-pick A^..B", "Resolver conflictos si aparecen y continuar"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando de git log busca cambios que contengan una cadena específica?"
+case_sensitive = false
+answers = ["git log -S", "git log -S <texto>"]
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué hace git blame <archivo>?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Muestra el historial completo del archivo" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Muestra cada línea del archivo con el autor, commit y fecha del último cambio" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Busca errores en el archivo automáticamente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Compara el archivo actual con el de otra rama" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Cuándo es útil combinar git bisect con git log -S?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Cuando sabes qué cambio de contenido buscar y quieres encontrar el commit exacto que lo introdujo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cuando quieres fusionar dos ramas automáticamente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cuando necesitas crear un stash temporal" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cuando quieres eliminar commits antiguos" }

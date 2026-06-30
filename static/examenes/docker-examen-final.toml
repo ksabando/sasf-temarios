@@ -1,0 +1,558 @@
+title = "Examen Final - Docker de Cero a Experto"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué diferencia fundamental hay entre un contenedor y una máquina virtual?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El contenedor comparte el kernel del host; la VM tiene su propio sistema operativo." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La VM comparte el kernel del host; el contenedor tiene su propio SO." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Ambos son idénticos en funcionamiento." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El contenedor requiere un hypervisor." }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es el archivo de configuración principal del daemon de Docker?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "/etc/docker/daemon.json" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "/etc/docker/config.yml" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "/var/lib/docker/config.json" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "/opt/docker/daemon.conf" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre docker stop y docker kill?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Stop envía SIGTERM (graceful); kill envía SIGKILL (forzado)." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Stop envía SIGKILL; kill envía SIGTERM." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Ambos envían la misma señal." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Stop pausa; kill elimina." }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre CMD y ENTRYPOINT en un Dockerfile?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "CMD es default sobreescribible; ENTRYPOINT es fijo." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ENTRYPOINT es default; CMD es fijo." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "CMD se ejecuta en build; ENTRYPOINT en runtime." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Ambos son idénticos." }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre un volume y un bind mount en Docker?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Volume es gestionado por Docker; bind mount usa una ruta del host." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Bind mount es más seguro; volume es menos." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Volume solo funciona en Windows; bind mount en Linux." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Son exactamente lo mismo." }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué red de Docker se usa para comunicación multi-host?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "overlay" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "bridge" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "host" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "none" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué hace el comando 'docker compose down'?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Detiene y elimina contenedores, redes y volúmenes anónimos." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Solo pausa los servicios sin eliminar nada." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Elimina las imágenes del sistema." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Desinstala Docker Compose." }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre ARG y ENV en un Dockerfile?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "ARG solo en build-time; ENV disponible en build y runtime." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ENV solo en build-time; ARG en build y runtime." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ARG es para strings; ENV para números." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Ambos son exactamente iguales." }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es el registro de imágenes por defecto de Docker?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Docker Hub" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "GitHub Container Registry" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Amazon ECR" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Google Artifact Registry" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es un multi-stage build en Docker?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Múltiples FROM en un mismo Dockerfile; solo la última stage va a la imagen final." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Construir la misma imagen en varios SO a la vez." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Ejecutar múltiples contenedores desde un mismo Dockerfile." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Dividir una imagen en varias más pequeñas." }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué algoritmo de consenso usa Docker Swarm?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Raft" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Paxos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Gossip" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "PBFT" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es un rolling update en Docker Swarm?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Actualización gradual de réplicas con un delay configurable." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Reinicio simultáneo de todas las réplicas." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Actualización del daemon Docker en cada nodo." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Migración de servicios entre clusters." }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Por qué es importante ejecutar contenedores como usuario no-root?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Reduce el riesgo de escalada de privilegios si el contenedor es comprometido." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Mejora el rendimiento del contenedor." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Permite usar más puertos." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Acelera el tiempo de build." }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué hace la instrucción HEALTHCHECK en un Dockerfile?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Define una prueba periódica de salud del contenedor." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Reinicia el contenedor al detectar alto uso de memoria." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Genera un log de estado cada minuto." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Monitorea el tráfico de red." }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la unidad mínima de despliegue en Kubernetes?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Pod" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Contenedor" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Deployment" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Service" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es un ConfigMap en Kubernetes?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Objeto para almacenar configuración desacoplada que se inyecta en Pods." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Mapa de la topología de red del cluster." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Archivo de log de configuración del cluster." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Herramienta de despliegue automático." }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la principal diferencia entre Helm 2 y Helm 3?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Helm 3 elimina Tiller y usa RBAC nativo de K8s." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Helm 3 usa JSON en lugar de YAML." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Helm 2 no tiene repositorios." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Helm 3 solo funciona en GKE." }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es un Ingress en Kubernetes?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Reglas de enrutamiento HTTP/HTTPS hacia Services." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Firewall entre Pods." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Política de acceso al API server." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Configuración de DNS interna del cluster." }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué escáner de vulnerabilidades usa Harbor por defecto?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Trivy" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Clair" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Snyk" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Anchore" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es Kaniko?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Herramienta para construir imágenes sin daemon Docker, ideal para K8s." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Plugin de Jenkins para Docker." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Sistema de caché para builds." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Dashboard de monitoreo de CI/CD." }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo se conecta una app a una base de datos en Docker Compose?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Usando el nombre del servicio como hostname." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usando la IP del contenedor manualmente." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Configurando un proxy inverso." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usando localhost siempre." }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre Fargate y EC2 en AWS ECS?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Fargate es serverless sin gestionar servidores; EC2 requiere administrar nodos." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "EC2 es más caro que Fargate siempre." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Fargate solo soporta Linux." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Son idénticos en funcionamiento." }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es el patrón Sidecar en el ecosistema de contenedores?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Contenedor auxiliar que extiende o complementa al contenedor principal." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Contenedor de respaldo que reemplaza al principal en fallos." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Balanceador de carga entre contenedores." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Sistema de backup de contenedores." }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la regla de oro de Docker?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Un proceso por contenedor y imágenes inmutables." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Ejecutar siempre como root." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usar la imagen latest en producción." }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No usar volúmenes en producción." }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles son herramientas de escaneo de vulnerabilidades para imágenes? (Selecciona dos)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Trivy" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Docker Scout" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Hadolint" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Dive" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles son patrones de diseño en el ecosistema Docker? (Selecciona dos)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Sidecar" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Ambassador" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Singleton" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Factory" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa la sigla OCI en el contexto de contenedores?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["open container initiative"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿En qué directorio se montan los secrets en un contenedor Docker?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["/run/secrets/", "/run/secrets"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué herramienta gestiona paquetes en Kubernetes?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["helm"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los tipos de Service de K8s por visibilidad, de interna a externa."
+points_awarded = 1000
+axis_labels = { from = "Interna", to = "Externa" }
+answers = ["ClusterIP", "NodePort", "LoadBalancer", "Ingress"]

@@ -1,0 +1,146 @@
+title = "M17 - Hooks y Automatización"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Dónde se almacenan los hooks de Git localmente en un repositorio?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "En el directorio .git/hooks" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "En la raíz del directorio de trabajo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "En el archivo .git/config" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "En el directorio .github/hooks" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué hook se ejecuta antes de que se cree un mensaje de commit?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "pre-commit" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "post-commit" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "commit-msg" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "prepare-commit-msg" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué hook se usa típicamente para validar las convenciones del mensaje de commit?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "commit-msg" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "pre-commit" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "pre-push" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "post-merge" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Para qué se usa principalmente Husky?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Gestionar e instalar hooks de Git fácilmente a través de package.json" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Ejecutar un servidor Git local" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Programar commits automáticos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Resolver conflictos de fusión automáticamente" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "¿Qué opción de configuración de Git permite cambiar la ubicación desde donde se cargan los hooks?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "core.hooksPath" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "hooks.path" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git.hooksDirectory" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "hooks.directory" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Cuál es el nombre del hook que se ejecuta justo después de un commit exitoso?"
+case_sensitive = false
+answers = ["post-commit"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué hook se ejecuta antes de que git push envíe datos al remoto?"
+case_sensitive = false
+answers = ["pre-push"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Cuál es el nombre del hook que se ejecuta después de editar el mensaje de commit para validarlo?"
+case_sensitive = false
+answers = ["commit-msg"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "Ordena los hooks según el orden en que se ejecutan durante un commit normal"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["pre-commit", "prepare-commit-msg", "commit-msg", "post-commit"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "Ordena los pasos para configurar Husky y lint-staged en un proyecto"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["npm install husky lint-staged --save-dev", "npx husky init", "Configurar lint-staged en package.json", "Crear un archivo de hook pre-commit que ejecute lint-staged"]

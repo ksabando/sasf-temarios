@@ -1,0 +1,167 @@
+title = "Módulo 10 - Proyecto Final y Entrevista"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué problema tiene el nombre 'int d;'?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "No revela intención" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es muy corto" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usa minúscula" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es una palabra reservada" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es el número ideal de parámetros en una función?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "0" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "1" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "2" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "3" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es Command Query Separation?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Un método debe ser comando (modifica) o consulta (retorna), no ambos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Separar consultas SQL de comandos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Separar la UI de la lógica" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Tener comandos y consultas en archivos separados" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuándo está justificado un comentario según Clean Code?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Para explicar intención no obvia, advertencias, documentación legal" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Siempre" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Nunca" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Solo en Javadoc" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es un Train Wreck?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Una cadena de llamadas a.getB().getC().getD()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una función recursiva" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un error de compilación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un bucle infinito" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué alternativa hay a retornar null?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Optional, Null Object, o excepción" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Retornar -1" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Retornar string vacío" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Retornar null igualmente" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significan las siglas FIRST en el contexto de tests?"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Fast (rápido)" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Independent (independiente), Repeatable (repetible), Self-validating (auto-validable), Timely (oportuno)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "First In, First Out" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Final, Integral, Robust, Simple, Tested" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué significa DRY en Clean Code?"
+case_sensitive = false
+answers = ["Don't Repeat Yourself", "Dont Repeat Yourself"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Cuál es el ciclo de TDD? (responde el orden de colores separado por flechas)"
+case_sensitive = false
+answers = ["Red → Green → Refactor", "Red Green Refactor", "Red, Green, Refactor"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "Ordena los principios SOLID que aprendiste en el curso de más específico a más general"
+axis_labels = { from = "Más específico", to = "Más general" }
+answers = ["SRP (Single Responsibility)", "OCP (Open/Closed)", "LSP (Liskov Substitution)", "ISP (Interface Segregation)", "DIP (Dependency Inversion)"]

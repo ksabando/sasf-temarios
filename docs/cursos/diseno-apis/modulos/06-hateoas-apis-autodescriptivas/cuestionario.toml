@@ -1,0 +1,175 @@
+title = "Módulo 06 — HATEOAS y APIs Autodescriptivas"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa HATEOAS?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Hypermedia as the Engine of Application State" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Hypertext And Transfer Extension Over Application State" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "High Availability Through Endpoint Object Access System" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Hypertext Application Transport Extension for Open API Systems" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿A qué nivel del Richardson Maturity Model pertenece HATEOAS?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Nivel 3" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Nivel 0" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Nivel 1" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Nivel 2" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué formato se usa típicamente para representar hypermedia en APIs REST?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "HAL (Hypertext Application Language)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "XML" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "YAML" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "CSV" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué campo indica los links en una respuesta HAL?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "_links" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "links" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "hypermedia" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "href" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es una affordance en el contexto de HATEOAS?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Una acción disponible que el cliente puede realizar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un descuento en el plan de la API" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un tipo de autenticación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un formato de serialización" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué ventaja principal ofrece HATEOAS a los clientes?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El cliente descubre dinámicamente qué acciones puede realizar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Mayor velocidad de respuesta" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Menor consumo de ancho de banda" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Autenticación integrada" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son formatos de hypermedia válidos? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "HAL" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Siren" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Plain JSON" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "CSV" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué librería de Spring Boot implementa HATEOAS?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["spring-boot-starter-hateoas", "spring hateoas", "hateoas"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué genera automáticamente Spring Data REST desde repositorios JPA?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["HAL + HATEOAS", "hal y hateoas", "hypermedia", "respuestas HAL con links HATEOAS"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los niveles del Richardson Maturity Model del más básico al más maduro."
+points_awarded = 1000
+axis_labels = { from = "Básico", to = "Maduro" }
+[[slides.Order.answers]]
+content = { Text = "Nivel 0 — POX: un solo endpoint, sin recursos" }
+[[slides.Order.answers]]
+content = { Text = "Nivel 1 — Recursos: múltiples URIs identifican recursos" }
+[[slides.Order.answers]]
+content = { Text = "Nivel 2 — Verbos HTTP: uso correcto de GET, POST, PUT, DELETE" }
+[[slides.Order.answers]]
+content = { Text = "Nivel 3 — HATEOAS: hypermedia controla el estado de la aplicación" }

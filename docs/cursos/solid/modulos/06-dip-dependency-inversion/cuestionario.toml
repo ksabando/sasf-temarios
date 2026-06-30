@@ -1,0 +1,191 @@
+title = "Módulo 06 - DIP (Dependency Inversion Principle)"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la definición formal del Dependency Inversion Principle?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Los módulos de alto nivel no deben depender de módulos de bajo nivel; ambos deben depender de abstracciones. Las abstracciones no deben depender de los detalles" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Todas las dependencias deben ser clases concretas para garantizar que el código funcione" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Los módulos de bajo nivel deben controlar el flujo de los módulos de alto nivel" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Las abstracciones deben depender de las implementaciones concretas para ser útiles" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre Dependency Injection (DI) y Dependency Inversion (DIP)?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "DIP es un principio de diseño (el qué): depender de abstracciones; DI es un patrón de implementación (el cómo): inyectar dependencias desde fuera" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Son exactamente lo mismo, Dependency Injection es el nombre moderno de DIP" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "DI es el principio y DIP es el patrón de implementación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "DI se usa solo en Spring y DIP es un concepto exclusivo de .NET" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Por qué es preferible la inyección por constructor sobre la inyección por campo (@Autowired)?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Dependencias explícitas en la firma, inmutabilidad con final, testabilidad sin reflexión y no requiere contenedor Spring para instanciar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La inyección por campo es más rápida y requiere menos código boilerplate" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Autowired en constructor está deprecado desde Spring 5" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La inyección por campo permite cambiar dependencias en tiempo de ejecución" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué problema resuelve DIP en la arquitectura en capas?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Las capas de alto nivel definen interfaces y las de bajo nivel las implementan, invirtiendo la dependencia para que cambios en infraestructura no afecten la lógica de negocio" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Elimina la necesidad de capas permitiendo que todas las clases se comuniquen directamente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Obliga a que la capa de presentación dependa directamente de la base de datos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Hace que todas las capas dependan de una capa central de configuración" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles son señales de violación de DIP? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Instanciación directa con new de clases concretas dentro de constructores o métodos" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Llamadas a métodos estáticos de clases utilitarias concretas como FileUtils o DatabaseManager" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Uso de interfaces para declarar el tipo de las dependencias en el constructor" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Inyección de dependencias por constructor con validación de nulls" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo se aplica DIP en React con custom hooks?"
+points_awarded = 1000
+answer_mode = "TypeAnswer"
+case_sensitive = false
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Los custom hooks actúan como abstracciones que ocultan la implementación (fetch, axios) detrás de una interfaz simple sin exponer los detalles" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El componente depende de la interfaz del hook, no de la implementación concreta de llamadas HTTP" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo resuelve Spring IoC (Inversion of Control) la aplicación de DIP?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El ApplicationContext maneja el ciclo de vida de beans y sus dependencias; el código solo conoce interfaces y Spring resuelve qué implementación concreta inyectar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Spring IoC elimina la necesidad de interfaces ya que el contenedor resuelve todo automáticamente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Spring IoC obliga a que cada clase tenga su propia fábrica para crear dependencias" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El contenedor Spring solo aplica DIP cuando se usa @Autowired en campos" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los niveles de dependencia desde la mayor violación de DIP hasta el cumplimiento ideal"
+points_awarded = 1000
+axis_labels = { from = "Mayor violación", to = "Cumplimiento ideal" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Clase concreta instanciada con new dentro del método" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Factory Method que retorna implementación concreta" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Interfaz inyectada por constructor sin conocer la implementación" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "ApplicationContext que resuelve dependencias por configuración externa" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es el patrón Factory y cómo ayuda a cumplir DIP?"
+points_awarded = 1000
+answer_mode = "TypeAnswer"
+case_sensitive = false
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Encapsula la creación de objetos retornando una interfaz; el cliente no conoce la implementación concreta" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "La fábrica retorna abstracciones y el cliente no usa new concreto" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuándo es aceptable violar DIP? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Cuando la dependencia es extremadamente estable como String, ArrayList o Integer del JDK" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "En la capa de configuración (@Configuration) donde se toman las decisiones de implementación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "En servicios de negocio que requieren alta testabilidad" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cuando se programa contra una interfaz en lugar de una clase concreta" }

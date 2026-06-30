@@ -1,0 +1,188 @@
+title = "Módulo 05 - Patrones Estructurales: Composite y Decorator"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón permite tratar objetos individuales y compuestos de manera uniforme?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Composite" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Decorator" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Adapter" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Proxy" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué clase del JDK usa el patrón Decorator para InputStream?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "BufferedInputStream" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "FileInputStream" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ObjectInputStream" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "StringInputStream" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia estructural entre Composite y Decorator?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Composite tiene hijos; Decorator envuelve un solo componente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Composite usa herencia; Decorator usa interfaces" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No hay diferencia" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Composite es de comportamiento" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "En Composite, ¿cómo se llama el elemento que no tiene hijos?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Leaf (Hoja)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Composite" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Root" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Branch" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué método de Collections es un ejemplo de Decorator?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Collections.synchronizedList()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Collections.sort()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Collections.binarySearch()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Collections.reverse()" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón se recomienda para agregar logging, caché o compresión a un objeto?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Decorator" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Composite" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Adapter" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Bridge" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son casos de uso típicos de Composite? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Sistemas de archivos jerárquicos" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Componentes UI en árbol (menús, paneles)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Notificaciones con diferentes canales" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Conexión a múltiples bases de datos" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo se denomina al objeto envuelto en el patrón Decorator?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "Wrappee" }
+[[slides.TypeAnswer.answers]]
+content = { Text = "wrappee" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los elementos de una estructura Composite del más general al más específico:"
+points_awarded = 1000
+axis_labels = { from = "General", to = "Específico" }
+[[slides.Order.answers]]
+content = { Text = "Component (interfaz común)" }
+[[slides.Order.answers]]
+content = { Text = "Composite (grupo de componentes)" }
+[[slides.Order.answers]]
+content = { Text = "Leaf (elemento hoja sin hijos)" }
+[[slides.Order.answers]]
+content = { Text = "Operación del Composite que itera sobre sus hijos" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes problemas puede causar el uso excesivo de Decorator? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Muchos objetos pequeños en memoria" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Debugging complejo por múltiples capas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No se puede compilar el código" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Incompatibilidad con el patrón Composite" }

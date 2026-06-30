@@ -1,0 +1,146 @@
+title = "M19 - Git Worktrees"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué es un worktree de Git?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Un directorio de trabajo adicional vinculado al mismo repositorio que permite tener múltiples ramas abiertas simultáneamente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una copia del repositorio completo creada con git clone" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una visualización en forma de árbol del grafo de commits" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un stash de cambios no commiteados" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "¿Qué comando crea un nuevo worktree en la ruta ../hotfix sobre la rama hotfix-fix?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git worktree add ../hotfix hotfix-fix" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git worktree create ../hotfix -b hotfix-fix" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git worktree new ../hotfix hotfix-fix" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git worktree clone ../hotfix hotfix-fix" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando lista todos los worktrees en un repositorio?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git worktree list" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git worktree show" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git worktree status" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git worktree display" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Cuál es el propósito de git worktree prune?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Eliminar datos administrativos obsoletos de worktrees después de borrar uno manualmente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Eliminar todos los worktrees permanentemente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Optimizar el tamaño del repositorio eliminando ramas no usadas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Eliminar archivos no rastreados de todos los worktrees" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué hace la bandera --lock en git worktree add?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Evita que el worktree sea podado automáticamente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Encripta el contenido del worktree" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Restringe el worktree a solo lectura" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Bloquea la rama para que nadie más pueda subir cambios" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué bandera combinada con git worktree add crea una nueva rama y la checkout en el nuevo worktree?"
+case_sensitive = false
+answers = ["-b"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando bloquea un worktree para que no sea podado?"
+case_sensitive = false
+answers = ["git worktree lock"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando elimina un worktree creado con git worktree add?"
+case_sensitive = false
+answers = ["git worktree remove"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "Ordena los pasos para crear un worktree para un hotfix en una rama nueva"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["git worktree add -b hotfix-fix ../hotfix-fix main", "Hacer cambios y commitear en el worktree del hotfix", "Subir la rama del hotfix al remoto", "Eliminar el worktree con git worktree remove ../hotfix-fix"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "Ordena el ciclo de vida típico de un worktree"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["Agregar un nuevo worktree apuntando a una rama de funcionalidad", "Trabajar en main y en la rama de funcionalidad simultáneamente", "Bloquear el worktree para evitar podado accidental", "Eliminar el directorio del worktree manualmente", "Ejecutar git worktree prune para limpiar referencias obsoletas"]

@@ -1,0 +1,188 @@
+title = "Módulo 13 - Transacciones y Migraciones"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación de Spring maneja transacciones declarativas?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Transactional" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Transaction" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Tx" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Transact" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué propagación crea una nueva transacción suspendiendo la actual?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "REQUIRES_NEW" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "REQUIRED" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "NESTED" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "SUPPORTS" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Cuál es el nivel de aislamiento por defecto en Spring?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "DEFAULT (el de la base de datos)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "READ_COMMITTED" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "REPEATABLE_READ" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "SERIALIZABLE" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué tipo de excepción provoca rollback automático en @Transactional?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "RuntimeException (unchecked)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Exception (checked)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Error" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cualquier excepción" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación de JPA implementa locking optimista?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Version" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@OptimisticLock" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Lock" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Versioning" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué herramienta de migraciones usa archivos SQL con prefijo V1__, V2__?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Flyway" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Liquibase" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Hibernate ddl-auto" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "MySQL Migration" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué diferencia a Flyway de Liquibase?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Flyway usa SQL plano, Liquibase usa XML/YAML/JSON" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Flyway es más lento" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Liquibase no soporta rollback" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Flyway es de pago" }
+
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué atributo de @Transactional permite ejecutar la transacción solo para lectura?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["readOnly = true"]
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué modo de Lock bloquea la fila para que otros no puedan leerla?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "PESSIMISTIC_WRITE" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "PESSIMISTIC_READ" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "OPTIMISTIC" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "NONE" }
+
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 60000
+title = "Ordena los niveles de aislamiento de menor a mayor consistencia"
+points_awarded = 1000
+axis_labels = { from = "Menor consistencia", to = "Mayor consistencia" }
+answers = ["READ_UNCOMMITTED", "READ_COMMITTED", "REPEATABLE_READ", "SERIALIZABLE"]
+

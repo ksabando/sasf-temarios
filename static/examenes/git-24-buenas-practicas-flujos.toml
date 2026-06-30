@@ -1,0 +1,168 @@
+title = "¿Qué prefijo de Conventional Commits indica una nueva funcionalidad?"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué prefijo de Conventional Commits indica una nueva funcionalidad?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "feat" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "fix" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "chore" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "docs" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué prefijo de Conventional Commits indica una corrección de bug?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "fix" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "feat" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "refactor" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "style" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué herramienta ayuda a escribir commits siguiendo Conventional Commits interactivamente?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "commitizen" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "commitlint" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "semantic-release" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "husky" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué herramienta valida mensajes de commit contra reglas de Conventional Commits?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "commitlint" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "commitizen" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "eslint" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "prettier" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué archivo de Git permite configurar atributos por ruta como LFS o merger?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = ".gitattributes" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = ".gitignore" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = ".gitconfig" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = ".gitmodules" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando de Git optimiza el almacenamiento del repositorio eliminando objetos innecesarios?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git gc" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git repack" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git fsck" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git prune" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando de Git verifica la integridad de los objetos del repositorio?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git fsck" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git gc" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git repack" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git verify-pack" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando de Git empaqueta objetos sueltos en un archivo pack optimizado?"
+case_sensitive = false
+answers = ["git repack"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando crea un archivo comprimido de un árbol Git sin comprimir el historial?"
+case_sensitive = false
+answers = ["git archive"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "Ordena el flujo de mantenimiento recomendado para un repositorio Git:"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["git gc --auto", "git repack -d", "git fsck --full"]

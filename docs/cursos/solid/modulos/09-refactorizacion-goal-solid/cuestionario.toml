@@ -1,0 +1,191 @@
+title = "Módulo 09 - Refactorización Goal SOLID"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es el primer principio SOLID que se debe aplicar en una refactorización y por qué?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "SRP: es el más fácil de identificar y al separar responsabilidades se facilita aplicar los demás principios" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "DIP: porque sin inversión de dependencias no se puede refactorizar nada" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "OCP: porque es el principio más importante y debe aplicarse antes que cualquier otro" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ISP: porque las interfaces son la base de todo diseño orientado a objetos" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es 'Big Bang Refactoring' y por qué es peligroso?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Refactorizar todo el sistema de una vez en una rama separada; es peligroso por riesgo de rotura masiva, conflictos de merge catastróficos y falta de punto de retorno" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Refactorizar en pequeños incrementos con pruebas; es peligroso porque toma demasiado tiempo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Eliminar todo el código legacy y reescribirlo desde cero; es la práctica más recomendada" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Hacer refactoring solo los viernes; es peligroso porque el equipo está cansado" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué métricas de código deberías medir antes y después de una refactorización? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Complejidad ciclomática: buscar reducir de más de 10 a menos de 5 por método" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Cobertura de pruebas: buscar aumentar a más de 80%" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cantidad de commits en el repositorio" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Número de desarrolladores en el equipo" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la estrategia correcta para refactorizar un sistema legacy sin pruebas?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Primero escribir pruebas de caracterización que capturen el comportamiento actual, luego refactorizar en pequeñas iteraciones manteniendo las pruebas verdes" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Reescribir todo el sistema desde cero usando TDD" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Refactorizar sin pruebas porque las pruebas solo agregan tiempo al proceso" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Congelar el sistema legacy y construir uno nuevo en paralelo" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es un 'seam' y cómo ayuda en la refactorización de legacy code?"
+points_awarded = 1000
+answer_mode = "TypeAnswer"
+case_sensitive = false
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Un lugar en el código donde se puede alterar el comportamiento sin modificar el código en ese lugar, como una llamada a un método virtual o una interfaz" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Un punto de extensión que permite insertar cambios sin modificar el código existente" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo aplicarías OCP en un sistema de descuentos legacy con un switch de 10 casos?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Crear interfaz DiscountStrategy, implementar una clase por cada caso del switch e inyectar la lista de estrategias eliminando el switch original" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Agregar más casos al switch existente para cubrir los nuevos descuentos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Convertir el switch en una serie de if-else anidados que sean más fáciles de mantener" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Eliminar todos los descuentos y empezar desde cero con un nuevo sistema" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los indicadores que muestran que una refactorización va por buen camino, del más inmediato al más a largo plazo"
+points_awarded = 1000
+axis_labels = { from = "Más inmediato", to = "Más a largo plazo" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Todas las pruebas pasan después de cada cambio incremental" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Las métricas mejoran: complejidad ciclomática baja, líneas por clase bajan" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "El código es más legible y el equipo lo entiende sin preguntas" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Agregar nueva funcionalidad requiere cambios mínimos y localizados" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuándo NO deberías refactorizar código legacy?"
+points_awarded = 1000
+answer_mode = "TypeAnswer"
+case_sensitive = false
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Cuando el código va a ser reemplazado pronto o descontinuado, sin pruebas de respaldo, o con un deadline inminente" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Sin pruebas, sin control de versiones, o si el módulo será eliminado en poco tiempo" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre refactorización y reescritura?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Refactorización son cambios incrementales que mejoran la estructura sin alterar el comportamiento; reescritura es desechar el código y escribirlo desde cero" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Son exactamente lo mismo, solo que refactorización es el término en inglés" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Refactorización se hace en backend y reescritura en frontend" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Reescritura es siempre preferible porque elimina toda la deuda técnica de una vez" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo medirías el éxito de una refactorización de sistema legacy a SOLID? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Reducción del tiempo para agregar nuevas funcionalidades" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Disminución del número de bugs por release" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Aumento en la cantidad total de líneas de código" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Mayor cantidad de clases y archivos en el proyecto" }

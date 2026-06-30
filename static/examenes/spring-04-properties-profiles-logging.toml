@@ -1,0 +1,188 @@
+title = "Módulo 04 - Properties, Profiles y Logging"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué formato de configuración soporta Spring Boot además de .properties?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "YAML" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "JSON" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "XML" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "INI" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación inyecta valores de properties en un campo?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Value" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Property" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Config" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@InjectValue" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación permite crear beans condicionalmente según el entorno?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Profile" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Conditional" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Environment" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@PropertySource" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué interfaz proporciona tipos seguros para propiedades de configuración?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@ConfigurationProperties" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Value" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@PropertySource" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@EnableConfigurationProperties" }
+
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué propiedad de application.yml cambia el puerto del servidor?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["server.port", "server.port: 8081"]
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Cuál es la implementación de logging por defecto en Spring Boot?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Logback" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Log4j2" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "JUL" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "SLF4J" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué nivel de logging muestra mensajes de depuración en Logback?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "DEBUG" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "INFO" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "TRACE" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "WARN" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué archivo se usa para configurar Logback en Spring Boot?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "logback-spring.xml" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "logback.xml" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "logging.properties" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "application.yml" }
+
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 60000
+title = "Ordena los niveles de logging de menor a mayor severidad"
+points_awarded = 1000
+axis_labels = { from = "Menos severo", to = "Más severo" }
+answers = ["TRACE", "DEBUG", "INFO", "WARN", "ERROR"]
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación permite cargar un archivo .properties personalizado?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@PropertySource" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Value" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Profile" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@ConfigurationProperties" }
+

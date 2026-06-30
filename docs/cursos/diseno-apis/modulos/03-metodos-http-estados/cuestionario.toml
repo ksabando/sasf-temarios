@@ -1,0 +1,175 @@
+title = "Módulo 03 — Métodos HTTP y Códigos de Estado"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué código HTTP retorna un POST exitoso que crea un recurso?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "201 Created" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "200 OK" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "202 Accepted" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "204 No Content" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa el código 422 Unprocessable Entity?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "La sintaxis es válida pero los datos no pueden procesarse" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Recurso no encontrado" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Muchos requests" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Bad Gateway" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuándo se usa típicamente 204 No Content?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "DELETE exitoso" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "POST exitoso" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "PUT exitoso con body" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "GET sin resultados" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre 401 y 403?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "401 es no autenticado, 403 es autenticado sin permisos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Son iguales" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "401 es no autorizado, 403 es no encontrado" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "401 es timeout, 403 es forbidden" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué método HTTP es seguro (no modifica estado del servidor)?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "GET" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "POST" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "PUT" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "DELETE" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué especifica el RFC 9457?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Problem Details for HTTP APIs" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "HTTP Methods" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "JSON Web Token" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "OAuth 2.0" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué métodos HTTP son idempotentes? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "PUT" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "GET" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "POST" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "PATCH" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué header HTTP indica la URL del recurso creado tras un POST?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["Location", "location"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa que un método HTTP sea idempotente? Responde con la palabra clave."
+points_awarded = 1000
+case_sensitive = false
+answers = ["múltiples requests idénticas producen el mismo resultado", "mismo resultado", "mismo efecto", "idempotencia"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los códigos HTTP del grupo 2xx en orden lógico (más común en operaciones REST)."
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+[[slides.Order.answers]]
+content = { Text = "200 OK — GET/PUT exitoso con body" }
+[[slides.Order.answers]]
+content = { Text = "201 Created — POST exitoso" }
+[[slides.Order.answers]]
+content = { Text = "202 Accepted — Procesamiento asíncrono" }
+[[slides.Order.answers]]
+content = { Text = "204 No Content — DELETE exitoso sin body" }

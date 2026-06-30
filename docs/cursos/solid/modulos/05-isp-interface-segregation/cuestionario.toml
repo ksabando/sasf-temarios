@@ -1,0 +1,191 @@
+title = "Módulo 05 - ISP (Interface Segregation Principle)"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la definición del Interface Segregation Principle?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Los clientes no deben ser forzados a depender de interfaces que no usan; es mejor tener interfaces pequeñas y específicas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Todas las interfaces deben tener exactamente un solo método abstracto" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Las interfaces deben agrupar todos los métodos relacionados a una entidad sin importar quién los use" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cada clase debe implementar todas las interfaces disponibles en el paquete" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre una 'fat interface' y una 'role interface'?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Fat interface declara muchos métodos que no todos los clientes usan; role interface representa una capacidad específica que un cliente necesita" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Fat interface tiene métodos con mucha lógica; role interface tiene métodos vacíos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Fat interface se usa en frontend; role interface se usa en backend" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Ambas son lo mismo pero fat interface es el término legacy y role interface es el moderno" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo aplica ISP Spring Data JPA con su jerarquía de repositorios?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "CrudRepository (CRUD básico), PagingAndSortingRepository (agrega paginación) y JpaRepository (agrega flush) permiten que cada cliente dependa solo de lo que necesita" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Todos los repositorios deben extender JpaRepository para garantizar consistencia" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Spring Data JPA no aplica ISP porque fuerza implementar todos los métodos CRUD" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "CrudRepository es obsoleto y PagingAndSortingRepository es la única interfaz recomendada" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué señales indican que una interfaz es una fat interface? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Implementaciones que lanzan UnsupportedOperationException en algunos métodos" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Hay clientes que solo usan una fracción de los métodos declarados" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La interfaz tiene exactamente 3 métodos fuertemente relacionados" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Todos los clientes implementan todos los métodos de la interfaz" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo se relaciona ISP con Command Query Separation (CQS)?"
+points_awarded = 1000
+answer_mode = "TypeAnswer"
+case_sensitive = false
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "CQS es una aplicación de ISP a nivel de métodos: separar comandos de queries evita que clientes dependan de efectos secundarios que no necesitan" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "CQS separa métodos que modifican estado de los que solo leen, aplicando ISP a nivel de método" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo se aplica ISP en React con componentes y props?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Creando componentes atómicos con props mínimas en lugar de un componente gigante con 10 props opcionales" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Pasando todas las props posibles a cada componente para máxima flexibilidad" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usando un solo hook global que exponga todo el estado de la aplicación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Eliminando las props y usando solo Context API para toda la comunicación" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los pasos para resolver el problema de RobotWorker que lanza excepciones al implementar Worker"
+points_awarded = 1000
+axis_labels = { from = "Primer paso", to = "Último paso" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Identificar los métodos de Worker que RobotWorker no puede implementar (eat, sleep)" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Dividir Worker en role interfaces: Workable, Feedable, Restable" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Hacer que RobotWorker implemente solo Workable" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Eliminar las excepciones UnsupportedOperationException" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué ventajas tienen las interfaces funcionales de Java (@FunctionalInterface) desde la perspectiva de ISP?"
+points_awarded = 1000
+answer_mode = "TypeAnswer"
+case_sensitive = false
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Son el ejemplo máximo de segregación: cada interfaz representa una capacidad única con un solo método abstracto" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Cada cliente depende solo de la capacidad exacta que necesita sin métodos adicionales" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuándo es aceptable tener una interfaz con varios métodos sin violar ISP?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Cuando los métodos están fuertemente relacionados y siempre se usan juntos, como Collection.add(), remove(), size()" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Siempre que la interfaz tenga menos de 20 métodos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Nunca, ISP exige que cada interfaz tenga exactamente un método" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Solo cuando la interfaz se usa exclusivamente en pruebas unitarias" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la relación entre ISP y SRP (Single Responsibility Principle)?"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "ISP aplica SRP a nivel de interfaces: cada interfaz debe representar un solo rol" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Ambos buscan que los componentes sean cohesivos y específicos en sus responsabilidades" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ISP y SRP son el mismo principio con diferente nombre" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ISP reemplaza a SRP cuando se trabaja con interfaces en lugar de clases" }

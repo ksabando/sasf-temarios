@@ -1,0 +1,186 @@
+title = "Módulo 09 - Patrones de Comportamiento: Memento, Observer y State"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón captura el estado de un objeto para restaurarlo después?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Memento" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Observer" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "State" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Command" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué rol juega el objeto que guarda los Mementos?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Caretaker" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Originator" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Observer" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Subject" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón define una dependencia uno-a-muchos entre objetos?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Observer" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Memento" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "State" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Mediator" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué anotación de Spring implementa Observer?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@EventListener" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Autowired" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Component" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Transactional" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón permite que un objeto cambie su comportamiento según su estado interno?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "State" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Memento" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Observer" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Strategy" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre State y Strategy?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "State cambia el estado del contexto; Strategy es un algoritmo intercambiable" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Son el mismo patrón" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Strategy cambia el estado; State es un algoritmo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "State es creacional; Strategy es de comportamiento" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son roles en el patrón Observer? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Subject (sujeto observable)" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Observer (observador)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Originator (creador del estado)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Caretaker (guardián)" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué hook de React se relaciona directamente con el patrón State?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "useState" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena el flujo de funcionamiento del patrón Memento:"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+[[slides.Order.answers]]
+content = { Text = "El Originator crea un Memento con su estado actual" }
+[[slides.Order.answers]]
+content = { Text = "El Caretaker almacena el Memento" }
+[[slides.Order.answers]]
+content = { Text = "El Originator modifica su estado" }
+[[slides.Order.answers]]
+content = { Text = "El Caretaker devuelve el Memento para restaurar el estado" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son verdaderos sobre Observer? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Define una dependencia uno-a-muchos" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Puede causar problemas de rendimiento con muchos observers" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No permite desuscribir observadores" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es idéntico al patrón Mediator" }

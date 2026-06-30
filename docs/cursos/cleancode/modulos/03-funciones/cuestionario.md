@@ -1,0 +1,76 @@
+---
+private: true
+sidebar_class_name: private
+sidebar_label: "Cuestionario"
+---
+
+### 2. [Investigar] ¿Qué es el principio "Tell, Don't Ask" y cómo se relaciona con Command Query Separation más allá de lo que la clase describe? ¿Qué objeciones plantea David West ("Object Thinking") a la separación estricta de comandos y consultas?
+
+**Respuesta**: El principio "Tell, Don't Ask" (Alec Sharp, Smalltalk community, popularizado en "The Pragmatic Programmer" de Hunt & Thomas, 1999) dice que en lugar de preguntar a un objeto por su estado y decidir qué hacer, le digas al objeto QUÉ hacer y dejes que él decida. CQS (Bertrand Meyer) dice: un método debe ser comando o consulta. La intersección es: una consulta que se usa SOLO para decidir un comando es una violación de Tell Don't Ask. Por ejemplo: `if (user.getStatus() == ACTIVE) { user.activate(); }` pregunta y decide afuera; `user.tryActivate()` encapsula la decisión. David West, en "Object Thinking" (2004), critica la separación estricta de CQS desde la filosofía original de objetos de Alan Kay: los objetos son "computadoras en una red" que se comunican por mensajes. En Smalltalk, un mensaje puede hacer AMBAS cosas y es natural. West argumenta que CQS es un invento de lenguajes procedurales disfrazados de OOP (como Java y C++) y que Smalltalk, Ruby o lenguajes puramente orientados a objetos no necesitan esa separación.
+
+**Por qué**: La clase presenta CQS como regla absoluta sin explorar su origen (Meyer, lenguaje Eiffel, orientado a contratos) ni sus críticas. West es un autor fundamental en teoría de objetos que cuestiona los "principios" de Clean Code como Java-céntricos. El alumno debe entender que CQS es una buena heurística en lenguajes con efectos secundarios no controlados, pero no un principio universal del diseño de software.
+
+---
+
+### 3. [Investigar] ¿Qué son las "check-callback closures" de Peter Sommerlad y cómo se relacionan con el manejo de recursos en funciones? ¿Qué patrón de C++/Java 7 (try-with-resources) resuelve el problema que Sommerlad identificó?
+
+**Respuesta**: Peter Sommerlad, en su trabajo sobre simplicidad y seguridad en código (C++ Report, 1998-2000), identificó que el patrón de funciones que adquieren un recurso (archivo, lock, conexión) y requieren que el llamante recuerde liberarlo es inherentemente frágil. Propuso las "check-callback closures": en lugar de retornar el recurso al llamante, la función que adquiere el recurso ejecuta un callback y libera el recurso automáticamente. Esto evolucionó en C++ al patrón RAII (Resource Acquisition Is Initialization, Bjarne Stroustrup) y en Java 7 al try-with-resources con `AutoCloseable`. La conexión con Clean Code: cuando una función hace try-catch-finally para liberar recursos, esos recursos deberían ser gestionados por una función/clase separada que implemente el patrón de adquisición-liberación segura. No es solo "funciones pequeñas", es "funciones que no mezclan lógica de negocio con gestión de recursos".
+
+**Por qué**: La clase habla de try-catch-finally como ámbito de transacción, pero no desarrolla el patrón de gestión de recursos. Sommerlad influyó en el diseño de Resource Management en múltiples lenguajes y su trabajo conecta Clean Code con seguridad de memoria y corrección de programas más allá de la mera legibilidad.
+
+---
+
+### 4. [Investigar] ¿Qué es la regla de los "siete más o menos dos" de George Miller (1956) en psicología cognitiva, y cómo la aplican autores como Steve McConnell al número aceptable de parámetros y niveles de anidamiento en funciones?
+
+**Respuesta**: George Miller publicó "The Magical Number Seven, Plus or Minus Two" (1956, Psychological Review), demostrando que la memoria de trabajo humana puede manejar aproximadamente 7 ± 2 ítems simultáneamente. Steve McConnell, en "Code Complete 2" (2004), aplica este límite a: (a) número de parámetros de una función (7 máximo, aunque Clean Code es más estricto con 3), (b) niveles de anidamiento de bloques (3-4 máximo), (c) número de variables locales vivas simultáneamente en un scope, (d) número de pasos conceptuales en un método. McConnell argumenta que este límite cognitivo —no una preferencia estética— es la RAÍZ de por qué las funciones largas son difíciles: cuando un desarrollador lee una función de 100 líneas con 15 variables locales y 8 niveles de if, su memoria de trabajo se satura y la comprensión colapsa. Los 3 parámetros de Clean Code son un límite más conservador que 7, y se justifica porque además de MEMORIZAR los parámetros, el lector debe RAZONAR sobre sus interacciones.
+
+**Por qué**: La clase da límites numéricos (3 parámetros, 20 líneas) pero sin explicar su origen cognitivo. Miller es una de las citas más importantes de la psicología del siglo XX y fundamenta CIENTÍFICAMENTE las reglas de Clean Code. El alumno que investiga a McConnell y Miller puede justificar Clean Code no como dogma sino como ergonomía cognitiva.
+
+---
+
+### 5. [Conectar] La clase recomienda usar polimorfismo en lugar de switch statements. ¿Qué plantea el libro "Refactoring" de Martin Fowler sobre el refactoring "Replace Conditional with Polymorphism"? ¿En qué casos específicos Fowler ADVIERTE que este refactoring es contraproducente?
+
+**Respuesta**: Martin Fowler, en "Refactoring: Improving the Design of Existing Code" (2da edición, 2018), describe el refactoring "Replace Conditional with Polymorphism" (Capítulo 10). La mecánica: tenés un switch/if que decide comportamiento según tipo; creás subclases y movés cada rama a una subclase. Pero Fowler advierte explícitamente que el refactoring es contraproducente cuando: (1) la variante de comportamiento es TRIVIAL (ej. un descuento de 5% vs 10% —el polimorfismo introduce más código boilerplate que la lógica que modela), (2) la jerarquía de tipos no es ESTABLE (cada semana se agrega un nuevo tipo y el polimorfismo requeriría modificar una jerarquía profunda, mientras que un switch agregando una rama es más simple), (3) las variantes no comparten una interfaz semántica coherente (si estás forzando métodos que no aplican naturalmente a todas las subclases, estás en camino al Refused Bequest smell). Fowler también introduce el concepto de "variabilización": antes de reemplazar con polimorfismo, preguntate cuántas VARIABLES (no solo cuántos tipos) determinan el comportamiento.
+
+**Por qué**: La clase presenta el polimorfismo como solución universal a los switch. Fowler —el propio autor de los code smells que la clase cita— es más matizado. El alumno debe aprender que TODO refactoring es contextual y que incluso las "buenas prácticas" tienen contraindicaciones. La 2da edición de Refactoring (escrita en JavaScript, no Java) es particularmente pragmática sobre cuándo NO refactorizar.
+
+---
+
+### 6. [Conectar] La clase describe DRY (Don't Repeat Yourself) con un ejemplo de código duplicado de logging. ¿Cómo se relaciona DRY con el concepto de "Orthogonality" (ortogonalidad) de "The Pragmatic Programmer"? ¿Qué distingue la duplicación accidental de la duplicación esencial?
+
+**Respuesta**: Dave Thomas y Andy Hunt, en "The Pragmatic Programmer" (1999), introdujeron DRY Y ortogonalidad como conceptos hermanos. DRY dice que cada pieza de conocimiento debe tener una representación única e inequívoca en el sistema. Ortogonalidad dice que dos módulos deben ser independientes: cambiar uno no afecta al otro. La conexión crítica es que NO toda duplicación de código es violación de DRY. Thomas y Hunt distinguen: (a) duplicación de CONOCIMIENTO (viola DRY): dos lugares que codifican "el IVA es 21%" —si cambia el IVA, hay que cambiar ambos; (b) duplicación accidental: dos lugares que COINCIDEN en tener código similar pero modelan conceptos distintos (ej. `validate(Order)` y `validate(Invoice)` ambas chequean campos no-nulos, pero las REGLAS de validación son distintas y cambiarán independientemente). El alumno que unifica `validate(Order)` y `validate(Invoice)` en una sola función `validate(Entity)` porque "se veían igual" está creando acoplamiento incidental entre conceptos que DEBEN evolucionar independientemente —violando ortogonalidad por obedecer DRY ciegamente.
+
+**Por qué**: La clase muestra DRY como "código repetido = malo". Thomas y Hunt refinaron el concepto décadas después de la primera edición: la clave es duplicación de CONOCIMIENTO, no de caracteres. Esta distinción es crucial porque muchos alumnos aplican DRY sobre-duplicando todo y crean abstracciones incorrectas (el problema del "premature abstraction" que Sandi Metz popularizó).
+
+---
+
+### 7. [Conectar] La clase menciona la "Stepdown Rule" para ordenar funciones. ¿Cómo se relaciona con el "Newspaper Metaphor" del módulo 04? ¿Qué dice Robert Martin en "Clean Architecture" sobre cómo la Stepdown Rule se aplica a nivel de MÓDULOS y no solo de archivos?
+
+**Respuesta**: La Stepdown Rule y el Newspaper Metaphor son el MISMO principio aplicado a distintas escalas: leer de arriba hacia abajo, con la información más importante primero y los detalles después. En "Clean Architecture" (2017), Robert Martin extiende este principio al nivel de MÓDULOS (packages, JARs): los módulos de alto nivel (políticas de negocio) deben leerse primero, y los de bajo nivel (infraestructura) después. La dependencia del código fuente debe apuntar HACIA ABAJO en la jerarquía de abstracción, y también hacia ABAJO en la estructura de directorios. En un proyecto Spring: `com.empresa.nominas.service.payroll` (alto nivel) debe depender de interfaces, no de `com.empresa.nominas.infrastructure.database` (bajo nivel). Martin llama a esto la "Screaming Architecture": la estructura de directorios DEBE GRITAR cuál es el negocio de la aplicación, no qué frameworks usa.
+
+**Por qué**: La clase presenta la Stepdown Rule como técnica de ordenamiento intra-clase. "Clean Architecture" la escala a nivel de sistema, lo cual conecta el módulo 03 con los conceptos de arquitectura que el alumno verá en el proyecto final. El alumno que investiga descubre que la Stepdown Rule no es solo estética: es la manifestación del Dependency Inversion Principle a nivel de estructura de archivos.
+
+---
+
+### 8. [Cuestionar] La clase dice que las funciones "deben ser pequeñas" (20 líneas o menos). John Ousterhout, en "A Philosophy of Software Design", argumenta que este enfoque produce "shallow modules". ¿En qué consiste su crítica y qué evidencia empírica existe a favor y en contra de las funciones pequeñas?
+
+**Respuesta**: John Ousterhout (Stanford, 2018) argumenta que el fanatismo por funciones pequeñas produce "shallow modules": funciones cuya interfaz (firma, parámetros, contrato conceptual) es casi tan compleja como su implementación. Su ejemplo: si partís una función de 90 líneas en 9 funciones de 10 líneas, el lector ahora debe navegar 9 funciones para entender el flujo completo, y la complejidad TOTAL del sistema (medida como el costo de entender la interacción entre las 9 funciones) puede ser MAYOR que la complejidad de la función original. La métrica de Ousterhout es la "profundidad": una buena abstracción tiene una interfaz SIMPLE y una implementación COMPLEJA. A favor de funciones pequeñas: estudio de Herraiz & Hassan (2010) encontró que archivos con funciones pequeñas (< 20 LOC) tienen menor densidad de bugs. En contra: estudio de Syer et al. (2012) en Android apps no encontró correlación entre longitud de método y defectos una vez que se controla por complejidad ciclomática —sugiriendo que la longitud es un proxy ruidoso.
+
+**Por qué**: La clase toma partido absoluto por funciones pequeñas sin presentar la discusión académica. Ousterhout enseña un curso de diseño de software en Stanford y su libro es contrapunto directo a Clean Code en varias dimensiones. El alumno debe entender que "funciones pequeñas" es una heurística, no una ley, y que el objetivo real es BAJA COMPLEJIDAD por función, que puede lograrse con funciones más largas si son inherentemente simples (secuenciales, sin ramas).
+
+---
+
+### 9. [Cuestionar] El principio "Command Query Separation" dice que un método debe ser comando o consulta. Sin embargo, operaciones como `stack.pop()` —que devuelve el elemento y modifica el stack— son ubicuas en la práctica. ¿Es `pop()` un mal diseño? ¿Qué dice Bertrand Meyer (creador de CQS) sobre este tipo de excepciones?
+
+**Respuesta**: `pop()` es universalmente aceptado, pero Bertrand Meyer, creador de CQS, reconoce que ciertas operaciones son inherentemente "hybrid" y que CQS es un principio de diseño, no una regla inquebrantable. En el libro "Object-Oriented Software Construction" (1988, 2da edición 1997), Meyer admite que `pop()` viola CQS porque modifica el stack (comando) Y devuelve el elemento (consulta). Sin embargo, Meyer argumenta que esta violación es pragmática porque: (a) separar en `top()` + `remove()` crea una condición de carrera en entornos multithread, (b) la operación es tan primitiva y universalmente comprendida que el riesgo de confusión es mínimo, (c) el lenguaje Eiffel (de Meyer) provee el modificador `obsolete` para advertir al llamante. La posición moderna sobre CQS es: es un principio que debe seguirse por defecto, con excepciones JUSTIFICADAS y DOCUMENTADAS. Si tu sistema tiene 3 violaciones documentadas de CQS en 500 métodos, es excelente diseño. Si tiene 50 violaciones sin documentar, es desorden.
+
+**Por qué**: La clase presenta CQS de manera absoluta. El propio Meyer —creador del principio— es más pragmático. El alumno debe entender que los principios de diseño son herramientas de juicio, no mandamientos. La discusión de `pop()` es el ejemplo canónico en la comunidad para distinguir entre pureza teórica y pragmatismo ingenieril.
+
+---
+
+### 10. [Cuestionar] "Extraer hasta que no puedas extraer más" es una filosofía de refactorización atribuida a Robert C. Martin. ¿Qué límites identifica Sandi Metz ("99 Bottles of OOP") al "extract method" agresivo? ¿Cómo determina ella cuándo una extracción está creando una abstracción equivocada?
+
+**Respuesta**: Sandi Metz, en "99 Bottles of OOP" (2016, co-escrito con Katrina Owen), argumenta que la extracción agresiva de métodos sin un criterio semántico produce el anti-patrón de "abstracciones equivocadas" (wrong abstractions), que considera más costoso que la duplicación. Su tesis: "la duplicación es más barata que la abstracción incorrecta". Metz propone el criterio de "squint test" (entrecerrar los ojos): si dos fragmentos de código se ven iguales cuando entrecerrás los ojos (misma forma, mismas variables, mismo patrón), pueden ser la misma abstracción. Si requieren parámetros booleanos (`extractedMethod(flag = true)`) o múltiples sobrecargas para cubrir variaciones sutiles, la abstracción es prematura —esperá a tener 3 o más ocurrencias ANTES de extraer. La regla derivada: no extraigas en el primer o segundo uso repetido; extraé cuando el patrón sea INEQUÍVOCO.
+
+**Por qué**: La clase promueve la extracción como virtud sin advertir sobre la abstracción prematura. Metz es una de las voces más influyentes en diseño OOP moderno y su libro "99 Bottles" es usado como material complementario en cursos de refactoring. El alumno debe desarrollar criterio sobre CUÁNDO extraer —no asumir que extraer siempre es bueno. Esta es quizás la lección más importante que Clean Code por sí solo no enseña.
+

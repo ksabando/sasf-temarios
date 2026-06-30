@@ -1,0 +1,186 @@
+title = "Módulo 01 - Introducción a Patrones GoF"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa GoF?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Gang of Four" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "General Object Framework" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Generic Object Form" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Group of Functions" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuántos patrones describe el libro original GoF?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "23" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "17" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "21" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "26" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál NO es una categoría de patrones GoF?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Funcionales" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Creacionales" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Estructurales" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Comportamiento" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón encapsula la creación de objetos delegando a subclases?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Factory Method" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Singleton" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Builder" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Prototype" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué principio SOLID establece que las clases deben depender de abstracciones, no de implementaciones concretas?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Dependency Inversion" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Single Responsibility" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Open/Closed" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Liskov Substitution" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "En un diagrama UML, ¿qué representa una flecha punteada con triángulo?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Implementación de interfaz" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Herencia" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Asociación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Dependencia" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son principios SOLID usados en conjunto con patrones de diseño? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Single Responsibility Principle" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Open/Closed Principle" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "DRY (Don't Repeat Yourself)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "KISS (Keep It Simple, Stupid)" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la principal ventaja de conocer patrones de diseño según el módulo?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "Usar soluciones probadas para problemas conocidos" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena correctamente los pasos para aplicar un patrón de diseño GoF:"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+[[slides.Order.answers]]
+content = { Text = "Identificar el problema recurrente" }
+[[slides.Order.answers]]
+content = { Text = "Seleccionar el patrón apropiado" }
+[[slides.Order.answers]]
+content = { Text = "Adaptar el patrón al contexto específico" }
+[[slides.Order.answers]]
+content = { Text = "Implementar la solución" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son verdaderos sobre los patrones de diseño GoF? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Fueron documentados por Gamma, Helm, Johnson y Vlissides" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Se clasifican en Creacionales, Estructurales y de Comportamiento" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Solo aplican al lenguaje Java" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Reemplazan completamente la necesidad de pruebas unitarias" }

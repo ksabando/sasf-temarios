@@ -1,0 +1,74 @@
+---
+private: true
+sidebar_class_name: private
+sidebar_label: "Cuestionario"
+---
+
+### 2. [Investigar] ¿Qué es el patrón "Multiton" o "Registry" y cómo se relaciona con Singleton? ¿En qué escenario usás Multiton en lugar de un `Map<String, Object>` gestionado por DI?
+
+**Respuesta**: **Multiton** (Registry) es una generalización de Singleton: en lugar de garantizar una única instancia por CLASE, garantiza una única instancia por CLAVE. Típicamente implementado como un `Map<Key, Instance>` privado con un `getInstance(key)` que devuelve la instancia existente o crea una nueva. Ejemplo canónico: `Currency.getInstance("USD")` en `java.util.Currency` (no exactamente Multiton, pero cercano). Se diferencia de un `Map` gestionado por DI en que el Multiton: (1) garantiza que solo existe UNA instancia por clave (el contenedor DI puede crear múltiples con la misma clave si no está bien configurado), (2) encapsula la lógica de creación (el cliente no sabe si la instancia ya existe), (3) es autogestionado (no depende de un contenedor externo). Spring no tiene Multiton nativo, pero `@Scope("prototype")` + caching manual en un `@Configuration` lo simula.
+
+**Por qué**: El Multiton aparece mencionado en GoF (p. 128) como "Registry" y fue expandido por la comunidad de patrones. Martin Fowler lo documenta como "Registry Pattern" en PoEAA. En JDK, `java.util.logging.LogManager` es un pseudo-Multiton (un manager por ClassLoader). `Currency.getInstance(String)` retorna la misma instancia para el mismo código de moneda. El riesgo del Multiton es el mismo que Singleton (estado global, difícil testing), magnificado por la gestión de múltiples instancias globales.
+
+---
+
+### 3. [Investigar] Investigá la diferencia entre Static Factory Method (Josh Bloch, Effective Java Item 1) y Factory Method de GoF. ¿Por qué Bloch defiende que los static factories son superiores en muchos casos?
+
+**Respuesta**: **Static Factory Method** (Bloch) es un método estático que devuelve instancias de una clase, con ventajas sobre constructores: (1) tiene nombre descriptivo (`BigInteger.probablePrime()` vs `new BigInteger()`), (2) no necesariamente crea un nuevo objeto cada vez (Flyweight con caching — `Boolean.valueOf(true)` reutiliza `Boolean.TRUE`), (3) puede devolver un subtipo del tipo de retorno declarado (el cliente recibe `List`, la implementación es `ArrayList`), (4) puede devolver un objeto según parámetros de entrada (`EnumSet.of()` devuelve `RegularEnumSet` o `JumboEnumSet` según el tamaño del enum). **Factory Method de GoF** usa herencia: una clase abstracta define un método fábrica y las subclases deciden qué instanciar. Bloch argumenta que el Static Factory es superior porque: (a) no fuerza herencia (composición), (b) es más simple, (c) permite caching de instancias. La diferencia clave: Static Factory es un idiom; Factory Method GoF es un patrón con estructura de clases.
+
+**Por qué**: Josh Bloch escribió Effective Java en 2001 (2da ed. 2008, 3ra ed. 2018). El Item 1 ("Consider static factory methods instead of constructors") es el más citado del libro. Ejemplos en JDK: `Optional.of()`, `Stream.of()`, `LocalDate.now()`, `List.of()`, `Set.of()`. La Java Language Architectura (Brian Goetz) ha seguido este consejo: las APIs modernas de JDK usan static factories masivamente. La diferencia con GoF es intencional: GoF modelan patrones para C++ y Smalltalk; Java encontró idioms más idiomáticos.
+
+---
+
+### 4. [Investigar] ¿Cómo se relaciona el Scope de un bean en Spring (`singleton`, `prototype`, `request`, `session`) con los patrones creacionales GoF? ¿Qué scope de Spring no tiene equivalente directo en GoF?
+
+**Respuesta**: `singleton` = Singleton delegado al contenedor (el bean no es un Singleton manual, pero el contenedor garantiza que solo exista una instancia). `prototype` = Prototype (GoF p. 117) — cada vez que se solicita el bean, el contenedor crea una nueva instancia (no por clonación como en GoF, sino por instanciación fresca). `request` y `session` NO tienen equivalente directo en GoF porque los GoF no modelaron scopes ligados al ciclo de vida HTTP. Estos scopes fueron una innovación de Spring para aplicaciones web, inspirados en la necesidad de tener "singletons por request/session" (objetos que viven exactamente lo que dura una petición HTTP o una sesión de usuario). En GoF, la gestión del ciclo de vida de los objetos está fuera del alcance de los patrones creacionales — es responsabilidad del cliente.
+
+**Por qué**: Rod Johnson documentó en "Expert One-on-One J2EE Development without EJB" (2004) que los scopes de Spring surgieron para reemplazar los complejos EJB lifecycle callbacks. `@Scope("request")` crea un bean que se destruye al finalizar la request HTTP — es un patrón inexistente en GoF porque en 1994 las aplicaciones web no eran mainstream. `@Scope("session")` es aún más complejo: requiere proxy (`ScopedProxyMode.TARGET_CLASS`) para inyectar una referencia que cambia según la sesión activa. Spring Cloud agrega `@RefreshScope` para recarga dinámica de configuración — otro scope sin equivalente GoF.
+
+---
+
+### 5. [Conectar] La clase explica Factory Method en el contexto de `ProcesadorDocumentos`. Conectá esto con la API `java.util.ServiceLoader` (SPI) y explicá cómo ServiceLoader implementa un Factory Method a nivel de classpath sin hardcodear clases concretas.
+
+**Por qué**: ServiceLoader fue introducido en Java 6 (2006) como reemplazo del mecanismo de `META-INF/services` usado por JDBC, JAXP, etc. Es la implementación Java del patrón SPI (Service Provider Interface) documentado por los GoF como extensión de Factory Method. Spring Boot usa ServiceLoader masivamente para auto-configuración: `spring.factories` es una variante de SPI. La diferencia con el Factory Method de la clase: en clase, cada `ConcreteCreator` conoce su producto; con ServiceLoader, el "creator" es el classpath mismo y los productos se descubren dinámicamente. JDK 9+ Module System mejora esto con `provides ... with` en `module-info.java`.
+
+---
+
+### 6. [Conectar] La clase menciona que Singleton es "singleton por defecto" en Spring. Investigá cómo funciona el scope `prototype` en Spring internamente y qué problema ocurre cuando un bean singleton inyecta un bean prototype.
+
+**Respuesta**: Cuando un bean singleton (`@Scope("singleton")`) inyecta un bean prototype (`@Scope("prototype")`), la inyección ocurre UNA SOLA VEZ: en el momento de creación del bean singleton, Spring resuelve la dependencia prototype e inyecta ESA instancia. El bean singleton siempre usará la misma instancia del prototype, convirtiéndolo efectivamente en singleton. Esto se llama "Scope Impedance Mismatch". Para resolverlo, Spring ofrece tres mecanismos: (1) **`ObjectFactory<T>`**: inyectás `ObjectFactory<MiPrototype>` y llamás `objectFactory.getObject()` cada vez que necesitás una nueva instancia; (2) **`@Lookup`**: un método abstracto anotado con `@Lookup` que Spring implementa en runtime para devolver una nueva instancia del prototype cada vez; (3) **Proxy Mode**: `@Scope(value = "prototype", proxyMode = ScopedProxyMode.TARGET_CLASS)` — Spring inyecta un proxy CGLIB que, en cada llamada, obtiene una nueva instancia del prototype.
+
+**Por qué**: Esto es una pregunta de entrevista clásica de Spring. La causa raíz es que la resolución de dependencias ocurre en tiempo de creación del bean, no en tiempo de uso. GoF Singleton y Prototype no anticiparon esta interacción porque no modelaron contenedores DI. La documentación oficial de Spring (sección "Singleton beans with prototype-bean dependencies") explica este comportamiento. `@Lookup` implementa el patrón **Dependency Lookup** (opuesto a Dependency Injection), usado cuando necesitás control programático sobre la creación. `ObjectFactory` es la alternativa funcional más limpia.
+
+---
+
+### 7. [Conectar] La clase muestra `Logger.getLogger()` como ejemplo de Factory Method en JDK. Investigá cómo `java.util.logging` implementa internamente la jerarquía de loggers y cómo se relaciona con Factory Method, Chain of Responsibility y Observer simultáneamente.
+
+**Respuesta**: `java.util.logging` es una implementación multi-patrón: (1) **Factory Method**: `Logger.getLogger(name)` es un factory method que busca en un `Map<String, Logger>` interno o crea un nuevo logger. No es Factory Method GoF puro (no usa herencia para la decisión), es más cercano a Static Factory. (2) **Chain of Responsibility + Composite**: los loggers forman un árbol jerárquico (namespace hierarchy — `com.miempresa.mimodulo` es hijo de `com.miempresa`, que es hijo de `com`). Cuando un logger recibe un mensaje, lo procesa y luego lo pasa a su padre recursivamente hacia la raíz. Esto es Chain of Responsibility (cada logger decide si procesa y luego pasa al siguiente) + Composite (estructura de árbol). (3) **Observer**: `Logger.addHandler(Handler)` permite agregar múltiples handlers que observan los mensajes del logger — cada handler es un Observer.
+
+**Por qué**: `java.util.logging` fue diseñado por Graham Hamilton (Sun) como alternativa a Log4j. Es un caso de estudio de cómo un solo componente del JDK puede implementar 3 patrones simultáneamente. La jerarquía de loggers es el ejemplo canónico de Chain of Responsibility que los GoF usan en el libro. En la práctica, SLF4J (Ceki Gülcü) reemplazó `java.util.logging` como fachada de logging (Facade pattern) delegando a Logback/Log4j2 como implementaciones (Bridge pattern).
+
+---
+
+### 8. [Cuestionar] ¿Es válido usar Singleton para un `HttpClient` en Java 11+? Defendé por qué sí y por qué no, considerando que `HttpClient` es inmutable y thread-safe por diseño.
+
+**Respuesta**: **A favor**: `HttpClient` de Java 11+ es diseñado para ser compartido — es inmutable (todas las configuraciones se pasan en el Builder y el objeto resultante es thread-safe), maneja un pool de conexiones internamente, y su documentación recomienda crear una instancia y reutilizarla. Un Singleton manual (`private static final HttpClient CLIENT = HttpClient.newHttpClient()`) cumple el propósito sin desventajas de testabilidad porque podés mockear a nivel de `HttpRequest`/`HttpResponse`. **En contra**: Si necesitás clientes con configuraciones diferentes (diferentes timeouts, autenticación, proxies por endpoint), un solo Singleton no alcanza. Además, en tests de integración, querés que cada test tenga su propio `HttpClient` configurado con un mock server en un puerto aleatorio — un Singleton global lo impide. La solución Spring: configurar un `@Bean HttpClient httpClient()` con scope singleton y, en tests, sobreescribir el bean con un `@TestConfiguration` que cree un cliente de test.
+
+**Por qué**: La documentación oficial de `java.net.http.HttpClient` (Java 11 JEP 321) dice: "Once created, an HttpClient instance is immutable... and can be used to send multiple requests." Sin embargo, el team de HTTP Client (Chris Hegarty, Michael McMahon) no lo diseñaron como Singleton — lo diseñaron para ser compartido, no para ser RevisarNICO. La diferencia es sutil: podés crear varios `HttpClient` con diferentes configuraciones sin violar el diseño. En microservicios con múltiples integraciones, tener un `HttpClient` por downstream service (con timeouts y circuit breakers específicos) es más resiliente que un Singleton global.
+
+---
+
+### 9. [Cuestionar] Algunos arquitectos argumentan que Factory Method es innecesario en la era de Dependency Injection: si el contenedor ya decide qué implementación inyectar, ¿para qué necesitás una jerarquía de `Creator`/`ConcreteCreator`? ¿Hay casos donde Factory Method sigue siendo superior a DI?
+
+**Respuesta**: Factory Method GoF puro (herencia) es raramente necesario cuando tenés un contenedor DI — Spring puede inyectar la implementación correcta basada en `@Qualifier`, `@Profile`, `@ConditionalOnProperty`, o `ObjectProvider<T>`. Sin embargo, Factory Method es superior a DI cuando: (1) **La decisión de qué crear depende de datos de runtime que no están disponibles en tiempo de configuración**: ej., `DocumentoFactory.crear(FileExtension ext)` decide entre `PDFDocumento` o `WordDocumento` basado en la extensión del archivo que el usuario subió — esto es runtime data, no configuration data. (2) **Necesitás crear objetos repetidamente en un loop**: la DI inyecta dependencias UNA vez al inicio; Factory Method puede llamarse N veces creando instancias frescas. (3) **Estás diseñando una librería, no una aplicación**: si tu código será usado por otros que no usan Spring/DI, exponer un Factory Method es más portable.
+
+**Por qué**: Esta discusión fue central en la transición de J2EE a Spring. En EJB, necesitabas `HomeFactory` + `Home` + `Remote` para crear un EJB — Factory Methods por todos lados. Spring simplificó con DI. Pero el equipo de Spring reconoce que Factory Method sigue siendo útil: `FactoryBean<T>` existe para casos donde la creación requiere lógica no trivial. Miško Hevery (Google) dice: "If you can inject it, inject it. If you need to create it repeatedly with runtime data, use a Factory."
+
+---
+
+### 10. [Cuestionar] ¿Es `enum` realmente "la mejor opción" para Singleton como afirma Joshua Bloch, o introduce sus propios problemas? Evaluá críticamente.
+
+**Respuesta**: **Ventajas de enum Singleton** (Effective Java Item 3): serialización garantizada por la JVM, thread-safety, reflexión bloqueada (el constructor de enum no puede invocarse vía reflection), código mínimo. **Desventajas críticas**: (1) **Herencia imposible**: un enum no puede extender otra clase — si tu Singleton necesita heredar de una clase base (ej. `AbstractService` con lógica común), no podés usar enum. (2) **Lazy initialization no es perezosa bajo demanda**: el enum se inicializa cuando la clase se carga, que ocurre en el primer acceso a la clase, no en el primer acceso al Singleton específico. Si el enum tiene campos estáticos, estos también se inicializan eager. (3) **No podés mockear en tests sin frameworks**: Mockito no puede mockear enums directamente (requiere `mockito-inline` o `PowerMock`). (4) **No es compatible con DI**: Spring no puede gestionar un enum — si querés que tu Singleton sea inyectable y gestionado por el contenedor, debe ser una clase. (5) **Rigidez**: si mañana necesitás que tu Singleton se convierta en un Multiton (una instancia por tenant), refactorizar un enum es más doloroso que una clase.
+
+**Por qué**: Bloch escribió Effective Java 2nd ed. en 2008, cuando mocking de enums no era una práctica común. En 2026, con TDD ubicuo y DI como práctica estándar, la recomendación del enum Singleton es más matizada. Brian Goetz (Java Language Architect) señaló en Twitter (2020) que "enums are great for what they're designed for — fixed sets of constants. Using them for Singletons works but has tradeoffs." La recomendación moderna: usá DI con scope singleton a menos que estés escribiendo código que DEBE funcionar sin un contenedor.
+

@@ -1,0 +1,189 @@
+title = "Módulo 07 - Event-Driven Architecture (EDA)"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre un Evento y un Comando?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Un evento indica que algo ocurrió (pasado), un comando solicita que algo ocurra (imperativo)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un evento es una solicitud, un comando es una notificación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No hay diferencia" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Los eventos son más rápidos que los comandos" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué tipo de acoplamiento reduce EDA en comparación con REST?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Acoplamiento temporal y espacial" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Acoplamiento de código" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Acoplamiento de datos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Acoplamiento de equipo" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es coreografía en EDA?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Cada servicio reacciona a eventos y produce eventos sin coordinador central" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un orquestador central coordina el flujo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un tipo de base de datos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un patrón de seguridad" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuándo es preferible orquestación sobre coreografía?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Cuando se requiere monitoreo centralizado y compensaciones claras" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cuando el proceso es simple (<3 pasos)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cuando el equipo es pequeño" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Siempre, la orquestación es siempre mejor" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo se maneja la evolución de eventos cuando el schema cambia?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Upcasting: convertir eventos viejos al nuevo formato al leerlos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Se eliminan los eventos viejos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Se ignora el cambio" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Se crea una nueva base de datos" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa at-least-once delivery?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El evento se entrega 1 o más veces" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El evento se entrega exactamente una vez" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El evento se entrega 0 o 1 vez" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El evento nunca se entrega" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Por qué es importante la idempotencia en consumidores de eventos?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Para que procesar el mismo evento dos veces no tenga efectos secundarios no deseados" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Para hacer el código más rápido" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Para reducir el uso de memoria" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Para mejorar la legibilidad" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles son brokers de mensajería adecuados para EDA? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Apache Kafka" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "RabbitMQ" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "MySQL" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Redis Pub/Sub (sin persistencia)" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo se llama la cola donde se envían eventos que no se pudieron procesar después de varios reintentos?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "Dead Letter Queue" }
+[[slides.TypeAnswer.answers]]
+content = { Text = "DLQ" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los patrones de comunicación por nivel de acoplamiento (de menor a mayor):"
+points_awarded = 1000
+axis_labels = { from = "Menor acoplamiento", to = "Mayor acoplamiento" }
+[[slides.Order.answers]]
+content = { Text = "Eventos asíncronos (EDA)" }
+[[slides.Order.answers]]
+content = { Text = "Mensajería asíncrona con colas" }
+[[slides.Order.answers]]
+content = { Text = "gRPC (streaming bidireccional)" }
+[[slides.Order.answers]]
+content = { Text = "REST síncrono (HTTP request-response)" }

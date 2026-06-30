@@ -1,0 +1,168 @@
+title = "¿Qué flag de -s recursive permite preferir una versión en conflictos de merge?"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué flag de -s recursive permite preferir una versión en conflictos de merge?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "-X theirs" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "-X ours" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--strategy-option" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--no-ff" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Cuál es la estrategia por defecto de git merge desde Git 2.33?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "ort" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "recursive" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "octopus" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "resolve" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué estrategia de merge se usa para fusionar más de dos ramas a la vez?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "octopus" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "recursive" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ours" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "subtree" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué flag de git merge crea un commit de merge aunque el merge sea fast-forward?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "--no-ff" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--ff-only" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--squash" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--no-commit" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué hace git merge --squash?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Aplica los cambios sin crear un commit de merge" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Descarta todos los cambios de la rama" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Fuerza un merge recursivo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Crea un commit de merge vacío" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando fusiona archivos externamente sin involucrar ramas?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git merge-file" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git merge" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git merge-tree" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git diff3" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué flag de merge --no-commit combinado con qué comando permite revisar cambios antes de commitear?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git merge --no-commit --no-ff" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git merge --abort" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git merge --continue" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git merge --squash" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué estrategia de merge ignora por completo los cambios de la rama que se fusiona y conserva la rama actual?"
+case_sensitive = false
+answers = ["ours"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "Ordena los pasos para hacer un merge con revisión manual:"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["git merge --no-commit --no-ff feature", "Revisar los cambios en staging", "git commit para completar el merge"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué opción de -s recursive permite usar la estrategia subtree para mergear un subproyecto?"
+case_sensitive = false
+answers = ["subtree"]

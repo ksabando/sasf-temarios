@@ -1,0 +1,187 @@
+title = "Módulo 13 - Deuda Técnica y Refactorización"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Quién acuñó el término \"deuda técnica\"?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Ward Cunningham" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Martin Fowler" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Robert C. Martin" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Eric Evans" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué representa el \"principal\" en el símil financiero de deuda técnica?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El costo de refactorizar el código subóptimo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El tiempo perdido por bugs" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El número de líneas de código" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El salario del equipo" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "Según el cuadrante de Fowler, ¿qué tipo de deuda es la más peligrosa?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Imprudente + Inadvertida (falta de conocimiento, sin conciencia del problema)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Prudente + Deliberada" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Imprudente + Deliberada" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Prudente + Inadvertida" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es el \"interés\" de la deuda técnica?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El tiempo extra que toma implementar nuevas features debido al código subóptimo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El costo de implementar la solución correcta" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La tasa de interés bancaria" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El costo de las herramientas de análisis" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es el \"Boy Scout Rule\" en refactorización?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Dejar el código mejor de lo que lo encontraste" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cambiar todo el código legacy" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No tocar código que funciona" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Escribir tests después del código" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es el primer paso para reducir deuda técnica?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Identificar y medir la deuda existente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Refactorizar todo de inmediato" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Contratar más desarrolladores" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Reescribir el sistema desde cero" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son ejemplos de anti-patrones arquitectónicos? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Big Ball of Mud" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Architecture by Resume" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Boy Scout Rule" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Testing Pyramid" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre refactorización de código y refactorización arquitectónica?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "La de código es local (clase/método), la arquitectónica cambia la estructura del sistema" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No hay diferencia" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La arquitectónica es más fácil" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La de código solo cambia nombres de variables" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué herramienta mide la deuda técnica en días estimados de refactorización?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "SonarQube" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena el proceso de gestión de deuda técnica (de inicio a fin):"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+[[slides.Order.answers]]
+content = { Text = "Identificar y medir la deuda existente" }
+[[slides.Order.answers]]
+content = { Text = "Priorizar según impacto en el negocio" }
+[[slides.Order.answers]]
+content = { Text = "Planificar la reducción (ej: 20% del sprint)" }
+[[slides.Order.answers]]
+content = { Text = "Ejecutar refactorización y medir mejora" }

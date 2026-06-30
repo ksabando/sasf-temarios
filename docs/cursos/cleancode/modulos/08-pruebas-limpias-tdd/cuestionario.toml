@@ -1,0 +1,167 @@
+title = "Módulo 08 - Pruebas Limpias y TDD"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es el ciclo de TDD?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Red → Green → Refactor" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Green → Red → Refactor" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Red → Refactor → Green" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Refactor → Red → Green" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa 'F' en FIRST?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Fast (rápido)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Final" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "First (primero)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Functional" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Por qué se recomienda una afirmación por test?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Porque si falla, sabes exactamente qué falló" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Porque es más rápido" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Porque es obligatorio" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Porque requiere menos código" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué estructura deben seguir los tests limpios?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Arrange-Act-Assert (o Given-When-Then)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Setup-Execute-Verify" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Prepare-Run-Check" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Before-After-Test" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa que un test sea 'Independiente'?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Que no depende de otros tests ni comparte estado mutable" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Que no usa frameworks" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Que se ejecuta solo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Que no tiene aserciones" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es el problema de un test que imprime en consola en lugar de hacer assert?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Requiere interpretación humana (no es self-validating)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es más lento" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No compila" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Consume memoria" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué haces en la fase GREEN de TDD?"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Escribir el código MÍNIMO para que el test pase" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Hacer que el test pase de la forma más simple posible" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Escribir el código perfecto" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Refactorizar el código existente" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué tipo de test verifica el comportamiento de una sola clase aislada?"
+case_sensitive = false
+answers = ["Test de unidad", "Unit test", "Test unitario"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Por qué los tests deben ser Repeatable según FIRST?"
+case_sensitive = false
+answers = ["Para que den el mismo resultado en cualquier entorno"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "Ordena las fases del ciclo TDD en el orden correcto"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["Red (escribir test que falle)", "Green (código mínimo para pasar)", "Refactor (mejorar el código)", "Repeat (repetir el ciclo)"]

@@ -1,0 +1,187 @@
+title = "Módulo 12 - Documentación Arquitectónica"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles son los 4 niveles del C4 Model?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Context, Container, Component, Code" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Code, Class, Component, Container" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Context, Class, Component, Code" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Container, Class, Component, Context" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Quién creó el C4 Model?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Simon Brown" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Robert C. Martin" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Martin Fowler" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Alistair Cockburn" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué nivel del C4 Model muestra el sistema en su contexto con usuarios y sistemas externos?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Nivel 1 - Context" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Nivel 2 - Container" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Nivel 3 - Component" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Nivel 4 - Code" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es un ADR (Architecture Decision Record)?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Un documento que captura una decisión arquitectónica con contexto y consecuencias" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un diagrama de base de datos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un registro de bugs" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una herramienta de testing" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué estado NO es válido para un ADR?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Pending" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Proposed" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Accepted" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Deprecated" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué herramienta permite definir C4 Model mediante un DSL y generar diagramas automáticamente?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Structurizr" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "PlantUML" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Mermaid" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Draw.io" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son anti-patrones de documentación? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Wiki antipattern (documentar en wiki y nunca actualizar)" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Documentación obsoleta que nadie mantiene" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Docs as code en el repositorio" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ADRs en markdown versionados" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Para qué sirve ArchUnit?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Para verificar reglas arquitectónicas mediante tests automatizados" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Para generar diagramas UML" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Para documentar APIs" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Para gestionar dependencias Maven" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué formato de diagrama es nativo de GitHub Markdown?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "Mermaid" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los niveles del C4 Model desde la vista más general a la más detallada:"
+points_awarded = 1000
+axis_labels = { from = "Más general", to = "Más detallada" }
+[[slides.Order.answers]]
+content = { Text = "Context (sistema + usuarios + sistemas externos)" }
+[[slides.Order.answers]]
+content = { Text = "Container (aplicaciones, bases de datos, servicios)" }
+[[slides.Order.answers]]
+content = { Text = "Component (módulos dentro de un contenedor)" }
+[[slides.Order.answers]]
+content = { Text = "Code (clases, interfaces, entidades)" }

@@ -1,0 +1,168 @@
+title = "¿Qué comando crea un repositorio Git en un directorio existente?"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando crea un repositorio Git en un directorio existente?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git init" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git clone" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git start" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git checkout --orphan" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué flag de git rebase permite reordenar y editar interactivamente los commits?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "-i" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--onto" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--continue" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--abort" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando guarda cambios temporales sin commitear para cambiar de rama?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git stash" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git save" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git shelve" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git hold" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando copia un commit específico de una rama a la rama actual?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git cherry-pick" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git rebase" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git merge" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git apply" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿En qué directorio se almacenan los hooks locales de un repositorio Git?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = ".git/hooks" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = ".hooks" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "hooks/" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = ".git/config/hooks" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué sistema de archivos grande usa Git para reemplazar archivos binarios con punteros?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Git LFS" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Git Annex" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Git Large Storage" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Git BigFiles" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué flag de git commit firma el commit con GPG?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "-S" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "-s" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--gpg-sign" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--verify" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando de Git lista las ramas del repositorio?"
+case_sensitive = false
+answers = ["git branch"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué hook de Git se ejecuta antes de cada commit para validar el mensaje?"
+case_sensitive = false
+answers = ["commit-msg"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "Ordena el flujo completo de trabajo en Git con revisión de código:"
+axis_labels = { from = "Inicio", to = "Fin" }
+answers = ["git checkout -b feature", "git add y git commit", "Abrir Pull Request"]

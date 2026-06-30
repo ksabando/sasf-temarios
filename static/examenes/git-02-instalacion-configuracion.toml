@@ -1,0 +1,135 @@
+title = "M02 - Instalación y Configuración Inicial"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando muestra la versión instalada de Git?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git --version" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git version" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git --v" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git info" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué nivel de configuración afecta a todos los usuarios del sistema?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "--system" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--global" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--local" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--all" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué configuración de Git se recomienda para normalizar los finales de línea en Windows?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "core.autocrlf = true" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "core.autocrlf = input" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "core.autocrlf = false" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "core.eol = crlf" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+points_awarded = 1000
+title = "¿Cuáles de los siguientes son niveles válidos de configuración en Git?"
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "system" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "global" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "local" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "remote" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando configura el nombre de usuario global en Git?"
+case_sensitive = false
+answers = ["git config --global user.name"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando configura el editor por defecto en Git?"
+case_sensitive = false
+answers = ["git config --global core.editor", "git config core.editor"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando se usa para crear un alias en Git?"
+case_sensitive = false
+answers = ["git config --global alias.", "git config alias."]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "Ordena los niveles de precedencia de configuración en Git (de menor a mayor prioridad)"
+axis_labels = { from = "Menor prioridad", to = "Mayor prioridad" }
+answers = ["system", "global", "local"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "Ordena los pasos para generar y agregar una clave SSH a GitHub"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["ssh-keygen -t ed25519", "Copiar la clave pública", "Agregar clave en Settings > SSH keys", "Probar conexión con ssh -T git@github.com"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "Ordena las configuraciones mínimas recomendadas tras instalar Git"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["git config --global user.name", "git config --global user.email", "git config --global core.editor", "git config --global core.autocrlf"]

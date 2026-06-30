@@ -1,0 +1,175 @@
+title = "Módulo 07 — OpenAPI Avanzado"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué versión de OpenAPI es la más reciente?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "3.1" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "2.0" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "3.0" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "4.0" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué hace $ref en una especificación OpenAPI?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Referencia un componente reutilizable" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Define un nuevo tipo de dato" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Refleja el contenido de otro archivo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Reformatea la especificación" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa el enfoque API-First?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Escribir el contrato OpenAPI primero, generar código después" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Escribir código primero, generar OpenAPI después" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usar solo APIs de terceros" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No usar OpenAPI" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué herramienta se usa para linting de especificaciones OpenAPI?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Spectral" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Swagger UI" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Redoc" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Stoplight" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué composición de schema combina múltiples schemas como herencia?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "allOf" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "oneOf" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "anyOf" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "noneOf" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿En qué sección de OpenAPI se definen los schemas reutilizables?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "components/schemas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "paths" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "servers" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "info" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son security schemes válidos en OpenAPI? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "http (scheme: bearer)" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "oauth2" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "session-cookie" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ldap" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué librería de Spring genera OpenAPI desde anotaciones en el código?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["springdoc-openapi", "springdoc", "springdoc openapi"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué propiedad en oneOf de OpenAPI determina cuál schema usar en tiempo de ejecución?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["discriminator", "discriminator property", "discriminador"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los pasos del enfoque API-First para el desarrollo."
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+[[slides.Order.answers]]
+content = { Text = "1. Escribir la especificación OpenAPI (contrato)" }
+[[slides.Order.answers]]
+content = { Text = "2. Validar con Spectral y revisar el diseño" }
+[[slides.Order.answers]]
+content = { Text = "3. Generar código server/client desde el contrato" }
+[[slides.Order.answers]]
+content = { Text = "4. Implementar la lógica de negocio sobre el código generado" }

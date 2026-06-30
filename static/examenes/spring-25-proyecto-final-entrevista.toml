@@ -1,0 +1,199 @@
+title = "Módulo 25 - Proyecto Final Integrador"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué patrón arquitectónico usan los microservicios?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Arquitectura basada en servicios independientes" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Monolito" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Arquitectura en capas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cliente-Servidor" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué herramienta orquesta contenedores en producción?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Kubernetes" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Docker Compose" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Docker Swarm" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Podman" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué dependencia starter se usa para exponer métricas en formato Prometheus?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "micrometer-registry-prometheus" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "spring-boot-starter-prometheus" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "prometheus-client" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "actuator-prometheus" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación de Spring Boot test carga el contexto completo de la aplicación?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@SpringBootTest" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@WebMvcTest" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@DataJpaTest" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@MockMvcTest" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué propiedad conecta un Config Client con el Config Server?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "spring.cloud.config.uri" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "spring.config.server" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "eureka.client.serviceUrl" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "config.server.url" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué protocolo usa Docker Compose para comunicación entre contenedores?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Red interna de Docker" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "HTTP" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "TCP/IP público" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "SSH" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Cuáles son herramientas de monitoreo usadas en el proyecto final?"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Prometheus" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Grafana" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Jenkins" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "SonarQube" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Cuáles son patrones de microservicios implementados en el proyecto final?"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "API Gateway" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Service Discovery" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Singleton" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Factory" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué beneficio principal aporta Docker Compose al proyecto final?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Define y ejecuta múltiples contenedores con un solo comando" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Aumenta la seguridad" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Compila el código más rápido" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Reemplaza a Kubernetes" }
+
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 60000
+title = "Ordena el flujo completo de una petición en el proyecto final"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+answers = ["Cliente envía petición al Gateway", "Gateway redirige al servicio", "Servicio consulta Config Server", "Servicio descubre instancias con Eureka", "Servicio procesa y responde", "Gateway retorna respuesta al cliente"]
+

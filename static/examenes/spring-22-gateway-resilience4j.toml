@@ -1,0 +1,188 @@
+title = "Módulo 22 - API Gateway y Resilience4j"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué componente de Spring Cloud actúa como punto único de entrada a microservicios?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Spring Cloud Gateway" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Eureka" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Config Server" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Ribbon" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué patrón de resiliencia evita llamadas repetidas a un servicio que falla?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Circuit Breaker" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Retry" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Rate Limiter" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Bulkhead" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué estado tiene un Circuit Breaker cuando el servicio está funcionando?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "CLOSED" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "OPEN" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "HALF_OPEN" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "DISABLED" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación de Resilience4j reintenta una operación fallida?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Retry" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@CircuitBreaker" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@RateLimiter" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Bulkhead" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación limita el número de llamadas concurrentes?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Bulkhead" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@RateLimiter" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@CircuitBreaker" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@TimeLimiter" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué tipo de filtro de Gateway modifica las cabeceras de la petición?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "AddRequestHeader" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "RewritePath" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "CircuitBreaker" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Retry" }
+
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué dependencia starter se usa para Spring Cloud Gateway?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["spring-cloud-starter-gateway"]
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué función tiene el método fallback en Resilience4j?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Proveer una respuesta alternativa cuando falla el circuito" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Reintentar la operación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Limitar la tasa de peticiones" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Aislar recursos" }
+
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 60000
+title = "Ordena los estados del Circuit Breaker"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+answers = ["CLOSED", "OPEN", "HALF_OPEN", "CLOSED (otra vez)"]
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Cómo se configuran las rutas en Spring Cloud Gateway?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "En application.yml con predicados y filtros" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Con anotaciones @Route" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Con Java DSL en una clase @Configuration" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Con archivos .route" }
+

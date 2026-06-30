@@ -1,0 +1,175 @@
+title = "Módulo 10 — Proyecto Final y Entrevista Técnica"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué código HTTP retorna un PUT exitoso con body?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "200 OK" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "201 Created" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "204 No Content" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "202 Accepted" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuándo retornar 409 Conflict?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El estado actual del recurso conflictúa con la request" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Recurso no encontrado" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Error de validación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Autenticación fallida" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué retorna 405 Method Not Allowed?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El método no está soportado para ese endpoint" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El método no está implementado" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El recurso no existe" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Autenticación fallida" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué indica el header Sunset?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "La fecha exacta en que la API será descontinuada" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La API está obsoleta" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El servidor está reiniciándose" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El token expiró" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué operación de GraphQL permite tiempo real?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Subscription" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Query" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Mutation" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Update" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué anotación de Spring Boot marca una clase como controlador REST?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@RestController" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Controller" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Service" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Component" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de las siguientes anotaciones de Spring son para inyección de dependencias? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Autowired" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Inject" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Bean" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Configuration" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué interfaz de Spring se usa para paginación en controladores REST?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["Pageable", "pageable"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué clase de Spring Boot 3.x se usa para manejar errores siguiendo el RFC 9457?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["ProblemDetail", "problemdetail", "problem detail"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los pasos típicos del desarrollo API-First con Spring Boot."
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+[[slides.Order.answers]]
+content = { Text = "1. Diseñar contrato OpenAPI (paths, schemas, security)" }
+[[slides.Order.answers]]
+content = { Text = "2. Generar interfaces y DTOs desde el contrato" }
+[[slides.Order.answers]]
+content = { Text = "3. Implementar lógica con @RestController y servicios" }
+[[slides.Order.answers]]
+content = { Text = "4. Documentar con springdoc-openapi y exponer Swagger UI" }

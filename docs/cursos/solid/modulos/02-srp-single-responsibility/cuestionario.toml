@@ -1,0 +1,194 @@
+title = "Módulo 02 - SRP (Single Responsibility Principle)"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la definición formal del Single Responsibility Principle según Robert C. Martin?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Una clase debe tener una sola razón para cambiar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una clase debe tener exactamente un método público" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una clase debe heredar de una sola clase padre" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una clase debe implementar una sola interfaz" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuántas razones para cambiar tiene una clase que valida datos, calcula impuestos y guarda en base de datos?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Tres razones: cambio en reglas de validación, cambio en reglas de cálculo de impuestos y cambio en esquema de base de datos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una razón: cualquier cambio en el sistema requiere modificar esta clase" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Dos razones: cambios en el frontend y cambios en el backend" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Ninguna razón, ya que la clase maneja todo lo necesario" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo promueve Spring Boot el SRP mediante anotaciones de estereotipo?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Controller para HTTP, @Service para lógica de negocio y @Repository para acceso a datos, cada una con una responsabilidad única" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Autowired para todas las dependencias sin importar la responsabilidad" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Component para todas las clases sin distinción de capa" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Entity para manejar tanto la lógica de negocio como la persistencia" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles son pruebas prácticas para detectar si una clase viola SRP? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "La prueba del 'y también': si describes la clase con 'hace X y también Y y también Z'" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "La prueba de los actores: si más de un tipo de persona podría pedir un cambio en la clase" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La prueba de rendimiento: si la clase tarda más de 100ms en ejecutarse" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La prueba de herencia: si la clase extiende más de una clase base" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué anti-patrón describe una clase con utilidades de todo tipo (validación, cálculo, conexión a BD, notificaciones)?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Clase Suiza (Swiss Army Knife)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Singleton Pattern mal aplicado" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Factory Pattern excesivo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Observer Pattern sin sujetos definidos" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo se aplica SRP en React con hooks y componentes?"
+points_awarded = 1000
+answer_mode = "TypeAnswer"
+case_sensitive = false
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Separando componentes de presentación que renderizan UI y custom hooks que encapsulan lógica de estado y llamadas a API" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Componentes de presentación para UI y custom hooks para lógica" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuándo es aceptable relajar el SRP?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "En prototipos, scripts desechables o cuando la separación introduce más complejidad que la violación misma" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Siempre que la clase tenga menos de 500 líneas de código" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Nunca, SRP debe aplicarse estrictamente en todo momento sin excepciones" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Solo cuando se usa Spring Boot, ya que el framework maneja las responsabilidades" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los beneficios de aplicar SRP, del más inmediato al más estratégico"
+points_awarded = 1000
+axis_labels = { from = "Más inmediato", to = "Más estratégico" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Legibilidad: código más fácil de entender" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Testabilidad: clases pequeñas se prueban de forma aislada" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Mantenibilidad: cambios localizados sin efectos colaterales" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Paralelismo: varios desarrolladores trabajan sin conflictos de merge" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles son beneficios concretos de aplicar SRP? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Reusabilidad: componentes específicos se reutilizan en otros contextos" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Facilidad de debugging: los errores se localizan rápidamente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Menor cantidad de archivos en el proyecto" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Mayor velocidad de compilación por tener menos clases" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué nombre de clase suele indicar una probable violación de SRP?"
+points_awarded = 1000
+answer_mode = "TypeAnswer"
+case_sensitive = false
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Manager" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Util" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Helper" }

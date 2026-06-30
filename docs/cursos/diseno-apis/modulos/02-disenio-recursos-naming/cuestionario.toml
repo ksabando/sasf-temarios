@@ -1,0 +1,186 @@
+title = "Módulo 02 — Diseño de Recursos y Naming"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué deben usar los endpoints REST preferentemente?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Sustantivos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Verbos en inglés" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Adjetivos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Números" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la convención correcta para nombres de recursos en URLs?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "kebab-case" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "PascalCase" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "camelCase" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "snake_case" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál de las siguientes URLs es correcta según las convenciones REST?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "/tasks/export" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "/exportTasks" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "/getTasksExport" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "/tasksExport" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuántos niveles de anidación se recomienda como máximo en URLs REST?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "3" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "1" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "2" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "5" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la forma correcta de representar una relación uno-a-muchos en REST?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "/users/{id}/tasks" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "/users-tasks" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "/userTasks/5" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "/getTasksByUser/5" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuándo es apropiado usar un action endpoint en REST?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Cuando la operación no es CRUD estándar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Siempre" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Nunca" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Solo para DELETE" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de las siguientes son buenas prácticas de naming en REST? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Usar sustantivos en plural para colecciones" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Usar kebab-case para URLs de múltiples palabras" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usar verbos como getTasks en las URLs" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usar mayúsculas para diferenciar recursos" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué convención de naming usa Spring Boot por defecto en Java pero NO se recomienda para URLs?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["camelCase", "camelcase"]
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de las siguientes son ventajas del naming consistente? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Facilita la predictibilidad de la API" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Reduce la curva de aprendizaje para nuevos desarrolladores" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Aumenta la velocidad de respuesta del servidor" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Elimina la necesidad de documentación" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena de mejor a peor práctica la denominación de la URL para exportar tareas."
+points_awarded = 1000
+axis_labels = { from = "Mejor", to = "Peor" }
+[[slides.Order.answers]]
+content = { Text = "POST /tasks/export" }
+[[slides.Order.answers]]
+content = { Text = "GET /tasks?action=export" }
+[[slides.Order.answers]]
+content = { Text = "POST /exportTasks" }
+[[slides.Order.answers]]
+content = { Text = "GET /getTasksExport" }

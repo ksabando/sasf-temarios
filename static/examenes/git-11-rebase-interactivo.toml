@@ -1,0 +1,146 @@
+title = "M11 - Rebase Interactivo"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Cuál es la principal diferencia entre rebase y merge?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Rebase reescribe la historia linealizando los commits, mientras que merge crea un commit de fusión" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Merge reescribe la historia y rebase crea un commit de fusión" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Ambos hacen exactamente lo mismo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Rebase solo funciona en ramas remotas" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+points_awarded = 1000
+title = "¿Qué comandos puedes usar durante un rebase interactivo para modificar commits?"
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "pick" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "reword" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "squash" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "merge" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando de rebase interactivo usas para eliminar un commit manteniendo sus cambios en el working directory?"
+case_sensitive = false
+answers = ["edit", "e"]
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando se usa para continuar un rebase después de resolver un conflicto?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git rebase continue" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git rebase --continue" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git rebase --resume" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git continue --rebase" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué hace la instrucción 'squash' en un rebase interactivo?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Elimina el commit por completo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Edita el mensaje del commit" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Combina el commit con el anterior, permitiendo fusionar sus mensajes" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Divide el commit en varios más pequeños" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 45000
+points_awarded = 1000
+title = "Ordena los pasos correctos para realizar un rebase interactivo de los últimos 3 commits"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["git rebase -i HEAD~3", "Editar las instrucciones en el editor (pick/reword/squash/etc.)", "Guardar y cerrar el editor para que Git ejecute el rebase", "Resolver conflictos si los hay y ejecutar git rebase --continue"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué instrucción del rebase interactivo debes usar para cambiar solo el mensaje de un commit?"
+case_sensitive = false
+answers = ["reword", "r"]
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué hace la instrucción 'fixup' en un rebase interactivo?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Combina el commit con el anterior descartando su mensaje" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Elimina el commit permanentemente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Corrige automáticamente errores de sintaxis" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Marca el commit como reparado para un fix posterior" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "Ordena la secuencia para abortar un rebase que salió mal"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["Detectar que el rebase tiene conflictos difíciles de resolver", "Ejecutar git rebase --abort", "Verificar que la rama vuelve al estado anterior al rebase"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué flag de git rebase permite移植 (transplantar) una serie de commits a otra rama base?"
+case_sensitive = false
+answers = ["--onto"]

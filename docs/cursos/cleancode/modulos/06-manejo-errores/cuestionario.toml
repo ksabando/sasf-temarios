@@ -1,0 +1,167 @@
+title = "Módulo 06 - Manejo de Errores"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Por qué los códigos de error son problemáticos?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Porque obligan al caller a revisar el resultado en cada llamada" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Porque son más lentos que las excepciones" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Porque no se pueden personalizar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Porque usan int en lugar de enum" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué debes hacer con la causa original al atrapar una excepción?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Preservarla pasándola al constructor de la nueva excepción" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Ignorarla" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Hacer println del stack trace" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Sobrescribirla" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la alternativa recomendada a retornar null?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Usar Optional, Null Object o lanzar excepción" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Retornar -1" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Retornar un string vacío" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Retornar un objeto vacío creado con new" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es el Null Object Pattern?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Un objeto que implementa la interfaz pero no hace nada" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un objeto que siempre es null" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un objeto que lanza excepción en todos sus métodos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un patrón para crear objetos nulos" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué hace Objects.requireNonNull(obj, 'message')?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Lanza NullPointerException si obj es null" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Retorna null si obj es null" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Convierte null a string 'null'" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Ignora si obj es null" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuándo usarías una excepción de dominio vs técnica?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Dominio para errores del negocio, técnica para errores de infraestructura" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Dominio para errores de red, técnica para errores de validación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Son intercambiables" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Siempre usar técnica" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué contexto debe tener una excepción bien diseñada?"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El mensaje descriptivo del error" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Los valores relevantes y la causa original" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Solo el stack trace" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El nombre del método que falló" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Por qué se recomienda usar unchecked exceptions en lugar de checked exceptions?"
+case_sensitive = false
+answers = ["Porque las checked violan el Principio Abierto/Cerrado", "Violan el OCP", "Violan el Open/Closed Principle"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué método de la clase Objects de Java se usa para validar que un parámetro no sea null?"
+case_sensitive = false
+answers = ["requireNonNull"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "Ordena el flujo correcto de manejo de una excepción"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["Capturar la excepción específica", "Preservar la causa original", "Traducir a excepción de dominio", "Registrar con contexto relevante"]

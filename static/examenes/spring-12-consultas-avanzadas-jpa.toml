@@ -1,0 +1,199 @@
+title = "Módulo 12 - Consultas Avanzadas JPA"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación permite escribir consultas JPQL personalizadas?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Query" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@NamedQuery" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Sql" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Select" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Cuál es la diferencia entre JPQL y SQL nativo?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "JPQL usa nombres de entidades y atributos, SQL usa tablas y columnas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "JPQL es más rápido" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "SQL solo funciona con MySQL" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No hay diferencia" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación se requiere para operaciones de escritura con @Query?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Modifying" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Transactional" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Write" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Update" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué API de JPA permite construir consultas dinámicas programáticamente?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Criteria API" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "JPQL" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "SQL nativo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "QueryDSL" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué interfaz permite consultas dinámicas con Specifications?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "JpaSpecificationExecutor" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "SpecificationExecutor" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "QueryByExampleExecutor" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "DynamicQueryExecutor" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué tipo de proyección evita crear una clase DTO separada?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Interface-based Projection" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Class-based Projection" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Dynamic Projection" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Entity Projection" }
+
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué palabra clave de un método derivado cuenta registros?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["countBy", "CountBy"]
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué anotación de @Query permite pasar parámetros por nombre?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = ":paramName" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "?1" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "#param" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "$param" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Cuál es la desventaja de usar Native Queries vs JPQL?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Son menos portables entre bases de datos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Son más lentas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No soportan JOINs" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Requieren más memoria" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué objeto encapsula una condición de búsqueda en Criteria API?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Predicate" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Filter" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Condition" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Expression" }
+

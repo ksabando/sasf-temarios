@@ -1,0 +1,175 @@
+title = "Módulo 05 — Paginación, Filtros y Ordenamiento"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué problema principal resuelve la paginación en APIs?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Limitar respuestas grandes para mejorar rendimiento" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Autenticación de usuarios" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Versionado de la API" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Documentación de endpoints" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la principal desventaja de offset pagination?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Puede dar resultados inconsistentes con inserciones concurrentes" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es difícil de implementar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No permite ordenar resultados" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Solo funciona con SQL" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué ventaja tiene cursor pagination sobre offset?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Es consistente aunque haya inserciones concurrentes" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Permite saltar a cualquier página" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es más simple de implementar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No requiere base de datos" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo se expresa un filtro \"mayor o igual que\" en una query string REST bien diseñada?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "?age=gte:18" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "?age>=18" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "?age=min:18" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "?age=from:18" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué tipo de paginación recomendarías para un feed de redes sociales con scroll infinito?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Cursor pagination" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Offset pagination" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No usar paginación" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cualquiera es igual" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo se implementan filtros OR en una URL REST?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "?tag=java&tag=spring (múltiples valores del mismo parámetro)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "?tag=java|spring" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "?tag=java+spring" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "?tag[]=java&tag[]=spring" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes campos son típicos en una respuesta de cursor pagination? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "nextCursor" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "data (arreglo de resultados)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "totalPages" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "page (número de página actual)" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa el parámetro page=0 en offset pagination?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["Primera página", "primera pagina", "página 1", "pagina 1", "índice 0", "indice 0"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué información NUNCA debe incluirse en una respuesta de API paginada o no paginada?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["Contraseñas", "passwords", "contraseñas de usuarios", "datos sensibles", "credenciales"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena de más simple a más robusto los tipos de paginación en APIs."
+points_awarded = 1000
+axis_labels = { from = "Más simple", to = "Más robusto" }
+[[slides.Order.answers]]
+content = { Text = "Offset pagination (page + size)" }
+[[slides.Order.answers]]
+content = { Text = "Keyset pagination (WHERE id > lastId)" }
+[[slides.Order.answers]]
+content = { Text = "Cursor pagination (cursor opaco)" }
+[[slides.Order.answers]]
+content = { Text = "Cursor + metadatos de navegación (next, prev)" }

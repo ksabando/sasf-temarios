@@ -1,0 +1,191 @@
+title = "Módulo 04 - Arquitectura Hexagonal (Ports & Adapters)"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Quién propuso la Arquitectura Hexagonal?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Alistair Cockburn" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Robert C. Martin" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Eric Evans" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Martin Fowler" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es el principio fundamental de la arquitectura hexagonal?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El dominio/aplicación no debe depender de infraestructura" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El frontend debe estar separado del backend" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usar siempre bases de datos SQL" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Todos los servicios deben ser REST" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es un puerto (port) en arquitectura hexagonal?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Una interfaz que define cómo el mundo exterior interactúa con el núcleo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una conexión de red" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un endpoint REST" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un adaptador de base de datos" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre puerto primario y secundario?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Los primarios son llamados por adaptadores externos (driving), los secundarios son llamados por el núcleo (driven)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Los puertos primarios son interfaces REST, los secundarios son JPA" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No hay diferencia" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Los puertos primarios son de red, los secundarios son locales" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué ventaja principal aporta la arquitectura hexagonal para testing?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Se pueden probar casos de uso sin infraestructura real, mockeando puertos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Los tests se ejecutan más rápido" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No necesita tests" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Solo se pueden hacer tests de integración" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Un REST Controller en arquitectura hexagonal actúa como un...?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Adaptador primario (implementa un puerto inbound)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Puerto primario" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Puerto secundario" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Adaptador secundario" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué regla de dependencia sigue la arquitectura hexagonal?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Las dependencias van hacia adentro (núcleo no sabe de adaptadores)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Las capas superiores dependen de las inferiores" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Todas las capas dependen de la base de datos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No hay reglas de dependencia" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles son los dos tipos de puertos en arquitectura hexagonal? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Puertos primarios (driving/inbound)" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Puertos secundarios (driven/outbound)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Puertos terciarios" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Puertos de red" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón de diseño es fundamental para implementar arquitectura hexagonal?"
+points_awarded = 1000
+case_sensitive = false
+[[slides.TypeAnswer.answers]]
+content = { Text = "Dependency Injection" }
+[[slides.TypeAnswer.answers]]
+content = { Text = "Inversión de Dependencias" }
+[[slides.TypeAnswer.answers]]
+content = { Text = "Inyección de Dependencias" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena las capas de la arquitectura hexagonal desde el exterior hacia el núcleo:"
+points_awarded = 1000
+axis_labels = { from = "Exterior", to = "Núcleo" }
+[[slides.Order.answers]]
+content = { Text = "Adaptadores externos (REST, JPA, Kafka)" }
+[[slides.Order.answers]]
+content = { Text = "Puertos (interfaces inbound/outbound)" }
+[[slides.Order.answers]]
+content = { Text = "Casos de uso / Servicios de aplicación" }
+[[slides.Order.answers]]
+content = { Text = "Dominio (entidades, value objects, reglas de negocio)" }

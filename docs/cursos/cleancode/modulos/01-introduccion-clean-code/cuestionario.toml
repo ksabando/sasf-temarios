@@ -1,0 +1,167 @@
+title = "Módulo 01 - Introducción a Clean Code"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es deuda técnica según Ward Cunningham?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Código mal escrito que genera 'intereses' en tiempo de mantenimiento" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El dinero que cuesta mantener un servidor" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Bugs reportados por usuarios" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La diferencia entre el código planeado y el implementado" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la relación entre lectura y escritura de código?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Se lee 10x más de lo que se escribe" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Se escribe 10x más de lo que se lee" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La relación es 1:1" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Depende del lenguaje de programación" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué propone la regla del Boy Scout?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Dejar el código más limpio de como lo encontraste" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Escribir código rápido para cumplir deadlines" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Solo modificar archivos que tengas en tu tarea" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No tocar código que funciona" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué describe la Broken Window Theory en software?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El código malo se propaga si no se arregla inmediatamente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Código con ventanas rotas no compila" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Las ventanas rotas representan bugs críticos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Hay que romper ventanas cada cierto tiempo" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál de las siguientes NO es una de las 4 reglas simples de Kent Beck?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Usa patrones de diseño avanzados" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Pasa todos los tests" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Revela intención" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No tiene duplicación" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué porcentaje del tiempo de un desarrollador se dedica a leer código?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "70%" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "20%" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "50%" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "90%" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la principal razón para usar herramientas como SonarLint o Checkstyle?"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Automatizar la detección de code smells y violaciones de estilo" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Mantener consistencia en el código del equipo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Hacer el código más rápido en ejecución" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Generar documentación automática" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Cómo se llama el principio que dice 'deja el código más limpio de como lo encontraste'?"
+case_sensitive = false
+answers = ["Regla del Boy Scout", "Boy Scout Rule"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué término describe el costo acumulado por tomar atajos en el código que luego requiere más tiempo de mantenimiento?"
+case_sensitive = false
+answers = ["Deuda técnica", "Deuda tecnica", "Technical debt"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "Ordena los pasos correctos para refactorizar código legacy"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["Escribir tests de caracterización", "Identificar code smells", "Aplicar refactorización", "Verificar que los tests pasan"]

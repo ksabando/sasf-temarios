@@ -1,0 +1,191 @@
+title = "Módulo 07 - SOLID en Spring"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo promueve Spring el cumplimiento de SRP mediante su arquitectura en capas?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Controller para HTTP, @Service para lógica de negocio, @Repository para acceso a datos y @ControllerAdvice para manejo centralizado de errores" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usando @Component para todas las clases sin distinción y delegando la responsabilidad al desarrollador" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Forzando que cada clase implemente al menos 3 interfaces de Spring" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Centralizando toda la lógica en el application.properties" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo implementarías un sistema de descuentos extensible en Spring Boot usando OCP?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Definir interfaz DiscountStrategy, crear @Component por cada tipo de descuento e inyectar List<DiscountStrategy> en el servicio sin modificar código existente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Crear un switch gigante en el controlador que maneje todos los tipos de descuento" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usar @Autowired en campos para cada tipo de descuento en el servicio" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Implementar todos los descuentos en un solo método del @Repository" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la relación entre @Qualifier y LSP en Spring?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "@Qualifier permite seleccionar una implementación entre varias, pero requiere que todas las implementaciones sean sustituibles sin romper el comportamiento" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Qualifier elimina la necesidad de que las implementaciones sean sustituibles entre sí" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Qualifier solo funciona con clases que extienden de la misma clase abstracta" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Qualifier reemplaza a @Primary y hace que todas las implementaciones sean iguales" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo ejemplifica Spring Data JPA el principio ISP?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Con interfaces jerárquicas: CrudRepository, PagingAndSortingRepository y JpaRepository, donde cada cliente depende solo del nivel de especialización que necesita" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Obligando a extender JpaRepository para cualquier operación de base de datos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Eliminando las interfaces y usando solo clases concretas con anotaciones" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Creando una única interfaz gigante con todos los métodos posibles de repositorio" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles son violaciones SOLID comunes en aplicaciones Spring mal escritas? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Controllers que hacen validación, lógica de negocio, persistencia y notificaciones (viola SRP)" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Switches/if-else en servicios para manejar diferentes tipos en lugar de estrategias polimórficas (viola OCP)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Uso de @Service para separar la lógica de negocio en clases dedicadas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Inyección por constructor con validación de dependencias no nulas" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué patrón de Spring reemplaza un switch/if-else gigante para calcular descuentos?"
+points_awarded = 1000
+answer_mode = "TypeAnswer"
+case_sensitive = false
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Strategy con inyección de lista de beans" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El patrón Strategy usando @Component y List de estrategias" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo afecta DIP a la testabilidad de los servicios Spring?"
+points_awarded = 1000
+answer_mode = "TypeAnswer"
+case_sensitive = false
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Los servicios dependen de interfaces, permitiendo inyectar mocks en pruebas sin necesidad de infraestructura real como bases de datos o APIs externas" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Al depender de abstracciones, se pueden usar implementaciones mock para pruebas unitarias aisladas" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los pasos para implementar un sistema de notificaciones extensible en Spring Boot"
+points_awarded = 1000
+axis_labels = { from = "Primer paso", to = "Último paso" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Definir la interfaz NotificationChannel con método send" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Crear @Component para cada canal: EmailChannel, SMSChannel, PushChannel" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Inyectar List<NotificationChannel> en NotificationService" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Agregar WhatsAppChannel como nuevo @Component sin modificar el servicio" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre IoC (Inversion of Control) y DIP en el contexto de Spring?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "IoC es sobre quién controla las dependencias (el contenedor); DIP es sobre el tipo de dependencias (abstracciones, no detalles)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "IoC y DIP son sinónimos en Spring y se refieren a lo mismo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "IoC se aplica en el frontend y DIP en el backend" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "DIP es un subconjunto de IoC que solo aplica a anotaciones @Autowired" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Por qué es preferible la inyección por constructor sobre @Autowired en campo en Spring?"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Permite declarar las dependencias como final garantizando inmutabilidad" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Facilita pruebas unitarias sin necesidad de levantar el contenedor Spring" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es la única forma de inyección que soporta Spring Boot 3" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Reduce el número de beans en el ApplicationContext" }

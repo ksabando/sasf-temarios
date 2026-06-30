@@ -1,0 +1,186 @@
+title = "Módulo 01 — Fundamentos de API REST"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa REST?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Representational State Transfer" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Remote State Transfer" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Resource State Transition" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Reliable System Transfer" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál de los siguientes NO es un principio REST según Fielding?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Session-based" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Stateless" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cacheable" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Uniform Interface" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué nivel del Richardson Maturity Model requiere el uso de HATEOAS?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Nivel 3" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Nivel 0" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Nivel 1" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Nivel 2" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué método HTTP NO es idempotente?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "POST" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "GET" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "PUT" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "DELETE" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué diferencia hay entre un recurso y un endpoint?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El recurso es la entidad conceptual; el endpoint es la URL donde se accede" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Son lo mismo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El endpoint es el concepto; el recurso es la URL" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No hay diferencia" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es el content-type típico para respuestas REST?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "application/json" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "application/xml" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "text/html" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "multipart/form-data" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son beneficios de REST? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Stateless: cada request contiene toda la información necesaria" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Cacheable: las respuestas pueden cachearse para mejorar rendimiento" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Stateful: el servidor mantiene sesiones activas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Solo funciona con XML" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué tecnología de APIs vino antes de REST? Escribe el nombre."
+points_awarded = 1000
+case_sensitive = false
+answers = ["SOAP", "soap"]
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes métodos HTTP son idempotentes? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "PUT" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "DELETE" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "POST" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "PATCH" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los niveles del Richardson Maturity Model de menos a más maduro."
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+[[slides.Order.answers]]
+content = { Text = "Nivel 0 — POX (Plain Old XML)" }
+[[slides.Order.answers]]
+content = { Text = "Nivel 1 — Recursos (URIs)" }
+[[slides.Order.answers]]
+content = { Text = "Nivel 2 — Verbos HTTP" }
+[[slides.Order.answers]]
+content = { Text = "Nivel 3 — HATEOAS" }

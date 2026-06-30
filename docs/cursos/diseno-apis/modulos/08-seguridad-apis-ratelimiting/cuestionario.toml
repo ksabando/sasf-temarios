@@ -1,0 +1,175 @@
+title = "Módulo 08 — Seguridad en APIs y Rate Limiting"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia entre autenticación y autorización?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Autenticación = ¿quién eres?, Autorización = ¿qué puedes hacer?" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Son lo mismo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Autenticación = ¿qué puedes hacer?, Autorización = ¿quién eres?" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No hay diferencia práctica" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la estructura de un JWT?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "header.payload.signature" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "header.body.signature" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "header.data.signature" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "header.claims.signature" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué flujo OAuth2 es más seguro para aplicaciones frontend (SPAs)?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Authorization Code + PKCE" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Client Credentials" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Implicit Grant" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Resource Owner Password" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué algoritmo de rate limiting permite bursts controlados?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Token Bucket" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Fixed Window" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Sliding Window" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Leaky Bucket" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué código HTTP retorna cuando se excede el rate limit?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "429 Too Many Requests" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "400 Bad Request" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "403 Forbidden" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "503 Service Unavailable" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué header de seguridad previene MIME sniffing?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "X-Content-Type-Options" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Strict-Transport-Security" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Content-Security-Policy" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "X-Frame-Options" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son claims estándar de JWT? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "sub (subject)" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "exp (expiration)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "pwd (password)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "tok (token type)" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa CORS?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["Cross-Origin Resource Sharing", "cross origin resource sharing"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significa PKCE en el contexto de OAuth2?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["Proof Key for Code Exchange", "proof key for code exchange", "pkce"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los headers de rate limiting de más general a más específico sobre el estado actual."
+points_awarded = 1000
+axis_labels = { from = "General", to = "Específico" }
+[[slides.Order.answers]]
+content = { Text = "X-RateLimit-Limit — total de requests permitidos" }
+[[slides.Order.answers]]
+content = { Text = "X-RateLimit-Remaining — requests restantes" }
+[[slides.Order.answers]]
+content = { Text = "X-RateLimit-Reset — timestamp de reinicio" }
+[[slides.Order.answers]]
+content = { Text = "Retry-After — segundos hasta poder reintentar" }

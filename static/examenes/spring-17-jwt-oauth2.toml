@@ -1,0 +1,188 @@
+title = "Módulo 17 - JWT y OAuth2"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Cuántas partes tiene un token JWT?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "3 (header, payload, signature)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "2 (header, payload)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "4 (header, payload, signature, footer)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "1 (solo el payload)" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué algoritmo de firma usa una clave secreta simétrica en JWT?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "HMAC" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "RSA" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "ECDSA" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "AES" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué filtro de Spring Security se extiende para procesar JWT en cada petición?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "OncePerRequestFilter" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "JwtFilter" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "AuthenticationFilter" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "SecurityFilter" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué starter habilita Spring Boot como OAuth2 Resource Server?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "spring-boot-starter-oauth2-resource-server" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "spring-boot-starter-security" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "spring-boot-starter-oauth2-client" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "spring-boot-starter-jwt" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Para qué sirve un Refresh Token?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Obtener nuevos Access Tokens sin re-autenticar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Refrescar la página" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Actualizar el perfil del usuario" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cambiar la contraseña" }
+
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué servidor de identidad open-source se usa frecuentemente con Spring?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["Keycloak"]
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué claim de JWT identifica al emisor del token?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "iss" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "sub" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "aud" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "exp" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué método de SecurityFilterChain configura JWT como Resource Server?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "oauth2ResourceServer" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "enableJwt" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "jwtConfig" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "resourceServer" }
+
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+title = "¿Qué librería Java se usa comúnmente para crear y validar JWT?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "JJWT (io.jsonwebtoken)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "JWT4J" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "SimpleJWT" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Spring JWT" }
+
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 60000
+title = "Ordena el flujo de autenticación con JWT"
+points_awarded = 1000
+axis_labels = { from = "Inicio", to = "Fin" }
+answers = ["Login con credenciales", "Servidor genera JWT", "Cliente almacena JWT", "Cliente envía JWT en cada request", "Filtro valida JWT y establece autenticación"]
+

@@ -1,0 +1,146 @@
+title = "M13 - Deshacer Cambios"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué hace git restore <archivo>?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Descarta los cambios en el working directory, volviendo al estado del último commit" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Elimina el archivo del repositorio" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Mueve el archivo al staging area" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Crea un nuevo commit deshaciendo los cambios" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué flag de git restore mueve cambios del staging al working directory?"
+case_sensitive = false
+answers = ["--staged", "-S"]
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 60000
+points_awarded = 1000
+title = "¿Cuáles son los tres modos de git reset?"
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "--soft" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "--mixed" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "--hard" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--merge" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué hace git reset --soft HEAD~1?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Elimina el último commit y todos sus cambios" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Deshace el último commit pero mantiene los cambios en el staging area" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Deshace el último commit y mueve los cambios al working directory" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Crea un commit inverso automáticamente" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "Ordena los efectos de git reset --mixed HEAD~1"
+axis_labels = { from = "Antes", to = "Después" }
+answers = ["HEAD se mueve al commit anterior", "El staging area se limpia", "Los cambios permanecen en el working directory"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando crea un nuevo commit que deshace los cambios de un commit anterior?"
+case_sensitive = false
+answers = ["git revert"]
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué hace git checkout -- <archivo>?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Descarta los cambios del archivo en el working directory desde el índice" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cambia a la rama especificada" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Agrega el archivo al staging area" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Borra el archivo del disco" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "Ordena la secuencia correcta para limpiar archivos no rastreados"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["Ejecutar git clean -n para ver qué archivos se eliminarán", "Revisar la lista de archivos no rastreados", "Ejecutar git clean -fd para eliminar archivos y directorios"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué flag combina la eliminación de archivos y directorios no rastreados en git clean?"
+case_sensitive = false
+answers = ["-fd", "-f -d"]
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Cómo puedes recuperar un commit perdido con git reflog?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git reflog restore HEAD@{1}" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git checkout HEAD@{1} --recover" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Usando git reflog para encontrar el hash y luego git reset o git cherry-pick" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Los commits perdidos no se pueden recuperar" }

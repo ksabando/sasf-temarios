@@ -1,0 +1,191 @@
+title = "Módulo 01 - Introducción a SOLID"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué significan las siglas SOLID?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Simple, Open, Lightweight, Integrated, Dynamic" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Scalable, Observable, Layered, Isolated, Decoupled" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Structured, Optimized, Liskov, Inheritable, Distributed" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Quién acuñó el acrónimo SOLID y quién formuló los principios?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El acrónimo fue acuñado por Michael Feathers y los principios fueron formulados por Robert C. Martin" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El acrónimo fue acuñado por Martin Fowler y los principios fueron formulados por Kent Beck" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El acrónimo fue acuñado por Erich Gamma y los principios fueron formulados por Grady Booch" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El acrónimo fue acuñado por Ward Cunningham y los principios fueron formulados por Linus Torvalds" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la principal diferencia entre acoplamiento (coupling) y cohesión (cohesion)?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El acoplamiento mide dependencia entre módulos (bajo es bueno); la cohesión mide relación de responsabilidades dentro de un módulo (alto es bueno)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El acoplamiento mide la cantidad de métodos; la cohesión mide la cantidad de clases en un paquete" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El acoplamiento mide líneas de código; la cohesión mide la complejidad ciclomática" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Ambos miden lo mismo pero desde perspectivas diferentes: uno a nivel de clase y otro a nivel de paquete" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de las siguientes son características del código espagueti? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Mezcla de responsabilidades (validación, lógica, presentación en un mismo método)" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Uso excesivo de condicionales anidados y switches" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Uso extensivo de interfaces y clases abstractas para cada variante" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Separación estricta en capas con inyección de dependencias" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es una God Class?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Una clase que concentra demasiadas responsabilidades no relacionadas (validación, persistencia, lógica de negocio, presentación)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una clase abstracta que define la interfaz común para toda una jerarquía de herencia" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una clase que implementa correctamente todos los principios SOLID de forma ejemplar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una clase utilitaria con métodos estáticos usados por todo el sistema" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué mide la complejidad ciclomática?"
+points_awarded = 1000
+answer_mode = "TypeAnswer"
+case_sensitive = false
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "La cantidad de caminos independientes en el código" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Los caminos independientes de ejecución" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "El objetivo del diseño de software según los principios SOLID es:"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Bajo acoplamiento y alta cohesión" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Alto acoplamiento y baja cohesión para máxima flexibilidad" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Máximo número de clases por paquete para mejor organización" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Mínimo número de métodos por clase para mayor simplicidad" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los rangos de complejidad ciclomática de menor a mayor severidad"
+points_awarded = 1000
+axis_labels = { from = "Menor severidad", to = "Mayor severidad" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "1-10: Baja (código simple, bien estructurado)" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "11-20: Moderada (revisar)" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "21-50: Alta (refactorizar urgente)" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "50+: Inmantenible" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué code smell indica una violación directa al Single Responsibility Principle?"
+points_awarded = 1000
+answer_mode = "TypeAnswer"
+case_sensitive = false
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "God Class" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Long Method" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de las siguientes son herramientas para detectar violaciones SOLID automáticamente? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "SonarQube / SonarLint" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "PMD" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "GitHub Copilot" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Docker Desktop" }

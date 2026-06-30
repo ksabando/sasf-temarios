@@ -1,0 +1,167 @@
+title = "Módulo 07 - Límites e Integración"
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es un 'Puerto' en el patrón Puerto-Adapter?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Una interfaz que define lo que el negocio necesita" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una clase concreta de una librería externa" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una implementación específica de pago" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un test de integración" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Para qué sirven los Learning Tests?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Para aprender cómo funciona una librería y documentar su comportamiento" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Para probar el código de producción" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Para probar la base de datos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Para medir rendimiento" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es el beneficio principal del patrón Adapter?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Aísla el código de negocio de los cambios en librerías externas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Hace el código más rápido" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Reduce la cantidad de clases" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Elimina la necesidad de tests" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué pasa si un Learning Test falla después de un upgrade de librería?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Detectas inmediatamente que la API cambió" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Nada, es solo un test" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El código de producción se rompe" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Hay que borrar el test" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es una boundary en software?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Un punto donde tu código se integra con código externo" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un límite de rendimiento" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El límite de líneas por función" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Un tipo de excepción" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué ventaja tiene agregar un nuevo proveedor de pagos usando Adapter?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Solo creas un nuevo adapter, no modificas código existente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Tienes que modificar todas las clases que usan pagos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Duplicas todo el código de pago" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "No puedes tener múltiples proveedores" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es el problema de service.getRepository().findAll()?"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Es una violación de la Ley de Demeter" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Expone la implementación interna del servicio" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es más rápido que usar una fachada" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es la práctica recomendada" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Qué tipo de tests se escriben para aprender y documentar el comportamiento de una librería externa?"
+case_sensitive = false
+answers = ["Learning Tests"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "¿Cómo debe manejar un adapter los errores de la API externa?"
+case_sensitive = false
+answers = ["Traduciéndolos a excepciones de dominio", "Traduciendolos a excepciones de dominio", "Con excepciones de dominio"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+points_awarded = 1000
+title = "Ordena los pasos para integrar una librería externa correctamente según Clean Code"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["Escribir Learning Tests", "Crear una interfaz (Puerto)", "Implementar el Adapter", "Usar el puerto en el código de negocio"]

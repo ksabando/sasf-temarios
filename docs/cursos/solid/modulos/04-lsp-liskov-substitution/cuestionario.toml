@@ -1,0 +1,191 @@
+title = "Módulo 04 - LSP (Liskov Substitution Principle)"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la definición formal del Liskov Substitution Principle?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Si S es un subtipo de T, los objetos de tipo T pueden ser reemplazados por objetos de tipo S sin alterar las propiedades deseables del programa" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Toda subclase debe agregar al menos un método nuevo no presente en la clase base" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Las subclases deben ser más restrictivas que sus clases base para garantizar seguridad" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una jerarquía de herencia no debe tener más de 3 niveles de profundidad" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Por qué el ejemplo clásico de Rectángulo vs Cuadrado viola LSP?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Square hereda de Rectangle y sobrescribe setWidth para también cambiar la altura, rompiendo la expectativa de que setWidth solo afecte el ancho" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Square no puede heredar de Rectangle porque un cuadrado no es un tipo de rectángulo en matemáticas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Rectangle no implementa correctamente los métodos de Square, violando el contrato de la interfaz" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Square tiene menos métodos que Rectangle, por lo que no puede ser un subtipo válido" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué establece Design by Contract sobre las precondiciones en subclases?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Una subclase NO puede fortalecer las precondiciones (no puede exigir más de lo que exigía la clase padre)" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una subclase debe siempre fortalecer las precondiciones para garantizar mayor seguridad" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Las precondiciones son independientes de la herencia y no aplican en subclases" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Una subclase puede eliminar todas las precondiciones del padre para mayor flexibilidad" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es 'Refused Bequest' y cómo viola LSP?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Cuando una subclase hereda métodos que no necesita y los sobrescribe lanzando UnsupportedOperationException, rompiendo la sustituibilidad" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cuando una clase padre rechaza la herencia de una subclase por incompatibilidad de tipos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cuando una subclase agrega más métodos de los que la clase padre define originalmente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Cuando se usa composición en lugar de herencia para delegar comportamiento" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles son señales de violación de LSP? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Subclase que lanza UnsupportedOperationException en métodos heredados" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Uso de instanceof en el cliente para verificar el tipo concreto antes de actuar" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Subclase que implementa todos los métodos de la interfaz correctamente" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El cliente programa contra la interfaz sin conocer la implementación concreta" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Por qué la composición es preferible a la herencia para cumplir LSP?"
+points_awarded = 1000
+answer_mode = "TypeAnswer"
+case_sensitive = false
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "La composición crea una relación 'tiene un' flexible que evita violaciones de sustituibilidad; los comportamientos se delegan a componentes intercambiables sin herencia" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "La composición evita que los subtipos violen el contrato de la clase base porque no hay herencia" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cómo se aplica LSP en Spring Framework mediante @Qualifier y @Profile?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Todas las implementaciones de una interfaz deben ser sustituibles entre sí; @Qualifier y @Profile permiten seleccionar implementaciones sin romper el comportamiento esperado" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Qualifier permite que cada implementación tenga un comportamiento completamente diferente sin restricciones" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "@Profile fuerza que solo una implementación exista en cada entorno, eliminando la necesidad de sustituibilidad" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "LSP no aplica en Spring porque el framework maneja las dependencias automáticamente" }
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena los pasos para probar que una jerarquía cumple LSP"
+points_awarded = 1000
+axis_labels = { from = "Primer paso", to = "Último paso" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Escribir pruebas que verifiquen el comportamiento de la clase base" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Ejecutar las mismas pruebas con cada subclase concreta" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Verificar que ninguna subclase falle pruebas que la clase base pasa" }
+[[slides.Order.answers]]
+correct = true
+content = { Text = "Confirmar que los invariantes se mantienen en todas las subclases" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuál es la diferencia clave entre una violación de LSP y una violación de OCP?"
+points_awarded = 1000
+answer_mode = "TypeAnswer"
+case_sensitive = false
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "LSP trata de la sustituibilidad entre subtipos; OCP trata de la extensibilidad sin modificar código existente" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "LSP es sobre relaciones entre clases; OCP es sobre cómo agregar funcionalidad" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles son condiciones para usar herencia sin violar LSP? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "La subclase mantiene todos los comportamientos de la clase base sin rechazar ninguno" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "La subclase no fortalece precondiciones ni debilita postcondiciones" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La subclase debe tener al menos el doble de métodos que la clase base" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La clase base debe ser abstracta y no tener implementaciones concretas" }

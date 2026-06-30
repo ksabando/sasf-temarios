@@ -1,0 +1,175 @@
+title = "Módulo 09 — GraphQL, REST y gRPC: Comparativa"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué ventaja principal tiene GraphQL sobre REST?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "El cliente especifica exactamente qué datos necesita" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es más rápido" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Usa HTTP/2" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Es más maduro" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué tipo de operación de GraphQL se usa para escribir datos?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Mutation" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Query" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Subscription" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Update" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué es el problema N+1 en GraphQL?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Se hacen N+1 queries a BD cuando debería ser 1" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El servidor se cae si hay más de N queries" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "El schema tiene N+1 tipos" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "La query es N+1 veces más lenta" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué formato usa gRPC para serialización?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Protocol Buffers" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "JSON" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "XML" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "YAML" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué versión de HTTP usa gRPC?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "HTTP/2" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "HTTP/1.1" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "HTTP/3" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "HTTP/1.0" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuándo es mejor usar gRPC que REST?"
+points_awarded = 1000
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Comunicación entre microservicios" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "APIs públicas" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Frontend web" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Aplicaciones móviles simples" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Cuáles de los siguientes son tipos de streaming en gRPC? (Selecciona 2)"
+points_awarded = 1000
+answer_mode = "MultipleAnswers"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Server streaming" }
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "Bidirectional streaming" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Round-robin streaming" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "Broadcast streaming" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué solución de GraphQL evita el problema N+1 mediante batching y caching?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["DataLoader", "dataloader", "data loader"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 15000
+title = "¿Qué tecnología ofrece tiempo real unidireccional del servidor al cliente usando HTTP?"
+points_awarded = 1000
+case_sensitive = false
+answers = ["SSE", "Server-Sent Events", "server sent events"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 15000
+title = "Ordena estas tecnologías de menor a mayor eficiencia para comunicación entre microservicios."
+points_awarded = 1000
+axis_labels = { from = "Menor eficiencia", to = "Mayor eficiencia" }
+[[slides.Order.answers]]
+content = { Text = "REST (JSON sobre HTTP/1.1)" }
+[[slides.Order.answers]]
+content = { Text = "GraphQL (JSON sobre HTTP/1.1)" }
+[[slides.Order.answers]]
+content = { Text = "gRPC Unary (Protobuf sobre HTTP/2)" }
+[[slides.Order.answers]]
+content = { Text = "gRPC Bidirectional Streaming (Protobuf sobre HTTP/2)" }

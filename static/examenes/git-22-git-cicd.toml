@@ -1,0 +1,157 @@
+title = "¿Qué acción de GitHub Actions se usa para clonar el repositorio en el runner?"
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué acción de GitHub Actions se usa para clonar el repositorio en el runner?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "actions/checkout" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "actions/setup-node" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "actions/cache" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "actions/upload-artifact" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué evento de GitHub Actions ejecuta un workflow cuando se crea un PR?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "pull_request" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "push" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "workflow_dispatch" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "schedule" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué flag de git clone limita la profundidad del historial?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "--depth=1" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--shallow-since" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--single-branch" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "--no-tags" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿En qué archivo se define un pipeline de GitLab CI?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = ".gitlab-ci.yml" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "gitlab-ci.yaml" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = ".ci-config.yml" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "pipeline.yml" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué herramienta automatiza versionado semántico y publicación con base en Conventional Commits?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "semantic-release" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "commitlint" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "commitizen" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "standard-version" }
+
+[[slides]]
+[slides.MultipleChoice]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando genera automáticamente un changelog a partir de los tags del repositorio?"
+answer_mode = "SingleAnswer"
+[[slides.MultipleChoice.answers]]
+correct = true
+content = { Text = "git log --oneline --decorate" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git changelog" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git release" }
+[[slides.MultipleChoice.answers]]
+correct = false
+content = { Text = "git describe" }
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué comando de git muestra la descripción más cercana a un commit basada en tags?"
+case_sensitive = false
+answers = ["git describe"]
+
+[[slides]]
+[slides.TypeAnswer]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "¿Qué flag se usa en actions/checkout para hacer un shallow clone en GitHub Actions?"
+case_sensitive = false
+answers = ["fetch-depth"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "Ordena los pasos de un pipeline CI/CD típico con Git:"
+axis_labels = { from = "Primero", to = "Último" }
+answers = ["Checkout del repositorio", "Ejecutar tests", "Crear tag de versión"]
+
+[[slides]]
+[slides.Order]
+introduce_question = 5000
+time_limit = 30000
+points_awarded = 1000
+title = "Ordena el flujo de semantic-release:"
+axis_labels = { from = "Inicio", to = "Fin" }
+answers = ["Analizar commits convencionales", "Calcular nueva versión semántica", "Publicar release y generar changelog"]
